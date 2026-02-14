@@ -1,0 +1,140 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "f7eac7bd-7d92-41f9-a304-bc5545110d98")
+	(paper "A4")
+	(lib_symbols)
+	(sheet
+		(at 40.64 69.85)
+		(size 27.94 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "82d1f6be-7087-4568-91f7-a16c09c66f51")
+		(property "Sheetname" "Ethernet"
+			(at 40.64 69.1384 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Ethernet.kicad_sch"
+			(at 40.64 94.5646 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 80.01 35.56)
+		(size 27.94 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "919b5cc4-bc87-4f6b-9b38-26476784197e")
+		(property "Sheetname" "ADC"
+			(at 80.01 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC.kicad_sch"
+			(at 80.01 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 40.64 35.56)
+		(size 27.94 24.13)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "93d101c8-aa70-4c97-a502-7da3b2b7e744")
+		(property "Sheetname" "FPGA"
+			(at 40.64 34.8484 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "FPGA.kicad_sch"
+			(at 40.64 60.2746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+	(embedded_fonts no)
+)
