@@ -5375,6 +5375,12 @@
 		(uuid "ab6c2f37-36c7-43ec-a907-010039b0b2d4")
 	)
 	(junction
+		(at 207.01 101.6)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab8921b4-f5c4-4329-9aa7-9e4a25c5a0d8")
+	)
+	(junction
 		(at 31.75 106.68)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5403,6 +5409,18 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "b78eaf14-9b19-4dcc-841e-5513d3640cac")
+	)
+	(junction
+		(at 218.44 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0782479-89f8-4af9-8e18-f935921beac1")
+	)
+	(junction
+		(at 273.05 120.65)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c0ed9639-b9d8-4a38-b57e-77271e5195d6")
 	)
 	(junction
 		(at 241.3 149.86)
@@ -5451,6 +5469,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d350ed01-c669-42d8-8276-ed98d1a19c14")
+	)
+	(junction
+		(at 273.05 115.57)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d53590b5-59ef-4cf6-a095-1151a68c1f88")
 	)
 	(junction
 		(at 123.19 35.56)
@@ -5636,7 +5660,7 @@
 	)
 	(wire
 		(pts
-			(xy 196.85 90.17) (xy 207.01 90.17)
+			(xy 196.85 90.17) (xy 220.98 90.17)
 		)
 		(stroke
 			(width 0)
@@ -5673,6 +5697,16 @@
 			(type default)
 		)
 		(uuid "030dcb65-8462-4e0d-b707-217728717bd7")
+	)
+	(wire
+		(pts
+			(xy 273.05 115.57) (xy 280.67 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "03d60180-18cd-4b51-9eeb-73e5a047d795")
 	)
 	(wire
 		(pts
@@ -5806,6 +5840,16 @@
 	)
 	(wire
 		(pts
+			(xy 276.86 124.46) (xy 273.05 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0b023fb8-0050-4a56-9bf5-6a7adb11ddee")
+	)
+	(wire
+		(pts
 			(xy 157.48 68.58) (xy 158.75 68.58)
 		)
 		(stroke
@@ -5823,6 +5867,16 @@
 			(type default)
 		)
 		(uuid "0dff03ad-d67b-453e-bfc1-9a68ed8d7d86")
+	)
+	(wire
+		(pts
+			(xy 273.05 124.46) (xy 273.05 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0e0990fb-099e-453a-94ba-89d4e474235f")
 	)
 	(wire
 		(pts
@@ -5853,6 +5907,26 @@
 			(type default)
 		)
 		(uuid "0f38e212-03e4-439e-8478-58816d321396")
+	)
+	(wire
+		(pts
+			(xy 265.43 115.57) (xy 273.05 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f876c94-e415-4a9c-9ac8-485bd182afb3")
+	)
+	(wire
+		(pts
+			(xy 270.51 111.76) (xy 273.05 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0fe1cbdd-4335-4821-9b6c-ba6d1268bf9a")
 	)
 	(wire
 		(pts
@@ -5913,6 +5987,16 @@
 			(type default)
 		)
 		(uuid "14022acd-8205-499b-8cbc-c44b3e96b5ed")
+	)
+	(wire
+		(pts
+			(xy 218.44 101.6) (xy 207.01 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14716f78-b114-45e4-8665-7d9e8ccd9fe6")
 	)
 	(wire
 		(pts
@@ -6116,16 +6200,6 @@
 	)
 	(wire
 		(pts
-			(xy 237.49 111.76) (xy 237.49 114.3)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1d4bfa6c-2d38-4d63-b73f-6c8ae6b6ac52")
-	)
-	(wire
-		(pts
 			(xy 69.85 41.91) (xy 71.12 41.91)
 		)
 		(stroke
@@ -6186,7 +6260,7 @@
 	)
 	(wire
 		(pts
-			(xy 207.01 90.17) (xy 207.01 93.98)
+			(xy 220.98 90.17) (xy 220.98 91.44)
 		)
 		(stroke
 			(width 0)
@@ -6223,6 +6297,16 @@
 			(type default)
 		)
 		(uuid "2544e305-df6b-47a4-bc90-80df1882d523")
+	)
+	(wire
+		(pts
+			(xy 254 91.44) (xy 262.89 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "264c2e9a-93ba-4f04-acdd-975aa6c881ee")
 	)
 	(wire
 		(pts
@@ -6796,6 +6880,16 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 91.44) (xy 207.01 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "572b9c84-8a62-43db-9fe2-9f4e47dabeaf")
+	)
+	(wire
+		(pts
 			(xy 232.41 100.33) (xy 232.41 102.87)
 		)
 		(stroke
@@ -7286,6 +7380,16 @@
 	)
 	(wire
 		(pts
+			(xy 254 86.36) (xy 262.89 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7cf07c48-d377-44e4-b625-894c071ff394")
+	)
+	(wire
+		(pts
 			(xy 69.85 44.45) (xy 71.12 44.45)
 		)
 		(stroke
@@ -7766,6 +7870,16 @@
 	)
 	(wire
 		(pts
+			(xy 262.89 86.36) (xy 262.89 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f0b6e11-21fb-49d8-9580-bbbef2be7b2d")
+	)
+	(wire
+		(pts
 			(xy 186.69 101.6) (xy 186.69 104.14)
 		)
 		(stroke
@@ -7813,6 +7927,16 @@
 			(type default)
 		)
 		(uuid "a0098d8a-c872-45b9-b8ce-3a69c122324b")
+	)
+	(wire
+		(pts
+			(xy 218.44 97.79) (xy 218.44 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a11d0231-2d61-487f-9fb2-ea5c682fe743")
 	)
 	(wire
 		(pts
@@ -7986,6 +8110,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 120.65) (xy 237.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ad3b3243-0b1b-4445-b102-39ae300fac16")
+	)
+	(wire
+		(pts
 			(xy 46.99 96.52) (xy 46.99 95.25)
 		)
 		(stroke
@@ -8043,6 +8177,16 @@
 			(type default)
 		)
 		(uuid "b111a8d9-1a7c-4738-9576-3eb8d050fb7e")
+	)
+	(wire
+		(pts
+			(xy 273.05 111.76) (xy 273.05 115.57)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b24b1582-176a-4624-b259-048d7b4420a0")
 	)
 	(wire
 		(pts
@@ -8213,6 +8357,16 @@
 			(type default)
 		)
 		(uuid "beef23a9-a044-445f-aeb3-6f151ecbd276")
+	)
+	(wire
+		(pts
+			(xy 262.89 91.44) (xy 262.89 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0c36e57-27f3-42f3-95a3-222409e9ddd4")
 	)
 	(wire
 		(pts
@@ -8423,6 +8577,16 @@
 			(type default)
 		)
 		(uuid "cb643289-5110-47f1-b0c2-588042aee924")
+	)
+	(wire
+		(pts
+			(xy 207.01 91.44) (xy 207.01 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cb7e7aa0-a203-4389-bc67-952822c450bd")
 	)
 	(wire
 		(pts
@@ -8666,6 +8830,16 @@
 	)
 	(wire
 		(pts
+			(xy 273.05 120.65) (xy 280.67 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d8c2d1aa-3069-4c8b-abf8-8ad49e750844")
+	)
+	(wire
+		(pts
 			(xy 121.92 57.15) (xy 123.19 57.15)
 		)
 		(stroke
@@ -8746,6 +8920,26 @@
 	)
 	(wire
 		(pts
+			(xy 218.44 91.44) (xy 218.44 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e14d6368-4511-405a-a45b-f638c96b2523")
+	)
+	(wire
+		(pts
+			(xy 220.98 91.44) (xy 218.44 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1b93cc0-8b48-4e04-866c-f805d529f644")
+	)
+	(wire
+		(pts
 			(xy 24.13 95.25) (xy 31.75 95.25)
 		)
 		(stroke
@@ -8816,6 +9010,16 @@
 	)
 	(wire
 		(pts
+			(xy 213.36 129.54) (xy 213.36 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5782c46-ffee-44d6-8fbd-a3aa0ee4e57e")
+	)
+	(wire
+		(pts
 			(xy 39.37 109.22) (xy 66.04 109.22)
 		)
 		(stroke
@@ -8843,6 +9047,16 @@
 			(type default)
 		)
 		(uuid "e7a0282a-6f11-4672-b6bb-40e5a9560340")
+	)
+	(wire
+		(pts
+			(xy 213.36 134.62) (xy 213.36 135.89)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e8b6defa-ae31-47ae-a797-c12ea6e4ae73")
 	)
 	(wire
 		(pts
@@ -8916,6 +9130,16 @@
 	)
 	(wire
 		(pts
+			(xy 265.43 120.65) (xy 273.05 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eebf5569-3350-47d7-a269-9cb834032ea0")
+	)
+	(wire
+		(pts
 			(xy 190.5 118.11) (xy 190.5 120.65)
 		)
 		(stroke
@@ -8933,6 +9157,16 @@
 			(type default)
 		)
 		(uuid "ef56c55f-92cd-411a-b30c-c64d9c4e0fa3")
+	)
+	(wire
+		(pts
+			(xy 237.49 111.76) (xy 237.49 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eff84683-dfe0-4e15-9d6e-b2ff257b97cd")
 	)
 	(wire
 		(pts
@@ -9633,6 +9867,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 262.89 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "30a6243f-786b-4265-a587-07b54fad131f")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 256.0343 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "LDO_O"
 		(shape input)
 		(at 24.13 35.56 180)
@@ -9843,6 +10099,28 @@
 			)
 		)
 	)
+	(global_label "AGND"
+		(shape input)
+		(at 270.51 111.76 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "523dd7ee-555f-45be-be44-a479b884da1e")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 262.5657 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "1V2_L"
 		(shape output)
 		(at 266.7 135.89 0)
@@ -9908,6 +10186,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "A1.2V"
+		(shape input)
+		(at 262.89 86.36 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "5c7c56b2-9ade-4ecc-b519-16775645feb4")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 271.0762 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10043,6 +10343,28 @@
 					(size 1.27 1.27)
 				)
 				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "A3.3V"
+		(shape input)
+		(at 274.32 87.63 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "7451359c-0460-4d37-8336-c4a9248ddb3a")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 282.5062 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
 				(hide yes)
 			)
 		)
@@ -10560,7 +10882,7 @@
 	)
 	(global_label "1.2V"
 		(shape input)
-		(at 207.01 90.17 0)
+		(at 220.98 90.17 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -10570,7 +10892,7 @@
 		)
 		(uuid "9e75f463-cbce-41c2-80c3-16abc35b39cf")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 214.1076 90.17 0)
+			(at 228.0776 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11280,6 +11602,28 @@
 			)
 		)
 	)
+	(global_label "GND"
+		(shape input)
+		(at 276.86 124.46 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "da05ce05-6899-4e95-8581-b6123e7b54bb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 283.7157 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
 	(global_label "RX_CLK"
 		(shape input)
 		(at 151.13 154.94 180)
@@ -11327,7 +11671,7 @@
 			)
 		)
 	)
-	(global_label "GND"
+	(global_label "AGND"
 		(shape input)
 		(at 227.33 83.82 180)
 		(fields_autoplaced yes)
@@ -11339,7 +11683,7 @@
 		)
 		(uuid "dccf6af4-b263-4f38-97aa-32430753885c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 220.4743 83.82 0)
+			(at 219.3857 83.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11547,6 +11891,28 @@
 		(uuid "f3579860-73b5-45de-b7cb-3eb5e7c000af")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 12.7991 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "GND"
+		(shape input)
+		(at 274.32 92.71 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f3f9d495-7cc6-435b-b5a0-70cefe1ec853")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 267.4643 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11890,7 +12256,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "0adf370f-a1bc-4d75-a96a-9d9ad6923506")
-		(property "Reference" "D4"
+		(property "Reference" "5V1"
 			(at 190.5 152.7174 90)
 			(effects
 				(font
@@ -11953,7 +12319,7 @@
 		(instances
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
-					(reference "D4")
+					(reference "5V1")
 					(unit 1)
 				)
 			)
@@ -12627,7 +12993,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "2396cdc0-57bb-431f-bb43-6b9a2da6594d")
-		(property "Reference" "R19"
+		(property "Reference" "JP1"
 			(at 269.24 139.6999 0)
 			(effects
 				(font
@@ -12681,7 +13047,7 @@
 		(instances
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
-					(reference "R19")
+					(reference "JP1")
 					(unit 1)
 				)
 			)
@@ -13038,6 +13404,146 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C_Small")
+		(at 273.05 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33933441-ebfd-4b0f-9656-91c9762ede93")
+		(property "Reference" "C23"
+			(at 275.59 116.8335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 275.59 119.3735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 273.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 273.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 273.05 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "21480fb4-869b-4682-9f8e-d9d2cd6a89dc")
+		)
+		(pin "2"
+			(uuid "51dbff7c-b9cb-4371-97df-552c7e92c271")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C23")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 262.89 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "33c9db1c-3709-4a6d-bc38-e3ede4c061c6")
+		(property "Reference" "C26"
+			(at 265.43 89.0269 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 265.43 91.5669 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 262.89 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 262.89 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 262.89 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78005f54-821e-42ff-b6ef-c0ce997d7f75")
+		)
+		(pin "2"
+			(uuid "f5491268-9323-4469-9c77-ab02b0794989")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C26")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Small_US")
 		(at 266.7 149.86 180)
 		(unit 1)
@@ -13047,7 +13553,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "43ecfb8c-b9b5-4c5f-8ebe-af3b7cf27831")
-		(property "Reference" "R20"
+		(property "Reference" "F1"
 			(at 269.24 148.5899 0)
 			(effects
 				(font
@@ -13101,7 +13607,7 @@
 		(instances
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
-					(reference "R20")
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -13551,7 +14057,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6504ad5a-bb7f-41ac-91fe-316a9cf98ce0")
-		(property "Reference" "R21"
+		(property "Reference" "F2"
 			(at 210.82 139.6999 0)
 			(effects
 				(font
@@ -13605,7 +14111,7 @@
 		(instances
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
-					(reference "R21")
+					(reference "F2")
 					(unit 1)
 				)
 			)
@@ -13825,6 +14331,76 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 265.43 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "7cd0ac8a-bc73-4718-90d0-5eb85f28eaf4")
+		(property "Reference" "F3"
+			(at 267.97 116.8399 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0"
+			(at 267.97 119.3799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 265.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 265.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor, small US symbol"
+			(at 265.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "a5fbf383-605f-4eb5-bd7a-109eeeb79642")
+		)
+		(pin "1"
+			(uuid "183161a1-b400-4ff2-a996-a6ccef1c68fc")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "F3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Simulation_SPICE:PMOS")
 		(at 30.48 35.56 0)
 		(unit 1)
@@ -13919,6 +14495,76 @@
 			(project ""
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
 					(reference "Q1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 274.32 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "841908be-09a0-4d68-91b9-74b2bd97deea")
+		(property "Reference" "C27"
+			(at 276.86 89.0269 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 276.86 91.5669 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 274.32 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 274.32 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 274.32 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2a44736-4d04-4572-8147-d7c2a508c732")
+		)
+		(pin "2"
+			(uuid "2670f696-c95e-44ed-b725-6c9780059f85")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C27")
 					(unit 1)
 				)
 			)
@@ -14129,6 +14775,76 @@
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
 					(reference "C21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 213.36 132.08 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "8b054596-001d-45f9-aa1b-091ccb2559fe")
+		(property "Reference" "C25"
+			(at 215.9 130.6829 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "10uF"
+			(at 215.9 133.2229 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 213.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 213.36 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4b5d3182-3ff9-4ded-8deb-811249109b8a")
+		)
+		(pin "2"
+			(uuid "2822a69b-1178-45d2-a08b-98b3ca619182")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C25")
 					(unit 1)
 				)
 			)
@@ -14619,6 +15335,76 @@
 			(project "PCB_Ethernet-1Gbps-Spartan-6"
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
 					(reference "R6")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small_US")
+		(at 218.44 95.25 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b1fa5d78-8bf5-47dc-87c7-8412fe885a25")
+		(property "Reference" "C29"
+			(at 220.98 94.1069 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10uF"
+			(at 220.98 96.6469 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+			(at 218.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 218.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 218.44 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4f57b659-73f0-4de2-a297-af886f9e3bea")
+		)
+		(pin "2"
+			(uuid "46d49fe1-9f48-4eb2-bb61-4392983dffc8")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C29")
 					(unit 1)
 				)
 			)
@@ -15341,6 +16127,76 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 280.67 118.11 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d13a8313-6814-4f10-ae13-0f0308f1f852")
+		(property "Reference" "C24"
+			(at 283.21 116.8335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 283.21 119.3735 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 280.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 280.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 280.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d8929bf9-0644-407f-a3ed-d1b3da8546fc")
+		)
+		(pin "2"
+			(uuid "310499f4-2c0a-4f59-a886-02d22d39f187")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C24")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 222.25 106.68 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15621,6 +16477,76 @@
 	)
 	(symbol
 		(lib_id "Device:C_Small")
+		(at 254 88.9 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e71c848e-0d18-4021-8ff3-d5ef7c07cfd1")
+		(property "Reference" "C28"
+			(at 256.54 87.6235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 256.54 90.1635 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder"
+			(at 254 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 254 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor, small symbol"
+			(at 254 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d98ba10f-7d92-41c1-a9d4-d7632d4044fc")
+		)
+		(pin "2"
+			(uuid "3cf7b897-61ba-4e9a-b501-df4c0250a78d")
+		)
+		(instances
+			(project "PCB_Ethernet-1Gbps-Spartan-6"
+				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
+					(reference "C28")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Small")
 		(at 210.82 156.21 180)
 		(unit 1)
 		(exclude_from_sim no)
@@ -15839,7 +16765,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "fd70197e-51d4-4f0e-94ec-f38844bd8605")
-		(property "Reference" "D3"
+		(property "Reference" "3V3"
 			(at 194.31 124.7774 90)
 			(effects
 				(font
@@ -15902,7 +16828,7 @@
 		(instances
 			(project ""
 				(path "/f7eac7bd-7d92-41f9-a304-bc5545110d98/82d1f6be-7087-4568-91f7-a16c09c66f51"
-					(reference "D3")
+					(reference "3V3")
 					(unit 1)
 				)
 			)
