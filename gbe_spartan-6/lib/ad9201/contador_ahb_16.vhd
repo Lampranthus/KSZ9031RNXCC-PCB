@@ -1,0 +1,37 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity contador_ahb_16 is
+
+	port(
+		RST,CLK : in std_logic;
+		opc : in std_logic_vector(1 downto 0);
+		Q : out std_logic_vector(14 downto 0)
+	);
+end contador_ahb_16;
+
+architecture simple of contador_ahb_16 is	  
+signal qp,qn : std_logic_vector(14 downto 0);
+begin 
+	
+	c1 : process (qp,opc)
+	begin
+		case (opc) is
+			when "01" => qn <= qp + 1;
+			when "00" => qn <= qp;
+			when others => qn <= (others => '0'); 
+		end case;
+	end process;
+	
+	secuencial : process (RST, CLK)
+	begin
+		if(RST='0') then
+			qp <= (others => '0');
+		elsif(CLK'event and CLK='1') then
+			qp <= qn;
+		end if;
+	end process;
+	    Q <= qp;
+	
+end simple;

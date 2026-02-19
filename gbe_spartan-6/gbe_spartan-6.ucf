@@ -1,0 +1,59 @@
+// 50Mhz Clock
+NET "clk" LOC = "P56";
+
+// Dip Switch
+NET "sw<0>" LOC = "P35";
+NET "sw<1>" LOC = "P34";
+NET "sw<2>" LOC = "P33";
+NET "sw<3>" LOC = "P32";
+NET "sw<4>" LOC = "P30";
+NET "sw<5>" LOC = "P29";
+NET "sw<6>" LOC = "P27";
+NET "sw<7>" LOC = "P26";
+
+// Red LEDs
+NET "led<0>" LOC = "P74";
+NET "led<1>" LOC = "P75";
+NET "led<2>" LOC = "P78";
+NET "led<3>" LOC = "P79";
+NET "led<4>" LOC = "P80";
+NET "led<5>" LOC = "P81";
+NET "led<6>" LOC = "P82";
+NET "led<7>" LOC = "P83";
+
+// Push buttons
+NET "push<0>" LOC = "P144";
+NET "push<1>" LOC = "P143";
+NET "rst" LOC = "P142";
+
+// UART
+//NET "txd" LOC = "P100";
+//NET "rxd" LOC = "P101";
+
+// Molex
+//NET "molex<0>" LOC = "P141";
+//NET "molex<1>" LOC = "P140";
+
+// Single
+//NET "pin0" LOC = "P139";
+
+// Pin Header
+NET "ENET0_TX_DATA<0>" LOC = "P138"; //adc_clk
+NET "ENET0_TX_DATA<1>" LOC = "P137"; // d9
+NET "ENET0_TX_DATA<2>" LOC = "P134"; // d8
+NET "ENET0_TX_DATA<3>" LOC = "P133"; // d7
+//NET "NC0" LOC = "P132"; // No connection
+NET "ENET0_GTX_CLK" LOC = "P131"; // d6
+NET "ENET0_TX_EN" LOC = "P127"; // d5
+NET "ENET0_RX_DATA<3>" LOC = "P126"; // d4
+NET "ENET0_RX_DATA<2>" LOC = "P124"; // d3
+NET "ENET0_RX_CLK" LOC = "P123"; // d2
+NET "ENET0_RX_DATA<1>" LOC = "P121"; // d1
+NET "ENET0_RX_DATA<0>" LOC = "P120"; // d0
+NET "ENET0_RX_DV" LOC = "P119"; // No connection
+NET "V33" LOC = "P118"; // 3.3V when adc on
+NET "MDC" LOC = "P117"; // int_rst
+NET "MDIO" LOC = "P115"; // trigg 0 start
+NET "INT_N" LOC = "P116"; // trigg 1 stop
+NET "CLK_125MHZ" LOC = "P114"; // debug 0
+NET "RST_N" LOC = "P112"; // debug 1

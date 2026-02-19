@@ -1,0 +1,32 @@
+Release 14.7 - par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Thu Feb 19 01:26:10 2026
+
+All signals are completely routed.
+
+WARNING:ParHelpers:361 - There are 20 loadless signals in this design. This design will cause Bitgen to issue DRC
+   warnings.
+
+   CLK_125MHZ_IBUF
+   INT_N_IBUF
+   MDIO_IBUF
+   V33_IBUF
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem1_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem2_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem3_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem4_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem2_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem4_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem1_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem2_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem1_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem2_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem1_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem2_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem1_RAMD_D1_O
+   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem2_RAMD_D1_O
+
+

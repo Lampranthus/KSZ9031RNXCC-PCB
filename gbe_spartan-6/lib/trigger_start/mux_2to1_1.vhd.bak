@@ -1,0 +1,23 @@
+library ieee;	   
+use ieee.std_logic_1164.all; 
+
+
+entity mux_2to1_1 is
+	port(
+	x0,x1	: in std_logic;
+	s			: in std_logic;
+	y			: out std_logic
+	);
+end mux_2to1_1;
+
+
+architecture combinacional of mux_2to1_1 is 
+begin
+	process (s,x0,x1)
+	begin
+		case s is
+			when '0'	=> y<=x0;
+			when others => y<=x1;
+		end case;
+	end process;
+end combinacional;

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj gbe_spartan-6 -o /home/ise/gbe_spartan-6/eth_mac_1g_rgmii.tfi -lib work /home/ise/gbe_spartan-6/lib/eth/rtl//eth_mac_1g_rgmii.v -module eth_mac_1g_rgmii -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
