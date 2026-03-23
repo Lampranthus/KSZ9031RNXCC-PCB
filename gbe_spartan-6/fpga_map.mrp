@@ -10,23 +10,23 @@ Target Device  : xc6slx9
 Target Package : tqg144
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Feb 19 01:24:51 2026
+Mapped Date    : Mon Mar 23 21:26:11 2026
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:   17
 Slice Logic Utilization:
-  Number of Slice Registers:                 2,844 out of  11,440   24%
-    Number used as Flip Flops:               2,833
+  Number of Slice Registers:                 3,136 out of  11,440   27%
+    Number used as Flip Flops:               3,125
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               11
-  Number of Slice LUTs:                      2,395 out of   5,720   41%
-    Number used as logic:                    2,137 out of   5,720   37%
-      Number using O6 output only:           1,383
-      Number using O5 output only:             147
-      Number using O5 and O6:                  607
+  Number of Slice LUTs:                      2,743 out of   5,720   47%
+    Number used as logic:                    2,432 out of   5,720   42%
+      Number using O6 output only:           1,552
+      Number using O5 output only:             144
+      Number using O5 and O6:                  736
       Number used as ROM:                        0
     Number used as Memory:                      99 out of   1,440    6%
       Number used as Dual Port RAM:             96
@@ -38,21 +38,21 @@ Slice Logic Utilization:
         Number using O6 output only:             3
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    159
-      Number with same-slice register load:    146
-      Number with same-slice carry load:        13
+    Number used exclusively as route-thrus:    212
+      Number with same-slice register load:    197
+      Number with same-slice carry load:        15
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,027 out of   1,430   71%
-  Number of MUXCYs used:                       636 out of   2,860   22%
-  Number of LUT Flip Flop pairs used:        3,260
-    Number with an unused Flip Flop:           866 out of   3,260   26%
-    Number with an unused LUT:                 865 out of   3,260   26%
-    Number of fully used LUT-FF pairs:       1,529 out of   3,260   46%
-    Number of unique control sets:             131
+  Number of occupied Slices:                 1,113 out of   1,430   77%
+  Number of MUXCYs used:                       592 out of   2,860   20%
+  Number of LUT Flip Flop pairs used:        3,528
+    Number with an unused Flip Flop:           955 out of   3,528   27%
+    Number with an unused LUT:                 785 out of   3,528   22%
+    Number of fully used LUT-FF pairs:       1,788 out of   3,528   50%
+    Number of unique control sets:             156
     Number of slice register sites lost
-      to control set restrictions:             412 out of  11,440    3%
+      to control set restrictions:             448 out of  11,440    3%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -62,12 +62,12 @@ Slice Logic Distribution:
 
 IO Utilization:
   Number of bonded IOBs:                        40 out of     102   39%
-    Number of LOCed IOBs:                       38 out of      40   95%
+    Number of LOCed IOBs:                       40 out of      40  100%
     IOB Flip Flops:                             11
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                        22 out of      32   68%
-  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of RAMB16BWERs:                         6 out of      32   18%
+  Number of RAMB8BWERs:                          5 out of      64    7%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
     Number used as BUFIO2_2CLKs:                 0
@@ -98,11 +98,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                3.63
+Average Fanout of Non-Clock Nets:                3.58
 
-Peak Memory Usage:  833 MB
-Total REAL time to MAP completion:  50 secs 
-Total CPU time to MAP completion:   42 secs 
+Peak Memory Usage:  841 MB
+Total REAL time to MAP completion:  54 secs 
+Total CPU time to MAP completion:   47 secs 
 
 Table of Contents
 -----------------
@@ -129,69 +129,69 @@ WARNING:Security:42 - Your software subscription period has lapsed. Your current
 version of Xilinx tools will continue to function, but you no longer qualify for
 Xilinx software updates or new releases.
 WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_por
-   t_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
    ort_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   _mem4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_por
+   t_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_por
+   t_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
+   ort_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
+   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
    _mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
+   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
    em3_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
    design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
    design.
 WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_por
-   t_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
    _mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
 WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
+   _mem5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
    _mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
-   ort_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
-   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
-   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
    (RAMB8BWER).  9K Block RAM initialization data, both user defined and
    default, may be incorrect and should not be used.  For more information,
@@ -200,14 +200,18 @@ WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
 Section 3 - Informational
 -------------------------
 INFO:Security:54 - 'xc6slx9' is a WebPack part.
-INFO:LIT:243 - Logical network rxd has no load.
-INFO:LIT:395 - The above info message is repeated 25 more times for the
+INFO:LIT:243 - Logical network rst has no load.
+INFO:LIT:395 - The above info message is repeated 21 more times for the
    following (max. 5 shown):
-   ENET0_INT_N,
-   V33_IBUF,
-   CLK_125MHZ_IBUF,
-   INT_N_IBUF,
-   MDIO_IBUF
+   V3_3_IBUF,
+   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_val
+   id_mem4/SPO,
+   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_val
+   id_mem3/SPO,
+   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_val
+   id_mem2/SPO,
+   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_val
+   id_mem1/SPO
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -219,9 +223,6 @@ INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
    1.260 Volts)
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
-INFO:Place:834 - Only a subset of IOs are locked. Out of 40 IOs, 38 are locked
-   and 2 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
 INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
@@ -248,6 +249,7 @@ Section 6 - IOB Properties
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 | CLK_125MHZ                         | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ENET0_GTX_CLK                      | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
+| ENET0_INT_N                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ENET0_RST_N                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | ENET0_RX_CLK                       | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | ENET0_RX_DATA<0>                   | IOB              | INPUT     | LVCMOS25             |       |          |      | IDDR         |          |          |
@@ -260,11 +262,9 @@ Section 6 - IOB Properties
 | ENET0_TX_DATA<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
 | ENET0_TX_DATA<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
 | ENET0_TX_EN                        | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
-| INT_N                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | MDC                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| MDIO                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| RST_N                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| V33                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| MDIO                               | IOB              | BIDIR     | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| V3_3                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | clk                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | led<0>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | led<1>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
@@ -276,7 +276,8 @@ Section 6 - IOB Properties
 | led<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
 | push<0>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | push<1>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| rst                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| push<2>                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| rxd                                | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | sw<0>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | sw<1>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 | sw<2>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |

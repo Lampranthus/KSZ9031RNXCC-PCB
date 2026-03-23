@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Thu Feb 19 01:26:10 2026
+Mon Mar 23 21:27:36 2026
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -119,8 +119,8 @@ Pinout by Pin Number:
 |P97       |                |IOBS     |IO_L34N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P98       |                |IOBM     |IO_L34P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P99       |                |IOBS     |IO_L33N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|P100      |                |IOBM     |IO_L33P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|P101      |                |IOBS     |IO_L32N_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|P100      |txd             |IOB      |IO_L33P_1                 |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P101      |rxd             |IOB      |IO_L32N_1                 |INPUT    |LVCMOS25*  |1             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P102      |                |IOBM     |IO_L32P_1                 |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |P103      |                |         |VCCO_1                    |         |           |1             |          |         |           |         |2.50     |          |           |                |
 |P104      |                |IOBS     |IO_L1N_VREF_1             |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
@@ -131,13 +131,13 @@ Pinout by Pin Number:
 |P109      |                |         |TCK                       |         |           |              |          |         |           |         |         |          |           |                |
 |P110      |                |         |TDI                       |         |           |              |          |         |           |         |         |          |           |                |
 |P111      |                |IOBS     |IO_L66N_SCP0_0            |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|P112      |RST_N           |IOB      |IO_L66P_SCP1_0            |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|P112      |ENET0_RST_N     |IOB      |IO_L66P_SCP1_0            |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P113      |                |         |GND                       |         |           |              |          |         |           |         |         |          |           |                |
 |P114      |CLK_125MHZ      |IOB      |IO_L65N_SCP2_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|P115      |MDIO            |IOB      |IO_L65P_SCP3_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|P116      |INT_N           |IOB      |IO_L64N_SCP4_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P115      |ENET0_INT_N     |IOB      |IO_L65P_SCP3_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P116      |MDIO            |IOB      |IO_L64N_SCP4_0            |BIDIR    |LVCMOS25*  |0             |12        |SLOW     |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P117      |MDC             |IOB      |IO_L64P_SCP5_0            |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|P118      |V33             |IOB      |IO_L63N_SCP6_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P118      |V3_3            |IOB      |IO_L63N_SCP6_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P119      |ENET0_RX_DV     |IOB      |IO_L63P_SCP7_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |P120      |ENET0_RX_DATA<0>|IOB      |IO_L62N_VREF_0            |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
 |P121      |ENET0_RX_DATA<1>|IOB      |IO_L62P_0                 |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |YES        |NONE            |
@@ -159,9 +159,9 @@ Pinout by Pin Number:
 |P137      |ENET0_TX_DATA<1>|IOB      |IO_L4N_0                  |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |P138      |ENET0_TX_DATA<0>|IOB      |IO_L4P_0                  |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |LOCATED   |YES        |NONE            |
 |P139      |                |IOBS     |IO_L3N_0                  |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
-|P140      |ENET0_RST_N     |IOB      |IO_L3P_0                  |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P141      |txd             |IOB      |IO_L2N_0                  |OUTPUT   |LVCMOS25*  |0             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
-|P142      |rst             |IOB      |IO_L2P_0                  |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|P140      |                |IOBM     |IO_L3P_0                  |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|P141      |                |IOBS     |IO_L2N_0                  |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
+|P142      |push<2>         |IOB      |IO_L2P_0                  |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P143      |push<1>         |IOB      |IO_L1N_VREF_0             |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |P144      |push<0>         |IOB      |IO_L1P_HSWAPEN_0          |INPUT    |LVCMOS25*  |0             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

@@ -47,15 +47,23 @@ module fpga_core #
     /*
      * GPIO
      */
-    //input  wire [1:0]  btn,
-    //input  wire [7:0]  sw,
-    //output wire [7:0]  led,
+    input  wire [1:0]  push,
+    input  wire [7:0]  sw,
+    output wire [7:0]  led,
+	 
+	 /*
+     * 1GbE PHY control (KSZ9031RNXCC) 
+     */
+	 output wire MDC,
+	 inout  wire MDIO,
+	 input  wire V3_3,
+	 input  wire CLK_125MHZ,
 	 
 	 /*
      * UART
      */
-	 //output wire txd,
-	 //input  wire rxd,
+	 output wire txd,
+	 input  wire rxd,
 
     /*
      * Ethernet: 1000BASE-T RGMII
@@ -227,6 +235,157 @@ assign tx_ip_payload_axis_tvalid = 0;
 assign tx_ip_payload_axis_tlast = 0;
 assign tx_ip_payload_axis_tuser = 0;
 
+//transmision de paquetes de bytes
+
+reg [15:0] n_bytes = 16'd1440;  //1440 bytes por paquete
+reg [15:0] cont_reg = 16'd0;
+
+reg [7:0] tx_fifo_axis_tdata = 8'd0;
+reg [7:0] tx_fifo_axis_tdata_reg = 8'd0;
+reg [7:0] tx_axis_tdata_test = 8'h0A; //"\n"
+reg tx_fifo_axis_tvalid = 0;
+wire tx_fifo_axis_tready;
+reg tx_fifo_axis_tlast = 0;
+reg tx_fifo_axis_tuser = 0;
+
+reg [4:0] off_cycles = 5'd20; // ciclos de reoloj de separacion entre paquetes, 20 ciclos no hay error en tx_ready
+reg [4:0] off_cycles_reg = 5'd0;
+
+reg [7:0] pkt_n = 8'd128; //por defecto ~184kB por cada pulso recibido de datos (128*8192)B = 184320B
+reg [7:0] pkt_n_reg = 8'd0;
+
+reg [2:0] state = 3'd0;
+reg ocupado;
+
+reg [7:0] random_data;
+// Linear-feedback shift register
+reg [7:0] lfsr;
+
+wire feedback;
+
+// Feedback
+assign feedback = lfsr[7] ^ lfsr[5] ^ lfsr[4] ^ lfsr[3];
+
+// maquina de estados para trasnmision 
+always @(posedge clk) begin
+
+    if (rst) begin
+        lfsr <= 8'hAB; // Semilla inicial (no todos ceros)
+    end else begin
+        // Generar nuevo valor cada ciclo de reloj
+        lfsr[7:0] <= {lfsr[6:0], feedback};
+        random_data <= lfsr;
+    end
+
+    if (rst) begin
+        state <=  3'd0;
+        tx_fifo_axis_tdata <= 8'd0;
+        tx_fifo_axis_tdata_reg <= 8'd0;
+        tx_fifo_axis_tvalid <= 0;
+        cont_reg <= 0;
+        tx_fifo_axis_tlast <= 0;
+        pkt_n_reg <= 0;
+        off_cycles_reg <= 5'd0;
+        ocupado <= 0;
+		  
+    end else begin
+       // Estado 0: Esperando pulso
+        if (state == 3'd0) begin
+        
+            if ((rx_trigger && ~rx_loopb) || ocupado) begin
+                ocupado <= 1; //empieza el envio de los paquetes
+                state <= 3'd1;
+                tx_fifo_axis_tvalid <= 1; //tvalid 1 en el siguiente ciclo
+                // primera palabra del mensaje
+					 if(rx_random) begin
+                    tx_fifo_axis_tdata <= random_data;
+                end else begin
+                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+                end
+            end
+        end 
+        // Estado 1: Enviando primera palabra del mensaje
+        else if (state == 3'd1) begin
+ 
+            if (tx_fifo_axis_tready) begin
+                state <= 3'd2;
+                // Primer dato aceptado y ligiendo segunda palabra
+                if(rx_random) begin
+                    tx_fifo_axis_tdata <= random_data;
+                end else begin
+                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+                end
+                cont_reg <= cont_reg + 1;
+            end
+
+        end 
+        // Estado 2: Enviando segunda palabra y el resto
+        else if (state == 3'd2) begin
+        
+            if (tx_fifo_axis_tready) begin
+                cont_reg <= cont_reg + 1;
+                if (cont_reg == (n_bytes - 2)) begin
+                    state <= 3'd3;
+                    tx_fifo_axis_tlast <= 1;
+                    pkt_n_reg <= pkt_n_reg + 1;
+                end else if(rx_random) begin
+                    tx_fifo_axis_tdata <= random_data;
+                end else begin
+                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+                end
+            end
+
+        end
+        // Estado 3: Último dato del paquete
+        else if (state == 3'd3) begin
+        
+            if (pkt_n_reg == (pkt_n)) begin
+                cont_reg <= 0;
+                pkt_n_reg <= 0;
+                tx_fifo_axis_tdata_reg <= 8'd0;
+                off_cycles_reg <= 5'd0;
+                ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
+                state <= 3'd7; //si se llego al numero de mensajes ir a estado 7 para enviar uar salto de linea
+                tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
+                tx_fifo_axis_tvalid <= 0;//bajar tvalid
+            end else begin
+                state <= 3'd4; //si no se llego al numero de mensaje ir al estado 4 para esperar a que baje tready
+                tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
+                tx_fifo_axis_tvalid <= 0;//bajar tvalid
+                cont_reg <= 0; //resetear cont_reg
+            end
+        end
+         // Estado 4: esperando que tready baje para enviar otro mensaje
+        else if (state == 3'd4) begin
+        
+            if (~tx_fifo_axis_tready) begin 
+                state <= 3'd5; //cuando baje tready ir al estado 5 para esperas ciclos de separacion
+            end
+        end
+         // Estado 5: esperando ciclos de separacion para enviar el siguiente mensaje
+        else begin
+        
+            if (off_cycles_reg == (off_cycles - 1)) begin 
+                state <= 3'd0; // ir a estado 0
+                off_cycles_reg <= 0; //reiniciando off_cycles_reg
+            end else begin
+                off_cycles_reg <= off_cycles_reg + 1; 
+            end
+        end
+    end
+end
+
+wire [7:0] reg_fifo_udp_payload_axis_tdata;
+wire reg_fifo_udp_payload_axis_tkeep;
+wire reg_fifo_udp_payload_axis_tvalid;
+wire reg_fifo_udp_payload_axis_tready;
+wire reg_fifo_udp_payload_axis_tlast;
+wire reg_fifo_udp_payload_axis_tuser;
+
+
 // Loop back UDP
 wire match_cond = rx_udp_dest_port == 1234;
 wire no_match = !match_cond;
@@ -252,23 +411,44 @@ always @(posedge clk) begin
     end
 end
 
-assign tx_udp_hdr_valid = rx_udp_hdr_valid && match_cond;
-assign rx_udp_hdr_ready = (tx_eth_hdr_ready && match_cond) || no_match;
+assign tx_udp_hdr_valid = rx_loopb ? (rx_udp_hdr_valid & match_cond) : (tx_udp_payload_axis_tvalid && tx_udp_hdr_ready);
+assign rx_udp_hdr_ready = rx_loopb ? ((tx_udp_hdr_ready & match_cond) | no_match) : (match_cond | no_match);
+
+//assign tx_udp_hdr_valid = rx_udp_hdr_valid && match_cond;
+//assign rx_udp_hdr_ready = (tx_eth_hdr_ready && match_cond) || no_match;
+
 assign tx_udp_ip_dscp = 0;
 assign tx_udp_ip_ecn = 0;
 assign tx_udp_ip_ttl = 64;
 assign tx_udp_ip_source_ip = local_ip;
-assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip;
-assign tx_udp_source_port = rx_udp_dest_port;
-assign tx_udp_dest_port = rx_udp_source_port;
-assign tx_udp_length = rx_udp_length;
+
+reg [31:0] tx_udp_ip_dest_ip_reg = {8'd192, 8'd168, 8'd1,   8'd100};
+reg [15:0] tx_udp_source_port_reg = 16'd1234;
+reg [15:0] tx_udp_dest_port_reg = 16'd9999;
+
+assign tx_udp_ip_dest_ip = rx_loopb ? rx_udp_ip_source_ip : tx_udp_ip_dest_ip_reg;
+assign tx_udp_source_port = rx_loopb ? rx_udp_dest_port : tx_udp_source_port_reg;
+assign tx_udp_dest_port = rx_loopb ? rx_udp_source_port : tx_udp_dest_port_reg;
+
+//assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip;
+//assign tx_udp_source_port = rx_udp_dest_port;
+//assign tx_udp_dest_port = rx_udp_source_port;
+
+assign tx_udp_length = rx_loopb ? rx_udp_length :16'd1448;  // 1440 byte de payload;
 assign tx_udp_checksum = 0;
 
-assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata;
-assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid;
-assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
-assign tx_udp_payload_axis_tlast  = tx_fifo_udp_payload_axis_tlast;
-assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
+assign tx_udp_payload_axis_tdata = rx_loopb ? reg_fifo_udp_payload_axis_tdata : tx_fifo_axis_tdata;
+assign tx_udp_payload_axis_tvalid = rx_loopb ? reg_fifo_udp_payload_axis_tvalid : tx_fifo_axis_tvalid;
+assign tx_fifo_axis_tready = tx_udp_payload_axis_tready;
+assign reg_fifo_udp_payload_axis_tready = rx_loopb ? tx_udp_payload_axis_tready : 1'b1;
+assign tx_udp_payload_axis_tlast = rx_loopb ? reg_fifo_udp_payload_axis_tlast : tx_fifo_axis_tlast;
+assign tx_udp_payload_axis_tuser = rx_loopb ? reg_fifo_udp_payload_axis_tuser : tx_fifo_axis_tuser;
+
+//assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata;
+//assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid;
+//assign tx_fifo_udp_payload_axis_tready = tx_udp_payload_axis_tready;
+//assign tx_udp_payload_axis_tlast  = tx_fifo_udp_payload_axis_tlast;
+//assign tx_udp_payload_axis_tuser = tx_fifo_udp_payload_axis_tuser;
 
 assign rx_fifo_udp_payload_axis_tdata = rx_udp_payload_axis_tdata;
 assign rx_fifo_udp_payload_axis_tvalid = rx_udp_payload_axis_tvalid && match_cond_reg;
@@ -277,16 +457,16 @@ assign rx_fifo_udp_payload_axis_tlast = rx_udp_payload_axis_tlast;
 assign rx_fifo_udp_payload_axis_tuser = rx_udp_payload_axis_tuser;
 
 
-assign phy0_reset_n = ~rst;
+assign phy0_reset_n = ~rst && ~push[0] && sw[0]; // desactivar phy con sw[0], reset con push[0]
 
 eth_mac_1g_rgmii_fifo #(
     .TARGET(TARGET),
     .USE_CLK90("TRUE"),
     .ENABLE_PADDING(1),
     .MIN_FRAME_LENGTH(64),
-    .TX_FIFO_DEPTH(8192),
+    .TX_FIFO_DEPTH(1500),
     .TX_FRAME_FIFO(1),
-    .RX_FIFO_DEPTH(8192),
+    .RX_FIFO_DEPTH(1500),
     .RX_FRAME_FIFO(1)
 )
 eth_mac_inst (
@@ -515,14 +695,14 @@ udp_complete_inst (
 );
 
 axis_fifo #(
-    .DEPTH(8192),
+    .DEPTH(1500),
     .DATA_WIDTH(8),
     .KEEP_ENABLE(0),
     .ID_ENABLE(0),
     .DEST_ENABLE(0),
     .USER_ENABLE(1),
     .USER_WIDTH(1),
-    .FRAME_FIFO(0)
+    .FRAME_FIFO(1)
 )
 udp_payload_fifo (
     .clk(clk),
@@ -539,14 +719,14 @@ udp_payload_fifo (
     .s_axis_tuser(rx_fifo_udp_payload_axis_tuser),
 
     // AXI output
-    .m_axis_tdata(tx_fifo_udp_payload_axis_tdata),
+    .m_axis_tdata(reg_fifo_udp_payload_axis_tdata),
     .m_axis_tkeep(),
-    .m_axis_tvalid(tx_fifo_udp_payload_axis_tvalid),
-    .m_axis_tready(tx_fifo_udp_payload_axis_tready),
-    .m_axis_tlast(tx_fifo_udp_payload_axis_tlast),
+    .m_axis_tvalid(reg_fifo_udp_payload_axis_tvalid),
+    .m_axis_tready(reg_fifo_udp_payload_axis_tready),
+    .m_axis_tlast(reg_fifo_udp_payload_axis_tlast),
     .m_axis_tid(),
     .m_axis_tdest(),
-    .m_axis_tuser(tx_fifo_udp_payload_axis_tuser),
+    .m_axis_tuser(reg_fifo_udp_payload_axis_tuser),
 
     // Status
     .status_overflow(),
@@ -554,7 +734,303 @@ udp_payload_fifo (
     .status_good_frame()
 );
 
+//LED RUN STATUS////////////////////////////////////////////////////////////
+
+assign led[0] = ~rst && sw[1]; //reset_n global encendido cuando run
+assign led[1] = phy0_reset_n && sw[1]; //reset_n phy encendido cuando run
+assign led[2] = CLK_125MHZ && sw[2];
+assign led[3] = ~phy0_int_n && sw[3];
+
+//UART/////////////////////////////////////////////////////////
+wire rx_busy;
+wire tx_busy;
+
+assign led[6]= ocupado && sw[6]; //desactivar indicador con sw
+
+uart(
+	  .clk(clk),
+	  .reset_n(rst || push[1]),
+	  .tx_ena(tx_ena),
+	  .tx_data(tx_data),
+	  .rx(rxd),
+	  .rx_busy(rx_busy),
+	  .rx_error(),
+	  .rx_data(rx_data_s),
+	  .tx_busy(tx_busy),
+	  .tx(txd)
+);
+///////UART RX////////////////////////////////////////////////////
+wire [7:0] rx_data_s;
+reg [7:0] rx_data_reg;
+
+reg [2:0] state_uart = 2'd0;
+reg rx_valid; // pulso para leer rx data
+
+always @(posedge clk) begin
+    if (rst) begin
+        rx_valid <= 0;
+		  rx_data_reg <= 8'd0;
+		  state_uart <= 2'd0;
+    end else begin
+			//estado 0: esperando rx busy
+        if (state_uart == 2'd0) begin 
+				if (rx_busy) begin
+					state_uart <= 2'd1; //pasando a estado 1 cuando rx_busy suba
+				end
+        end
+			//estado 1: esperando a que baje rx_busy
+		  else if (state_uart == 2'd1) begin
+				if (~rx_busy) begin
+					rx_data_reg <= rx_data_s; //guardar por un ciclo en reg
+					rx_valid <= 1; //subir valid cuando rx_busy baje
+					state_uart <= 2'd2; // pasar a estado 2
+				end
+        end 
+		  else begin
+				rx_data_reg <= 8'd0; // borrar registro 
+				rx_valid <= 0; //bajar valid 
+				state_uart <= 2'd0; // volver a estado 0 a esperar otro rx_busy
+		  end
+    end
+end
+
+//UDP CONTROL/////////////////////////////
+//loopback///////////////////////////
+reg rx_loopb;
+
+always @(posedge clk) begin
+    if (rst) begin
+        rx_loopb <= 0;
+    end else begin
+        if (rx_data_reg == 8'h4C) begin //L
+				rx_loopb <= ~rx_loopb;
+        end else begin
+				rx_loopb <= rx_loopb;
+		  end
+    end
+end
+
+assign led[4] = rx_loopb && sw[4]; //decarctivar indicador con sw
+
+////////////////////////////////////////////////////////////
+reg rx_trigger;
+
+always @(posedge clk) begin
+    if (rst) begin
+        rx_trigger <= 0;
+    end else begin
+        if (rx_data_reg == 8'h54) begin //T
+				rx_trigger <= 1; //pulse with a single T
+        end else if (rx_trigger == 1) begin
+				rx_trigger <= 0;
+		  end else begin
+				rx_trigger <= rx_trigger;
+		  end
+    end
+end
+
+////////////////////////////////////////////////////////////
+reg rx_random;
+
+always @(posedge clk) begin
+    if (rst) begin
+        rx_random <= 0;
+    end else begin
+        if (rx_data_reg == 8'h52) begin //R
+				rx_random <= ~rx_random;
+        end else begin
+				rx_random <= rx_random;
+		  end
+    end
+end
+
+assign led[5] = rx_random && sw[5];
+
+// PHY CONTROLLER
+/*------------------*/
+reg mdio_op;
+
+always @(posedge clk) begin
+    if (rst) begin
+        mdio_op <= 1; //default read
+    end else begin
+        if (rx_data_reg == 8'h77) begin //w for write
+				mdio_op <= 0;
+        end else if (rx_data_reg == 8'h72) begin //r for read
+				mdio_op <= 1;
+        end else begin
+				mdio_op <= mdio_op;
+		  end
+    end
+end
+/*------------------*/
+reg [4:0] mdio_phy;
+
+always @(posedge clk) begin
+    if (rst) begin
+        mdio_phy <= 5'b00111; // default 7
+    end else begin
+        if (rx_data_reg[7:5] == 3'b001) begin //8'b001AAAAA 
+				mdio_phy <= rx_data_reg[4:0];
+        end else begin
+				mdio_phy <= mdio_phy;
+		  end
+    end
+end
+/*------------------*/
+reg [4:0] mdio_reg;
+
+always @(posedge clk) begin
+    if (rst) begin
+        mdio_reg <= 5'd0; // default 0
+    end else begin
+        if (rx_data_reg[7:5] == 3'b100) begin //8'b100RRRRR
+				mdio_reg <= rx_data_reg[4:0];
+        end else begin
+				mdio_reg <= mdio_reg;
+		  end
+    end
+end
+/*------------------*/
+reg [15:0] mdio_wdata;
+reg [2:0] state_wdata = 2'd0;
+
+always @(posedge clk) begin
+    if (rst) begin
+		  mdio_wdata <= 16'd0;
+		  state_wdata <= 2'd0;
+    end else begin
+			//estado 0: esperando 'd' por uart
+        if (state_wdata == 2'd0) begin
+				if (rx_data_reg == 8'h64) begin
+					state_wdata <= 2'd1; //pasando a estado 1 cuando se reciba 'd'
+				end
+        end
+			//estado 1: esperando valid 
+		  else if (state_wdata == 2'd1) begin
+				if (rx_valid) begin
+					mdio_wdata <= {rx_data_reg, mdio_wdata[7:0]}; // primero msByte
+					state_wdata <= 2'd2; // pasar a estado 2
+				end
+        end 
+		  else if (state_wdata == 2'd2) begin
+				if (rx_valid) begin
+					mdio_wdata <= {mdio_wdata[15:8], rx_data_reg}; //luego lsByte
+					state_wdata <= 2'd3; // pasar a estado 3
+				end
+		  end
+		  else begin
+				mdio_wdata <= mdio_wdata; // mantener valor 
+				state_wdata <= 2'd0; // pasar a estado 0
+		  end
+    end
+end
+/*------------------*/
+reg mdio_start;
+
+always @(posedge clk) begin
+    if (rst) begin
+        mdio_start <= 0;
+    end else begin
+        if (rx_data_reg == 8'h73) begin //s
+				mdio_start <= 1; //pulse with a single s
+        end else if (mdio_start == 1) begin
+				mdio_start <= 0;
+		  end else begin
+				mdio_start <= mdio_start;
+		  end
+    end
+end
+
+/*------------------*/
+wire mdio_busy;
+assign led[7]= mdio_busy && sw[7];
+
+mdio_controller
+mdio_controller_inst(
+    // System Signals
+    .clk(clk),
+    .rst_n(~rst && ~push[1]),
+
+    // User Interface - Inputs
+    .start(mdio_start),      // Start transaction
+    .rw(mdio_op),         // 1 for read, 0 for write
+    .phy_addr(mdio_phy),   // PHY Address 5b "00AAA"
+    .reg_addr(mdio_reg),   // Register Address 5b "RRRRR"
+    .wdata(mdio_wdata),      // Data to write 16b
+
+    // User Interface - Outputs
+    .rdata(mdio_rdata),      // Data read from PHY 16b
+    .busy(mdio_busy),       // Controller is busy
+    .rvalid(mdio_rvalid),     // Read data is valid
+
+    // PHY Interface
+    .mdc(MDC),        // MDIO Clock
+    .mdio(MDIO)        // MDIO Data
+);
+
+//SEND READ DATA REGISTERS//////////////////////////////////////
+wire [15:0] mdio_rdata;
+reg [15:0] mdio_rdata_reg;
+wire mdio_rvalid;
+reg mdio_read_ready;
+
+always @(posedge clk) begin
+    if (rst) begin
+        mdio_rdata_reg <= 16'd0;
+		  mdio_read_ready <= 0;
+    end else begin
+        if (mdio_rvalid) begin //si mdio valid
+				mdio_rdata_reg <= mdio_rdata; //guardar registro
+				mdio_read_ready <= 1;
+		  end else begin
+				mdio_rdata_reg <= mdio_rdata_reg;
+				mdio_read_ready <= 0;
+		  end
+    end
+end
+
+//UART TX////////////////////////////////////
+reg tx_ena;
+reg [7:0] tx_data;
+reg [2:0] state_uart_tx = 2'd0;
+
+always @(posedge clk) begin
+    if (rst) begin
+		  tx_ena <= 0;
+		  tx_data <= 8'd0;
+		  state_uart_tx <= 2'd0;
+    end else begin
+			//estado 0: esperando mdio_read_ready
+        if (state_uart_tx == 2'd0) begin
+				if (mdio_read_ready) begin
+					tx_data <= mdio_rdata_reg[15:8];
+					tx_ena <= 1;
+					state_uart_tx <= 2'd1;
+				end
+        end
+			//estado 1
+		  else if (state_uart_tx == 2'd1) begin
+				tx_ena <= 0;
+				state_uart_tx <= 2'd2; // pasar a estado 2
+        end 
+		  //estado 2: esperando a que se envie primero 8 bits
+		  else if (state_uart_tx == 2'd2) begin
+				if (~tx_busy) begin
+					tx_data <= mdio_rdata_reg[7:0];
+					tx_ena <= 1;
+					state_uart_tx <= 2'd3; // pasar a estado 3
+				end
+		  end
+		  //estado 3: esperar a que se envie segunda palabra para volver a estado 0
+		  else begin
+				tx_ena <= 0; 
+				if (~tx_busy) begin
+				state_uart_tx <= 2'd0; // pasar a estado 0
+				end
+		  end
+    end
+end
 
 endmodule
-
 `resetall

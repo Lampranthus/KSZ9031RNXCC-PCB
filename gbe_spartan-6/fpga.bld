@@ -15,7 +15,6 @@ Checking Constraint Associations...
 Done...
 
 Checking expanded design ...
-WARNING:NgdBuild:470 - bidirect pad net 'MDIO' has no legal driver
 
 Partition Implementation Status
 -------------------------------
@@ -26,9 +25,9 @@ Partition Implementation Status
 
 NGDBUILD Design Results Summary:
   Number of errors:     0
-  Number of warnings:   1
+  Number of warnings:   0
 
-Total memory usage is 517556 kilobytes
+Total memory usage is 518412 kilobytes
 
 Writing NGD file "fpga.ngd" ...
 Total REAL time to NGDBUILD completion:  3 sec

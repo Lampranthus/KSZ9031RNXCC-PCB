@@ -17028,7 +17028,7 @@
 		(descr "Through hole straight pin header, 1x01, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x01 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.2 -0)
+			(at 0 -2.2 0)
 			(layer "F.SilkS")
 			(uuid "a91c5869-8415-4088-adb7-cc89199a939f")
 			(effects
@@ -21724,7 +21724,7 @@
 	(footprint "LOGO"
 		(layer "B.Cu")
 		(uuid "b635c82d-6f95-4895-abf6-7e0e11f2b2fb")
-		(at 123.975 113.325 180)
+		(at 122.1 114.2 180)
 		(property "Reference" "G***"
 			(at 0 0 0)
 			(layer "B.SilkS")
@@ -38385,7 +38385,7 @@
 		(last_status "tuned")
 		(last_track_width 0.3)
 		(last_tuning "24.5000 mm (tuned)")
-		(max_amplitude 2.05)
+		(max_amplitude 2.049999)
 		(min_amplitude 0.2)
 		(min_spacing 0.6)
 		(origin

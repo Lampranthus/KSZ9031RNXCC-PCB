@@ -1,0 +1,16 @@
+Storage Target: Xilinx Flash/PROM
+Storage Family: Platform Flash
+xcf04s          [4 M]
+FF
+spartan_mdio_ok
+/home/ise/VM_ISE
+
+MCS
+No
+
+S
+No
+
+
+MCS
+No

@@ -24,11 +24,11 @@ NET "led<7>" LOC = "P83";
 // Push buttons
 NET "push<0>" LOC = "P144";
 NET "push<1>" LOC = "P143";
-NET "rst" LOC = "P142";
+NET "push<2>" LOC = "P142";
 
 // UART
-//NET "txd" LOC = "P100";
-//NET "rxd" LOC = "P101";
+NET "txd" LOC = "P100";
+NET "rxd" LOC = "P101";
 
 // Molex
 //NET "molex<0>" LOC = "P141";
@@ -51,9 +51,9 @@ NET "ENET0_RX_CLK" LOC = "P123"; // d2
 NET "ENET0_RX_DATA<1>" LOC = "P121"; // d1
 NET "ENET0_RX_DATA<0>" LOC = "P120"; // d0
 NET "ENET0_RX_DV" LOC = "P119"; // No connection
-NET "V33" LOC = "P118"; // 3.3V when adc on
+NET "V3_3" LOC = "P118"; // 3.3V when adc on
 NET "MDC" LOC = "P117"; // int_rst
-NET "MDIO" LOC = "P115"; // trigg 0 start
-NET "INT_N" LOC = "P116"; // trigg 1 stop
+NET "MDIO" LOC = "P116"; // trigg 0 start
+NET "ENET0_INT_N" LOC = "P115"; // trigg 1 stop
 NET "CLK_125MHZ" LOC = "P114"; // debug 0
-NET "RST_N" LOC = "P112"; // debug 1
+NET "ENET0_RST_N" LOC = "P112"; // debug 1

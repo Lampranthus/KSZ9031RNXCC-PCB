@@ -41,7 +41,7 @@ module fpga (
     /*
      * GPIO
      */
-    input  wire [1:0]  push,
+    input  wire [2:0]  push,
     input  wire [7:0]  sw,
     output wire [7:0]  led,
 	 
@@ -56,10 +56,8 @@ module fpga (
      */
 	 output wire MDC,
 	 inout  wire MDIO,
-	 input  wire V33,
+	 input  wire V3_3,
 	 input  wire CLK_125MHZ,
-	 input  wire INT_N,
-	 output wire RST_N,
 
     /*
      * Ethernet: 1000BASE-T RGMII
@@ -80,26 +78,7 @@ module fpga (
 wire clk_int;
 wire rst_int;
 
-assign led = sw;
-
-assign MDIO = 1'bz;
-assign MDC = 1'b0;
-
-assign txd = 1'b0;
-wire unused_rxd;
-assign unused_rxd = rxd;
-
-wire unused_INT_N;
-assign unused_INT_N = INT_N;
-
-wire unused_V33;
-assign unused_V33 = V33;
-
-wire unused_CLK_125MHZ;
-assign unused_CLK_125MHZ = CLK_125MHZ;
-
-assign RST_N = ~push[0] && ~push[1];
-wire pll_rst = ~rst;
+wire pll_rst = push[2]; // asyncronus reset
 wire pll_locked;
 
 wire clk90_int; //clock 90degre
@@ -128,17 +107,17 @@ wire [1:0] btn_int;
 wire [7:0] sw_int;
 
 debounce_switch #(
-    .WIDTH(4+18),
+    .WIDTH(2+8), // 2 push buttons and 8 switches for multiporpuse.
     .N(4),
     .RATE(125000)
 )
 debounce_switch_inst (
     .clk(clk_int),
     .rst(rst_int),
-    .in({~push,
-        sw}),
-    .out({btn_int,
-        sw_int})
+    .in({push[1:0],
+        sw[7:0]}),
+    .out({btn_int[1:0],
+        sw_int[7:0]})
 );
 
 fpga_core #(
@@ -156,15 +135,23 @@ core_inst (
     /*
      * GPIO
      */
-    //.btn(btn_int),
-    //.sw(sw_int),
-    //.led(led),
+    .push(btn_int),
+    .sw(sw_int),
+    .led(led),
+	 
+	 /*
+     * 1GbE PHY control (KSZ9031RNXCC) 
+     */
+	 .MDC(MDC),
+	 .MDIO(MDIO),
+	 .V3_3(V3_3),
+	 .CLK_125MHZ(CLK_125MHZ),
 	 
 	 /*
      * UART
      */
-	 //.txd(txd),
-	 //.rxd(rxd),
+	 .txd(txd),
+	 .rxd(rxd),
 	
     /*
      * Ethernet: 1000BASE-T RGMII
