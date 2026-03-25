@@ -269,24 +269,17 @@ Elaborating module <BUFG>.
 Elaborating module <sync_reset(N=4)>.
 
 Elaborating module <debounce_switch(WIDTH=10,N=4,RATE=125000)>.
-WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 462: Port tx_axis_tkeep is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 513: Port s_axis_tkeep is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 539: Port s_eth_payload_axis_tkeep is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 697: Port pause_req is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 499: Port tx_axis_tkeep is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 550: Port s_axis_tkeep is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 576: Port s_eth_payload_axis_tkeep is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 734: Port pause_req is not connected to this instance
 
 Elaborating module <fpga_core(TARGET="XILINX")>.
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 240: Using initial value of n_bytes since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 249: Using initial value of tx_fifo_axis_tuser since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 251: Using initial value of off_cycles since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 254: Using initial value of pkt_n since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 425: Using initial value of tx_udp_ip_dest_ip_reg since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 426: Using initial value of tx_udp_source_port_reg since it is never assigned
-WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 427: Using initial value of tx_udp_dest_port_reg since it is never assigned
-WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 320: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 328: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 332: Result of 9-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 375: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 423: Assignment to tx_udp_ip_source_ip ignored, since the identifier is never used
+WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 275: Using initial value of tx_fifo_axis_tuser since it is never assigned
+WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 462: Using initial value of tx_udp_ip_dest_ip_reg since it is never assigned
+WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 463: Using initial value of tx_udp_source_port_reg since it is never assigned
+WARNING:HDLCompiler:872 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 464: Using initial value of tx_udp_dest_port_reg since it is never assigned
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 460: Assignment to tx_udp_ip_source_ip ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 254: Port s_pause_req is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/ise/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 305: Port s_pause_req is not connected to this instance
 
@@ -431,54 +424,54 @@ WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.
 
 Elaborating module <udp_ip_tx>.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/lib/eth/rtl/udp_ip_tx.v" Line 394: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 592: Assignment to tx_ip_hdr_ready ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 602: Assignment to tx_ip_payload_axis_tready ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 606: Assignment to rx_ip_hdr_valid ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 608: Assignment to rx_ip_eth_dest_mac ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 609: Assignment to rx_ip_eth_src_mac ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 610: Assignment to rx_ip_eth_type ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 611: Assignment to rx_ip_version ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 612: Assignment to rx_ip_ihl ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 613: Assignment to rx_ip_dscp ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 614: Assignment to rx_ip_ecn ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 615: Assignment to rx_ip_length ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 616: Assignment to rx_ip_identification ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 617: Assignment to rx_ip_flags ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 618: Assignment to rx_ip_fragment_offset ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 619: Assignment to rx_ip_ttl ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 620: Assignment to rx_ip_protocol ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 621: Assignment to rx_ip_header_checksum ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 622: Assignment to rx_ip_source_ip ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 623: Assignment to rx_ip_dest_ip ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 624: Assignment to rx_ip_payload_axis_tdata ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 625: Assignment to rx_ip_payload_axis_tvalid ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 627: Assignment to rx_ip_payload_axis_tlast ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 628: Assignment to rx_ip_payload_axis_tuser ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 649: Assignment to rx_udp_eth_dest_mac ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 650: Assignment to rx_udp_eth_src_mac ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 651: Assignment to rx_udp_eth_type ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 652: Assignment to rx_udp_ip_version ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 653: Assignment to rx_udp_ip_ihl ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 654: Assignment to rx_udp_ip_dscp ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 655: Assignment to rx_udp_ip_ecn ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 656: Assignment to rx_udp_ip_length ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 657: Assignment to rx_udp_ip_identification ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 658: Assignment to rx_udp_ip_flags ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 659: Assignment to rx_udp_ip_fragment_offset ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 660: Assignment to rx_udp_ip_ttl ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 661: Assignment to rx_udp_ip_protocol ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 662: Assignment to rx_udp_ip_header_checksum ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 664: Assignment to rx_udp_ip_dest_ip ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 668: Assignment to rx_udp_checksum ignored, since the identifier is never used
-WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 693: Size mismatch in connection of port <clear_arp_cache>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 629: Assignment to tx_ip_hdr_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 639: Assignment to tx_ip_payload_axis_tready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 643: Assignment to rx_ip_hdr_valid ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 645: Assignment to rx_ip_eth_dest_mac ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 646: Assignment to rx_ip_eth_src_mac ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 647: Assignment to rx_ip_eth_type ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 648: Assignment to rx_ip_version ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 649: Assignment to rx_ip_ihl ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 650: Assignment to rx_ip_dscp ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 651: Assignment to rx_ip_ecn ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 652: Assignment to rx_ip_length ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 653: Assignment to rx_ip_identification ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 654: Assignment to rx_ip_flags ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 655: Assignment to rx_ip_fragment_offset ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 656: Assignment to rx_ip_ttl ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 657: Assignment to rx_ip_protocol ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 658: Assignment to rx_ip_header_checksum ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 659: Assignment to rx_ip_source_ip ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 660: Assignment to rx_ip_dest_ip ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 661: Assignment to rx_ip_payload_axis_tdata ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 662: Assignment to rx_ip_payload_axis_tvalid ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 664: Assignment to rx_ip_payload_axis_tlast ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 665: Assignment to rx_ip_payload_axis_tuser ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 686: Assignment to rx_udp_eth_dest_mac ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 687: Assignment to rx_udp_eth_src_mac ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 688: Assignment to rx_udp_eth_type ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 689: Assignment to rx_udp_ip_version ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 690: Assignment to rx_udp_ip_ihl ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 691: Assignment to rx_udp_ip_dscp ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 692: Assignment to rx_udp_ip_ecn ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 693: Assignment to rx_udp_ip_length ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 694: Assignment to rx_udp_ip_identification ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 695: Assignment to rx_udp_ip_flags ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 696: Assignment to rx_udp_ip_fragment_offset ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 697: Assignment to rx_udp_ip_ttl ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 698: Assignment to rx_udp_ip_protocol ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 699: Assignment to rx_udp_ip_header_checksum ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 701: Assignment to rx_udp_ip_dest_ip ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 705: Assignment to rx_udp_checksum ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 730: Size mismatch in connection of port <clear_arp_cache>. Formal port size is 1-bit while actual signal size is 32-bit.
 
 Elaborating module <axis_fifo(DEPTH=1500,DATA_WIDTH=8,KEEP_ENABLE=0,ID_ENABLE=0,DEST_ENABLE=0,USER_ENABLE=1,USER_WIDTH=1,FRAME_FIFO=1)>.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 290: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 300: Result of 13-bit expression is truncated to fit in 12-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 399: Result of 13-bit expression is truncated to fit in 12-bit target.
-WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 713: Size mismatch in connection of port <s_axis_tkeep>. Formal port size is 1-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 717: Size mismatch in connection of port <s_axis_tid>. Formal port size is 8-bit while actual signal size is 32-bit.
-WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 718: Size mismatch in connection of port <s_axis_tdest>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 750: Size mismatch in connection of port <s_axis_tkeep>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 754: Size mismatch in connection of port <s_axis_tid>. Formal port size is 8-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:189 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 755: Size mismatch in connection of port <s_axis_tdest>. Formal port size is 8-bit while actual signal size is 32-bit.
 Going to vhdl side to elaborate module uart
 
 Elaborating entity <uart> (architecture <logic>) with generics from library <work>.
@@ -493,10 +486,10 @@ WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/mdio_controller.v" Line 171: 
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/mdio_controller.v" Line 177: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/mdio_controller.v" Line 183: Result of 6-bit expression is truncated to fit in 5-bit target.
 WARNING:HDLCompiler:413 - "/home/ise/gbe_spartan-6/mdio_controller.v" Line 195: Result of 6-bit expression is truncated to fit in 5-bit target.
-WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 472: Input port tx_axis_tkeep[0] is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 514: Input port s_axis_tkeep[0] is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 540: Input port s_eth_payload_axis_tkeep[0] is not connected on this instance
-WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 707: Input port pause_req is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 509: Input port tx_axis_tkeep[0] is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 551: Input port s_axis_tkeep[0] is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 577: Input port s_eth_payload_axis_tkeep[0] is not connected on this instance
+WARNING:HDLCompiler:552 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 744: Input port pause_req is not connected on this instance
 WARNING:Xst:2972 - "/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/arbiter.v" line 91. All outputs of instance <priority_encoder_masked> of block <priority_encoder> are unconnected in block <arbiter>. Underlying logic will be removed.
 
 =========================================================================
@@ -559,94 +552,98 @@ WARNING:Xst:2898 - Port 's_axis_tkeep', unconnected in block instance 'eth_axis_
 WARNING:Xst:2898 - Port 's_eth_payload_axis_tkeep', unconnected in block instance 'eth_axis_tx_inst', is tied to GND.
 WARNING:Xst:2898 - Port 'pause_req', unconnected in block instance 'udp_payload_fifo', is tied to GND.
 WARNING:Xst:647 - Input <V3_3> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_axis_tkeep> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <speed> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <tx_error_underflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <tx_fifo_overflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <tx_fifo_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <tx_fifo_good_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_error_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_error_bad_fcs> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_fifo_overflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_fifo_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 472: Output port <rx_fifo_good_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 514: Output port <m_eth_payload_axis_tkeep> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 514: Output port <busy> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 514: Output port <error_header_early_termination> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 540: Output port <m_axis_tkeep> of the instance <eth_axis_tx_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 540: Output port <busy> of the instance <eth_axis_tx_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_eth_dest_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_eth_src_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_eth_type> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_version> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_ihl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_dscp> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_ecn> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_length> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_identification> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_flags> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_fragment_offset> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_ttl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_protocol> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_header_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_source_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_dest_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_payload_axis_tdata> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_eth_dest_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_eth_src_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_eth_type> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_version> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_ihl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_dscp> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_ecn> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_length> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_identification> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_flags> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_fragment_offset> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_ttl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_protocol> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_header_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_ip_dest_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_udp_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <s_ip_hdr_ready> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <s_ip_payload_axis_tready> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_hdr_valid> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_payload_axis_tvalid> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_payload_axis_tlast> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <m_ip_payload_axis_tuser> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_rx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_tx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <udp_rx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <udp_tx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_rx_error_header_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_rx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_rx_error_invalid_header> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_rx_error_invalid_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_tx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <ip_tx_error_arp_failed> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <udp_rx_error_header_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <udp_rx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 565: Output port <udp_tx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <m_axis_tkeep> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <m_axis_tid> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <m_axis_tdest> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <status_depth> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <status_depth_commit> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <pause_ack> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <status_overflow> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <status_bad_frame> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 707: Output port <status_good_frame> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 750: Output port <rx_error> of the instance <_i000112> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_axis_tkeep> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <speed> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <tx_error_underflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <tx_fifo_overflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <tx_fifo_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <tx_fifo_good_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_error_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_error_bad_fcs> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_fifo_overflow> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_fifo_bad_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 509: Output port <rx_fifo_good_frame> of the instance <eth_mac_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 551: Output port <m_eth_payload_axis_tkeep> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 551: Output port <busy> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 551: Output port <error_header_early_termination> of the instance <eth_axis_rx_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 577: Output port <m_axis_tkeep> of the instance <eth_axis_tx_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 577: Output port <busy> of the instance <eth_axis_tx_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_eth_dest_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_eth_src_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_eth_type> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_version> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_ihl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_dscp> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_ecn> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_length> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_identification> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_flags> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_fragment_offset> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_ttl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_protocol> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_header_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_source_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_dest_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_payload_axis_tdata> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_eth_dest_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_eth_src_mac> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_eth_type> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_version> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_ihl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_dscp> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_ecn> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_length> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_identification> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_flags> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_fragment_offset> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_ttl> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_protocol> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_header_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_ip_dest_ip> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_udp_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <s_ip_hdr_ready> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <s_ip_payload_axis_tready> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_hdr_valid> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_payload_axis_tvalid> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_payload_axis_tlast> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <m_ip_payload_axis_tuser> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_rx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_tx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <udp_rx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <udp_tx_busy> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_rx_error_header_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_rx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_rx_error_invalid_header> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_rx_error_invalid_checksum> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_tx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <ip_tx_error_arp_failed> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <udp_rx_error_header_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <udp_rx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 602: Output port <udp_tx_error_payload_early_termination> of the instance <udp_complete_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <m_axis_tkeep> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <m_axis_tid> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <m_axis_tdest> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <status_depth> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <status_depth_commit> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <pause_ack> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <status_overflow> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <status_bad_frame> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 744: Output port <status_good_frame> of the instance <udp_payload_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 787: Output port <rx_error> of the instance <_i000135> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <off_cycles>.
+    Found 32-bit register for signal <pkt_n>.
+    Found 8-bit register for signal <lfsr>.
     Found 8-bit register for signal <random_data>.
     Found 3-bit register for signal <state>.
     Found 8-bit register for signal <tx_fifo_axis_tdata>.
     Found 8-bit register for signal <tx_fifo_axis_tdata_reg>.
     Found 1-bit register for signal <tx_fifo_axis_tvalid>.
-    Found 16-bit register for signal <cont_reg>.
+    Found 32-bit register for signal <cont_reg>.
     Found 1-bit register for signal <tx_fifo_axis_tlast>.
-    Found 8-bit register for signal <pkt_n_reg>.
-    Found 5-bit register for signal <off_cycles_reg>.
+    Found 32-bit register for signal <pkt_n_reg>.
+    Found 32-bit register for signal <off_cycles_reg>.
     Found 1-bit register for signal <ocupado>.
+    Found 64-bit register for signal <rx_reg>.
     Found 1-bit register for signal <match_cond_reg>.
     Found 1-bit register for signal <no_match_reg>.
     Found 1-bit register for signal <rx_valid>.
@@ -681,7 +678,7 @@ INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 750: Output port 
     Found 1-bit register for signal <tx_ena>.
     Found 8-bit register for signal <tx_data>.
     Found 3-bit register for signal <state_uart_tx>.
-    Found 8-bit register for signal <lfsr>.
+    Found 32-bit register for signal <n_bytes>.
     Found finite state machine <FSM_0> for signal <state>.
     -----------------------------------------------------------------------
     | States             | 7                                              |
@@ -692,7 +689,6 @@ INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 750: Output port 
     | Reset              | rst (positive)                                 |
     | Reset type         | synchronous                                    |
     | Reset State        | 000                                            |
-    | Power Up State     | 000                                            |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
@@ -738,15 +734,22 @@ INFO:Xst:3210 - "/home/ise/gbe_spartan-6/rtl/fpga_core.v" line 750: Output port 
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 16-bit adder for signal <cont_reg[15]_GND_10_o_add_32_OUT> created at line 328.
-    Found 8-bit adder for signal <pkt_n_reg[7]_GND_10_o_add_34_OUT> created at line 332.
-    Found 8-bit adder for signal <tx_fifo_axis_tdata_reg[7]_GND_10_o_add_35_OUT> created at line 337.
-    Found 5-bit adder for signal <off_cycles_reg[4]_GND_10_o_add_56_OUT> created at line 375.
-    Found 8-bit 4-to-1 multiplexer for signal <_n0567> created at line 309.
-    Found 1-bit 4-to-1 multiplexer for signal <_n0606> created at line 1013.
+    Found 32-bit subtractor for signal <n_bytes[31]_GND_10_o_sub_50_OUT> created at line 350.
+    Found 32-bit subtractor for signal <off_cycles[31]_GND_10_o_sub_73_OUT> created at line 392.
+    Found 32-bit adder for signal <cont_reg[31]_GND_10_o_add_48_OUT> created at line 349.
+    Found 32-bit adder for signal <pkt_n_reg[31]_GND_10_o_add_51_OUT> created at line 353.
+    Found 8-bit adder for signal <tx_fifo_axis_tdata_reg[7]_GND_10_o_add_52_OUT> created at line 358.
+    Found 32-bit adder for signal <off_cycles_reg[31]_GND_10_o_add_74_OUT> created at line 396.
+    Found 16-bit adder for signal <n_bytes[15]_GND_10_o_add_129_OUT> created at line 474.
+    Found 8-bit 4-to-1 multiplexer for signal <_n0586> created at line 330.
+    Found 1-bit 4-to-1 multiplexer for signal <_n0625> created at line 1050.
+    Found 32-bit comparator equal for signal <cont_reg[31]_n_bytes[31]_equal_51_o> created at line 350
+    Found 32-bit comparator equal for signal <pkt_n_reg[31]_pkt_n[31]_equal_66_o> created at line 366
+    Found 32-bit comparator equal for signal <off_cycles_reg[31]_off_cycles[31]_equal_74_o> created at line 392
     Summary:
-	inferred   4 Adder/Subtractor(s).
-	inferred 132 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred 359 D-type flip-flop(s).
+	inferred   3 Comparator(s).
 	inferred  30 Multiplexer(s).
 	inferred   4 Finite State Machine(s).
 Unit <fpga_core> synthesized.
@@ -1690,17 +1693,17 @@ WARNING:Xst:647 - Input <s_ip_payload_axis_tdest> is never used. This port will 
     Found 2-bit shifter logical left for signal <s_ip_payload_axis_tready> created at line 79
     Found 24-bit shifter logical right for signal <n0231> created at line 180
     Found 3-bit shifter logical right for signal <n0232> created at line 187
-    Found 1x6-bit multiplier for signal <grant_encoded[0]_PWR_32_o_MuLt_28_OUT> created at line 247.
+    Found 1x6-bit multiplier for signal <grant_encoded[0]_PWR_33_o_MuLt_28_OUT> created at line 247.
     Found 144-bit shifter logical right for signal <n0239> created at line 248
     Found 48-bit shifter logical right for signal <n0241> created at line 255
     Found 12-bit shifter logical right for signal <n0242> created at line 251
-    Found 1x3-bit multiplier for signal <grant_encoded[0]_PWR_32_o_MuLt_35_OUT> created at line 252.
+    Found 1x3-bit multiplier for signal <grant_encoded[0]_PWR_33_o_MuLt_35_OUT> created at line 252.
     Found 18-bit shifter logical right for signal <n0245> created at line 252
     Found 6-bit shifter logical right for signal <n0246> created at line 253
     Found 48-bit shifter logical right for signal <n0247> created at line 254
-    Found 1x2-bit multiplier for signal <grant_encoded[0]_PWR_32_o_MuLt_40_OUT> created at line 256.
+    Found 1x2-bit multiplier for signal <grant_encoded[0]_PWR_33_o_MuLt_40_OUT> created at line 256.
     Found 9-bit shifter logical right for signal <n0250> created at line 256
-    Found 1x4-bit multiplier for signal <grant_encoded[0]_PWR_32_o_MuLt_42_OUT> created at line 257.
+    Found 1x4-bit multiplier for signal <grant_encoded[0]_PWR_33_o_MuLt_42_OUT> created at line 257.
     Found 39-bit shifter logical right for signal <n0252> created at line 257
     Found 24-bit shifter logical right for signal <n0253> created at line 258
     Found 24-bit shifter logical right for signal <n0254> created at line 259
@@ -1794,7 +1797,7 @@ WARNING:Xst:647 - Input <s_eth_payload_axis_tdest> is never used. This port will
     Found 2-bit shifter logical left for signal <s_eth_payload_axis_tready> created at line 66
     Found 24-bit shifter logical right for signal <n0124> created at line 128
     Found 3-bit shifter logical right for signal <n0125> created at line 135
-    Found 1x6-bit multiplier for signal <grant_encoded[0]_PWR_36_o_MuLt_15_OUT> created at line 182.
+    Found 1x6-bit multiplier for signal <grant_encoded[0]_PWR_37_o_MuLt_15_OUT> created at line 182.
     Found 144-bit shifter logical right for signal <n0132> created at line 182
     Found 144-bit shifter logical right for signal <n0133> created at line 183
     Found 48-bit shifter logical right for signal <n0134> created at line 184
@@ -2942,12 +2945,12 @@ Synthesizing Unit <uart>.
     Found 4-bit adder for signal <os_count[3]_GND_59_o_add_18_OUT> created at line 128.
     Found 4-bit adder for signal <rx_count[3]_GND_59_o_add_20_OUT> created at line 132.
     Found 4-bit adder for signal <tx_count[3]_GND_59_o_add_46_OUT> created at line 180.
-    Found 11-bit comparator greater for signal <count_baud[10]_PWR_56_o_LessThan_1_o> created at line 76
-    Found 7-bit comparator greater for signal <GND_59_o_PWR_56_o_LessThan_5_o> created at line 85
+    Found 11-bit comparator greater for signal <count_baud[10]_PWR_57_o_LessThan_1_o> created at line 76
+    Found 7-bit comparator greater for signal <GND_59_o_PWR_57_o_LessThan_5_o> created at line 85
     Found 4-bit comparator greater for signal <os_count[3]_GND_59_o_LessThan_10_o> created at line 112
-    Found 4-bit comparator greater for signal <os_count[3]_PWR_56_o_LessThan_18_o> created at line 127
-    Found 4-bit comparator greater for signal <rx_count[3]_PWR_56_o_LessThan_20_o> created at line 130
-    Found 4-bit comparator greater for signal <tx_count[3]_PWR_56_o_LessThan_50_o> created at line 183
+    Found 4-bit comparator greater for signal <os_count[3]_PWR_57_o_LessThan_18_o> created at line 127
+    Found 4-bit comparator greater for signal <rx_count[3]_PWR_57_o_LessThan_20_o> created at line 130
+    Found 4-bit comparator greater for signal <tx_count[3]_PWR_57_o_LessThan_50_o> created at line 183
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred  65 D-type flip-flop(s).
@@ -3023,7 +3026,7 @@ Macro Statistics
  3x1-bit multiplier                                    : 1
  4x1-bit multiplier                                    : 1
  6x1-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 77
+# Adders/Subtractors                                   : 80
  11-bit adder                                          : 1
  12-bit adder                                          : 8
  12-bit subtractor                                     : 12
@@ -3034,37 +3037,39 @@ Macro Statistics
  24-bit adder                                          : 1
  3-bit adder                                           : 3
  3-bit subtractor                                      : 1
- 32-bit adder                                          : 3
+ 32-bit adder                                          : 6
+ 32-bit subtractor                                     : 2
  36-bit subtractor                                     : 1
  4-bit adder                                           : 7
  4-bit subtractor                                      : 1
- 5-bit adder                                           : 4
+ 5-bit adder                                           : 3
  6-bit adder                                           : 4
  6-bit subtractor                                      : 2
  7-bit adder                                           : 2
- 8-bit adder                                           : 3
+ 8-bit adder                                           : 2
  9-bit adder                                           : 1
-# Registers                                            : 872
+# Registers                                            : 876
  1-bit register                                        : 548
  10-bit register                                       : 5
  11-bit register                                       : 1
  12-bit register                                       : 44
  13-bit register                                       : 6
- 16-bit register                                       : 55
+ 16-bit register                                       : 54
  2-bit register                                        : 34
  24-bit register                                       : 1
  3-bit register                                        : 11
- 32-bit register                                       : 25
+ 32-bit register                                       : 31
  36-bit register                                       : 1
  4-bit register                                        : 23
  40-bit register                                       : 1
  48-bit register                                       : 35
- 5-bit register                                        : 7
+ 5-bit register                                        : 6
  6-bit register                                        : 12
+ 64-bit register                                       : 1
  7-bit register                                        : 2
- 8-bit register                                        : 58
+ 8-bit register                                        : 57
  9-bit register                                        : 3
-# Comparators                                          : 34
+# Comparators                                          : 37
  1-bit comparator equal                                : 2
  1-bit comparator not equal                            : 1
  11-bit comparator greater                             : 1
@@ -3073,7 +3078,7 @@ Macro Statistics
  16-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  3-bit comparator equal                                : 1
- 32-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 4
  32-bit comparator greater                             : 1
  32-bit comparator not equal                           : 1
  4-bit comparator equal                                : 1
@@ -3092,19 +3097,19 @@ Macro Statistics
  10-bit 2-to-1 multiplexer                             : 1
  11-bit 2-to-1 multiplexer                             : 1
  12-bit 2-to-1 multiplexer                             : 38
- 16-bit 2-to-1 multiplexer                             : 35
+ 16-bit 2-to-1 multiplexer                             : 33
  2-bit 2-to-1 multiplexer                              : 7
  24-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 3
- 32-bit 2-to-1 multiplexer                             : 20
+ 32-bit 2-to-1 multiplexer                             : 25
  36-bit 2-to-1 multiplexer                             : 3
  4-bit 2-to-1 multiplexer                              : 12
  48-bit 2-to-1 multiplexer                             : 4
- 5-bit 2-to-1 multiplexer                              : 14
+ 5-bit 2-to-1 multiplexer                              : 12
  6-bit 2-to-1 multiplexer                              : 12
  7-bit 2-to-1 multiplexer                              : 4
  8-bit 15-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 55
+ 8-bit 2-to-1 multiplexer                              : 54
  8-bit 22-to-1 multiplexer                             : 1
  8-bit 27-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 2
@@ -3154,6 +3159,38 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 INFO:Xst:2261 - The FF/Latch <m_eth_type_reg_0> in Unit <ip_eth_tx_inst> is equivalent to the following 61 FFs/Latches, which will be removed : <m_eth_type_reg_1> <m_eth_type_reg_2> <m_eth_type_reg_3> <m_eth_type_reg_4> <m_eth_type_reg_5> <m_eth_type_reg_6> <m_eth_type_reg_7> <m_eth_type_reg_8> <m_eth_type_reg_9> <m_eth_type_reg_10> <m_eth_type_reg_12> <m_eth_type_reg_13> <m_eth_type_reg_14> <m_eth_type_reg_15> <m_eth_src_mac_reg_0> <m_eth_src_mac_reg_1> <m_eth_src_mac_reg_2> <m_eth_src_mac_reg_3> <m_eth_src_mac_reg_4> <m_eth_src_mac_reg_5> <m_eth_src_mac_reg_6> <m_eth_src_mac_reg_7> <m_eth_src_mac_reg_8> <m_eth_src_mac_reg_9> <m_eth_src_mac_reg_10> <m_eth_src_mac_reg_11> <m_eth_src_mac_reg_12> <m_eth_src_mac_reg_13> <m_eth_src_mac_reg_14> <m_eth_src_mac_reg_15> <m_eth_src_mac_reg_16> <m_eth_src_mac_reg_17> <m_eth_src_mac_reg_18> <m_eth_src_mac_reg_19> <m_eth_src_mac_reg_20> <m_eth_src_mac_reg_21> <m_eth_src_mac_reg_22> <m_eth_src_mac_reg_23> <m_eth_src_mac_reg_24> <m_eth_src_mac_reg_25>
    <m_eth_src_mac_reg_26> <m_eth_src_mac_reg_27> <m_eth_src_mac_reg_28> <m_eth_src_mac_reg_29> <m_eth_src_mac_reg_30> <m_eth_src_mac_reg_31> <m_eth_src_mac_reg_32> <m_eth_src_mac_reg_33> <m_eth_src_mac_reg_34> <m_eth_src_mac_reg_35> <m_eth_src_mac_reg_36> <m_eth_src_mac_reg_37> <m_eth_src_mac_reg_38> <m_eth_src_mac_reg_39> <m_eth_src_mac_reg_40> <m_eth_src_mac_reg_42> <m_eth_src_mac_reg_43> <m_eth_src_mac_reg_44> <m_eth_src_mac_reg_45> <m_eth_src_mac_reg_46> <m_eth_src_mac_reg_47> 
 INFO:Xst:2261 - The FF/Latch <m_eth_type_reg_11> in Unit <ip_eth_tx_inst> is equivalent to the following FF/Latch, which will be removed : <m_eth_src_mac_reg_41> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_28> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_28> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_27> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_27> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_26> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_26> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_25> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_25> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_24> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_24> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_18> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_18> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_8> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_8> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_17> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_17> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_22> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_22> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_9> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_9> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_16> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_16> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_15> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_15> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_20> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_20> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_7> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_7> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_14> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_14> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_6> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_6> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_13> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_13> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_31> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_31> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_5> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_5> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_12> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_12> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_30> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_30> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_4> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_4> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_11> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_11> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_19> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_19> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_3> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_3> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_10> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_10> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_0> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_0> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_23> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_23> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_2> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_2> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_1> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_1> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_21> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_21> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_29> in Unit <arp_inst> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_29> 
 INFO:Xst:2261 - The FF/Latch <ip_ttl_reg_0> in Unit <udp_checksum_gen_inst> is equivalent to the following 31 FFs/Latches, which will be removed : <ip_ttl_reg_1> <ip_ttl_reg_2> <ip_ttl_reg_3> <ip_ttl_reg_4> <ip_ttl_reg_5> <ip_ttl_reg_7> <ip_source_ip_reg_0> <ip_source_ip_reg_1> <ip_source_ip_reg_2> <ip_source_ip_reg_3> <ip_source_ip_reg_4> <ip_source_ip_reg_5> <ip_source_ip_reg_6> <ip_source_ip_reg_9> <ip_source_ip_reg_10> <ip_source_ip_reg_11> <ip_source_ip_reg_12> <ip_source_ip_reg_13> <ip_source_ip_reg_14> <ip_source_ip_reg_15> <ip_source_ip_reg_16> <ip_source_ip_reg_17> <ip_source_ip_reg_18> <ip_source_ip_reg_20> <ip_source_ip_reg_22> <ip_source_ip_reg_24> <ip_source_ip_reg_25> <ip_source_ip_reg_26> <ip_source_ip_reg_27> <ip_source_ip_reg_28> <ip_source_ip_reg_29> 
 INFO:Xst:2261 - The FF/Latch <ip_ttl_reg_6> in Unit <udp_checksum_gen_inst> is equivalent to the following 7 FFs/Latches, which will be removed : <ip_source_ip_reg_7> <ip_source_ip_reg_8> <ip_source_ip_reg_19> <ip_source_ip_reg_21> <ip_source_ip_reg_23> <ip_source_ip_reg_30> <ip_source_ip_reg_31> 
 INFO:Xst:2261 - The FF/Latch <m_ip_protocol_reg_1> in Unit <udp_ip_tx_inst> is equivalent to the following 5 FFs/Latches, which will be removed : <m_ip_protocol_reg_2> <m_ip_protocol_reg_3> <m_ip_protocol_reg_5> <m_ip_protocol_reg_6> <m_ip_protocol_reg_7> 
@@ -3404,7 +3441,7 @@ INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the 
     |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <mem_write>     | high     |
     |     addrA          | connected to signal <wr_ptr_reg>    |          |
-    |     diA            | connected to signal <clear_cache_reg_INV_285_o> |          |
+    |     diA            | connected to signal <clear_cache_reg_INV_286_o> |          |
     -----------------------------------------------------------------------
     | Port B                                                              |
     |     aspect ratio   | 512-word x 1-bit                    |          |
@@ -4089,7 +4126,7 @@ Macro Statistics
  3x1-bit multiplier                                    : 1
  4x1-bit multiplier                                    : 1
  6x1-bit multiplier                                    : 2
-# Adders/Subtractors                                   : 61
+# Adders/Subtractors                                   : 64
  12-bit adder                                          : 6
  12-bit subtractor                                     : 12
  16-bit adder                                          : 5
@@ -4097,11 +4134,12 @@ Macro Statistics
  17-bit adder                                          : 12
  2-bit adder                                           : 1
  3-bit subtractor                                      : 1
- 32-bit adder                                          : 3
+ 32-bit adder                                          : 5
+ 32-bit subtractor                                     : 2
  36-bit subtractor                                     : 1
  4-bit adder                                           : 4
  4-bit subtractor                                      : 1
- 5-bit adder                                           : 4
+ 5-bit adder                                           : 3
  6-bit adder                                           : 1
  6-bit subtractor                                      : 1
  7-bit adder                                           : 2
@@ -4113,13 +4151,13 @@ Macro Statistics
  16-bit up counter                                     : 1
  24-bit up counter                                     : 1
  3-bit up counter                                      : 3
+ 32-bit up counter                                     : 1
  4-bit up counter                                      : 3
  6-bit down counter                                    : 1
  6-bit up counter                                      : 3
- 8-bit up counter                                      : 1
-# Registers                                            : 5207
- Flip-Flops                                            : 5207
-# Comparators                                          : 34
+# Registers                                            : 5410
+ Flip-Flops                                            : 5410
+# Comparators                                          : 37
  1-bit comparator equal                                : 2
  1-bit comparator not equal                            : 1
  11-bit comparator greater                             : 1
@@ -4128,7 +4166,7 @@ Macro Statistics
  16-bit comparator greater                             : 1
  24-bit comparator greater                             : 1
  3-bit comparator equal                                : 1
- 32-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 4
  32-bit comparator greater                             : 1
  32-bit comparator not equal                           : 1
  4-bit comparator equal                                : 1
@@ -4148,14 +4186,14 @@ Macro Statistics
  1-bit 8-to-1 multiplexer                              : 9
  10-bit 2-to-1 multiplexer                             : 1
  12-bit 2-to-1 multiplexer                             : 38
- 16-bit 2-to-1 multiplexer                             : 30
+ 16-bit 2-to-1 multiplexer                             : 28
  2-bit 2-to-1 multiplexer                              : 7
  3-bit 2-to-1 multiplexer                              : 1
- 32-bit 2-to-1 multiplexer                             : 18
+ 32-bit 2-to-1 multiplexer                             : 22
  36-bit 2-to-1 multiplexer                             : 3
  4-bit 2-to-1 multiplexer                              : 10
  48-bit 2-to-1 multiplexer                             : 4
- 5-bit 2-to-1 multiplexer                              : 14
+ 5-bit 2-to-1 multiplexer                              : 12
  6-bit 2-to-1 multiplexer                              : 8
  7-bit 2-to-1 multiplexer                              : 4
  8-bit 15-to-1 multiplexer                             : 1
@@ -4683,6 +4721,38 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_ip_protocol_reg_6
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <m_ip_protocol_reg_7> has a constant value of 0 in block <udp_ip_tx>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <mark_frame_reg> has a constant value of 0 in block <axis_fifo_2>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <m_eth_src_mac_reg_41> in Unit <ip_eth_tx> is equivalent to the following FF/Latch, which will be removed : <m_eth_type_reg_11> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_28> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_28> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_27> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_27> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_26> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_26> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_25> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_25> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_24> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_24> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_18> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_18> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_8> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_8> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_17> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_17> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_22> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_22> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_9> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_9> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_16> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_16> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_15> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_15> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_20> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_20> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_7> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_7> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_14> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_14> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_6> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_6> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_13> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_13> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_31> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_31> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_5> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_5> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_12> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_12> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_30> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_30> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_4> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_4> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_11> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_11> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_19> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_19> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_3> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_3> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_10> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_10> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_0> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_0> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_23> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_23> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_2> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_2> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_1> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_1> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_21> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_21> 
+INFO:Xst:2261 - The FF/Latch <cache_query_request_ip_reg_29> in Unit <arp> is equivalent to the following FF/Latch, which will be removed : <arp_request_ip_reg_29> 
 INFO:Xst:2261 - The FF/Latch <m_ip_protocol_reg_0> in Unit <udp_ip_rx> is equivalent to the following FF/Latch, which will be removed : <m_ip_protocol_reg_4> 
 INFO:Xst:2261 - The FF/Latch <ip_ttl_reg_6> in Unit <udp_checksum_gen> is equivalent to the following 7 FFs/Latches, which will be removed : <ip_source_ip_reg_7> <ip_source_ip_reg_8> <ip_source_ip_reg_19> <ip_source_ip_reg_21> <ip_source_ip_reg_23> <ip_source_ip_reg_30> <ip_source_ip_reg_31> 
 INFO:Xst:2261 - The FF/Latch <m_ip_protocol_reg_0> in Unit <udp_ip_tx> is equivalent to the following FF/Latch, which will be removed : <m_ip_protocol_reg_4> 
@@ -4765,6 +4835,15 @@ Optimizing FSM <core_inst/FSM_3> on signal <state_wdata[1:2]> with sequential en
  011   | 11
 -------------------
 Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <core_inst/FSM_2> on signal <state_uart[1:2]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <core_inst/FSM_1> on signal <state_uart_tx[1:2]> with gray encoding.
 -------------------
  State | Encoding
@@ -4773,15 +4852,6 @@ Optimizing FSM <core_inst/FSM_1> on signal <state_uart_tx[1:2]> with gray encodi
  001   | 01
  010   | 11
  011   | 10
--------------------
-Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <core_inst/FSM_2> on signal <state_uart[1:2]> with sequential encoding.
--------------------
- State | Encoding
--------------------
- 000   | 00
- 001   | 01
- 010   | 10
 -------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <core_inst/FSM_0> on signal <state[1:3]> with user encoding.
@@ -6447,21 +6517,12 @@ WARNING:Xst:2677 - Node <core_inst/udp_payload_fifo/depth_commit_reg_1> of seque
 WARNING:Xst:2677 - Node <core_inst/udp_payload_fifo/depth_commit_reg_0> of sequential type is unconnected in block <fpga>.
 WARNING:Xst:2677 - Node <core_inst/udp_payload_fifo/good_frame_reg> of sequential type is unconnected in block <fpga>.
 WARNING:Xst:2677 - Node <core_inst/udp_payload_fifo/overflow_reg> of sequential type is unconnected in block <fpga>.
-WARNING:Xst:2677 - Node <core_inst/_i000112/rx_buffer_0> of sequential type is unconnected in block <fpga>.
-WARNING:Xst:2677 - Node <core_inst/_i000112/rx_error> of sequential type is unconnected in block <fpga>.
+WARNING:Xst:2677 - Node <core_inst/_i000135/rx_buffer_0> of sequential type is unconnected in block <fpga>.
+WARNING:Xst:2677 - Node <core_inst/_i000135/rx_error> of sequential type is unconnected in block <fpga>.
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem61>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem62> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem3> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem1> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ecn_mem2>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ecn_mem1> are equivalent, second RAM is removed
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_20> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_16> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_14> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_13> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_12> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_11> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_10> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_9> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
@@ -6482,24 +6543,13 @@ WARNING:Xst:1293 - FF/Latch <debounce_switch_inst/cnt_reg_20> has a constant val
 WARNING:Xst:1293 - FF/Latch <debounce_switch_inst/cnt_reg_19> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <debounce_switch_inst/cnt_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <debounce_switch_inst/cnt_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_13> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_14> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_16> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_20> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_22> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_24> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_25> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_26> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_27> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_28> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_29> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_2> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_5> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_3> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_4> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_13> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_14> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_16> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_20> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_22> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_24> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_25> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
@@ -6507,10 +6557,12 @@ WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_in
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_27> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_28> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_29> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_9> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_10> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_11> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_12> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_2> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_5> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_3> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_4> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_11> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_12> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_29> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_28> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_27> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
@@ -6518,17 +6570,17 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_compl
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_25> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_24> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_22> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_20> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_16> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_14> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_13> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_12> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_11> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_9> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_10> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_11> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_12> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_13> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_14> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_15> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_16> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_17> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_18> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_20> has a constant value of 0 in block <fpga>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_25> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_13> <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_1> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_31> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_30> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_26> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_14> <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_2> 
@@ -6550,27 +6602,18 @@ INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_arb_mux_inst/m_ip_p
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_24> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_12> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_0> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_25> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_13> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_1> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_31> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_30> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_0> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_0> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_26> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_14> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_2> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_27> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_15> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_3> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_1> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_1> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_28> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_16> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_4> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_2> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_2> 
 INFO:Xst:2261 - The FF/Latch <core_inst/eth_axis_tx_inst/eth_type_reg_2> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/eth_axis_tx_inst/eth_type_reg_1> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_3> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_3> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_29> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_17> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_5> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_4> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_4> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_11> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_2> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_1> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_5> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_5> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_6> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_6> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_7> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_7> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_ttl_reg_6> in Unit <fpga> is equivalent to the following 5 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_10> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_7> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_6> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_4> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_1> 
 INFO:Xst:2261 - The FF/Latch <core_inst/state_uart_FSM_FFd1> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/rx_valid> 
 INFO:Xst:2261 - The FF/Latch <core_inst/eth_axis_tx_inst/eth_type_reg_11> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/eth_axis_tx_inst/eth_src_mac_reg_41> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_src_mac_reg_41> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_11> 
+INFO:Xst:2261 - The FF/Latch <core_inst/_i000135/rx_busy> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/_i000135/rx_state> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_src_mac_reg_41> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_flags_reg_1> 
-INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_31> in Unit <fpga> is equivalent to the following 11 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_30> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_23> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_21> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_19> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_8> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_31> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_30> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_23> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_21> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_19>
-   <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_8> 
 INFO:Xst:2261 - The FF/Latch <core_inst/eth_mac_inst/tx_fifo/fifo_inst/m_rst_sync1_reg> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/tx_rst_reg_3> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_protocol_reg_4> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_protocol_reg_0> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_24> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_12> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_0> 
@@ -6580,12 +6623,12 @@ INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_27> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_15> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_3> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_28> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_16> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_4> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_29> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_17> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_5> 
+INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_31> in Unit <fpga> is equivalent to the following 5 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_30> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_23> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_21> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_19> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_8> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_31> in Unit <fpga> is equivalent to the following 5 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_30> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_23> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_21> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_19> <core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_8> 
 INFO:Xst:2261 - The FF/Latch <core_inst/eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_gray_reg_11> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_reg_11> 
 INFO:Xst:2261 - The FF/Latch <core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_11> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_reg_11> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ecn_reg_1> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ecn_reg_0> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_ecn_reg_1> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_ecn_reg_0> 
-INFO:Xst:2261 - The FF/Latch <core_inst/_i000112/rx_busy> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/_i000112/rx_state> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_2> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_1> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_24> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_12> <core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_0> 
 INFO:Xst:3203 - The FF/Latch <core_inst/eth_axis_rx_inst/read_eth_payload_reg> in Unit <fpga> is the opposite to the following FF/Latch, which will be removed : <core_inst/eth_axis_rx_inst/read_eth_header_reg> 
@@ -6603,7 +6646,9 @@ INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem34>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ecn_mem2> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1> are equivalent, second RAM is removed
 INFO:Xst:2399 - RAMs <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5>, <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dscp_mem> are equivalent, second RAM is removed
-Found area constraint ratio of 100 (+ 5) on block fpga, actual ratio is 98.
+Found area constraint ratio of 100 (+ 5) on block fpga, actual ratio is 107.
+Optimizing block <fpga> to meet ratio 100 (+ 5) of 1430 slices :
+Area constraint is met for block <fpga>, final ratio is 100.
 INFO:Xst:2260 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_udp_source_port_reg_15> in Unit <fpga> is equivalent to the following 5 FFs/Latches : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_udp_source_port_reg_14> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_udp_source_port_reg_13> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_udp_source_port_reg_12> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_ttl_reg_7> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_ecn_reg_1> 
 INFO:Xst:2260 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_24> in Unit <fpga> is equivalent to the following 2 FFs/Latches : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_ttl_reg_0> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_dscp_reg_0> 
 INFO:Xst:2260 - The FF/Latch <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_25> in Unit <fpga> is equivalent to the following 2 FFs/Latches : <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_ttl_reg_1> <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_dscp_reg_1> 
@@ -6644,11 +6689,6 @@ INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_in
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_dscp_reg_4> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_28> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ttl_reg_4> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_dscp_reg_5> in Unit <fpga> is equivalent to the following 2 FFs/Latches, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_29> <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ttl_reg_5> 
 INFO:Xst:2261 - The FF/Latch <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ecn_reg_1> in Unit <fpga> is equivalent to the following FF/Latch, which will be removed : <core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_ttl_reg_7> 
-FlipFlop core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/ptr_reg_0 has been replicated 1 time(s)
-FlipFlop core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/ptr_reg_1 has been replicated 1 time(s)
-FlipFlop core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/ptr_reg_2 has been replicated 2 time(s)
-FlipFlop core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/ptr_reg_3 has been replicated 1 time(s)
-FlipFlop core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/ptr_reg_4 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -6664,8 +6704,8 @@ Unit <fpga> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 3122
- Flip-Flops                                            : 3122
+# Registers                                            : 3343
+ Flip-Flops                                            : 3343
 # Shift Registers                                      : 3
  2-bit shift register                                  : 3
 
@@ -6690,30 +6730,31 @@ Top Level Output File Name         : fpga.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4151
+# BELS                             : 4742
 #      GND                         : 1
-#      INV                         : 64
-#      LUT1                        : 161
+#      INV                         : 126
+#      LUT1                        : 211
 #      LUT2                        : 405
-#      LUT3                        : 698
-#      LUT4                        : 250
-#      LUT5                        : 449
-#      LUT6                        : 971
-#      MUXCY                       : 556
-#      MUXF7                       : 44
+#      LUT3                        : 848
+#      LUT4                        : 269
+#      LUT5                        : 437
+#      LUT6                        : 993
+#      MUXCY                       : 725
+#      MUXF7                       : 40
 #      MUXF8                       : 9
 #      VCC                         : 1
-#      XORCY                       : 542
-# FlipFlops/Latches                : 3136
+#      XORCY                       : 677
+# FlipFlops/Latches                : 3357
 #      FD                          : 100
 #      FDC                         : 63
 #      FDCE                        : 96
 #      FDE                         : 2007
 #      FDP                         : 15
 #      FDR                         : 272
-#      FDRE                        : 496
+#      FDRE                        : 646
+#      FDRE_1                      : 64
 #      FDS                         : 9
-#      FDSE                        : 67
+#      FDSE                        : 74
 #      IDDR2                       : 5
 #      ODDR2                       : 6
 # RAMS                             : 47
@@ -6741,19 +6782,19 @@ Selected Device : 6slx9tqg144-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            3136  out of  11440    27%  
- Number of Slice LUTs:                 3113  out of   5720    54%  
-    Number used as Logic:              2998  out of   5720    52%  
+ Number of Slice Registers:            3357  out of  11440    29%  
+ Number of Slice LUTs:                 3404  out of   5720    59%  
+    Number used as Logic:              3289  out of   5720    57%  
     Number used as Memory:              115  out of   1440     7%  
        Number used as RAM:              112
        Number used as SRL:                3
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   4481
-   Number with an unused Flip Flop:    1345  out of   4481    30%  
-   Number with an unused LUT:          1368  out of   4481    30%  
-   Number of fully used LUT-FF pairs:  1768  out of   4481    39%  
-   Number of unique control sets:       154
+ Number of LUT Flip Flop pairs used:   4893
+   Number with an unused Flip Flop:    1536  out of   4893    31%  
+   Number with an unused LUT:          1489  out of   4893    30%  
+   Number of fully used LUT-FF pairs:  1868  out of   4893    38%  
+   Number of unique control sets:       158
 
 IO Utilization: 
  Number of IOs:                          41
@@ -6786,7 +6827,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-_i000001/pll_base_inst/CLKOUT0     | BUFG                   | 2994  |
+_i000001/pll_base_inst/CLKOUT0     | BUFG                   | 3215  |
 ENET0_RX_CLK                       | IBUFG+BUFG             | 203   |
 _i000001/pll_base_inst/CLKOUT1     | BUFG                   | 2     |
 -----------------------------------+------------------------+-------+
@@ -6799,9 +6840,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 9.059ns (Maximum Frequency: 110.387MHz)
+   Minimum period: 10.066ns (Maximum Frequency: 99.344MHz)
    Minimum input arrival time before clock: 5.275ns
-   Maximum output required time after clock: 6.956ns
+   Maximum output required time after clock: 7.020ns
    Maximum combinational path delay: 5.961ns
 
 Timing Details:
@@ -6810,35 +6851,31 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock '_i000001/pll_base_inst/CLKOUT0'
-  Clock period: 9.059ns (frequency: 110.387MHz)
-  Total number of paths / destination ports: 382995 / 7003
+  Clock period: 10.066ns (frequency: 99.344MHz)
+  Total number of paths / destination ports: 446099 / 7666
 -------------------------------------------------------------------------
-Delay:               9.059ns (Levels of Logic = 6)
-  Source:            core_inst/eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_10 (FF)
-  Destination:       core_inst/eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_11 (FF)
-  Source Clock:      _i000001/pll_base_inst/CLKOUT0 rising
+Delay:               5.033ns (Levels of Logic = 2)
+  Source:            core_inst/rx_reg_60 (FF)
+  Destination:       core_inst/n_bytes_31 (FF)
+  Source Clock:      _i000001/pll_base_inst/CLKOUT0 falling
   Destination Clock: _i000001/pll_base_inst/CLKOUT0 rising
 
-  Data Path: core_inst/eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_10 to core_inst/eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_11
+  Data Path: core_inst/rx_reg_60 to core_inst/n_bytes_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDR:C->Q              2   0.525   1.181  core_inst/eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_10 (core_inst/eth_mac_inst/tx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_10)
-     LUT6:I0->O            1   0.254   0.790  core_inst/eth_mac_inst/tx_fifo/fifo_inst/s_axis_tready9 (core_inst/eth_mac_inst/tx_fifo/fifo_inst/s_axis_tready8)
-     LUT6:I4->O            1   0.250   0.682  core_inst/eth_mac_inst/tx_fifo/fifo_inst/s_axis_tready11_SW0_SW0 (N262)
-     LUT6:I5->O            1   0.254   0.682  core_inst/eth_mac_inst/tx_fifo/fifo_inst/s_axis_tready11_SW0 (N212)
-     LUT6:I5->O           16   0.254   1.182  core_inst/eth_mac_inst/tx_fifo/fifo_inst/s_axis_tready11 (core_inst/tx_axis_tready)
-     LUT6:I5->O           13   0.254   1.098  core_inst/eth_mac_inst/tx_fifo/fifo_inst/Mmux_wr_ptr_sync_commit_reg[11]_GND_26_o_mux_52_OUT1101 (core_inst/eth_mac_inst/tx_fifo/fifo_inst/Mmux_wr_ptr_sync_commit_reg[11]_GND_26_o_mux_52_OUT110)
-     LUT5:I4->O           13   0.254   1.097  core_inst/eth_mac_inst/tx_fifo/fifo_inst/_n0544_inv1 (core_inst/eth_mac_inst/tx_fifo/fifo_inst/_n0544_inv)
-     FDRE:CE                   0.302          core_inst/eth_mac_inst/tx_fifo/fifo_inst/wr_ptr_sync_commit_reg_0
+     FDRE_1:C->Q           1   0.525   1.137  core_inst/rx_reg_60 (core_inst/rx_reg_60)
+     LUT6:I0->O            3   0.254   1.042  core_inst/_n0991_inv14 (core_inst/_n0991_inv14)
+     LUT6:I2->O           32   0.254   1.519  core_inst/_n0991_inv17 (core_inst/_n0991_inv1)
+     FDSE:CE                   0.302          core_inst/off_cycles_0
     ----------------------------------------
-    Total                      9.059ns (2.347ns logic, 6.712ns route)
-                                       (25.9% logic, 74.1% route)
+    Total                      5.033ns (1.335ns logic, 3.698ns route)
+                                       (26.5% logic, 73.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ENET0_RX_CLK'
   Clock period: 8.184ns (frequency: 122.196MHz)
-  Total number of paths / destination ports: 6527 / 448
+  Total number of paths / destination ports: 6532 / 448
 -------------------------------------------------------------------------
 Delay:               8.184ns (Levels of Logic = 5)
   Source:            core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_7 (FF)
@@ -6867,17 +6904,17 @@ Timing constraint: Default OFFSET IN BEFORE for Clock '_i000001/pll_base_inst/CL
 -------------------------------------------------------------------------
 Offset:              5.275ns (Levels of Logic = 3)
   Source:            rxd (PAD)
-  Destination:       core_inst/_i000112/rx_buffer_8 (FF)
+  Destination:       core_inst/_i000135/rx_buffer_8 (FF)
   Destination Clock: _i000001/pll_base_inst/CLKOUT0 rising
 
-  Data Path: rxd to core_inst/_i000112/rx_buffer_8
+  Data Path: rxd to core_inst/_i000135/rx_buffer_8
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             5   1.328   1.271  rxd_IBUF (rxd_IBUF)
-     LUT6:I1->O            3   0.254   0.766  core_inst/_i000112/_n016011 (core_inst/_i000112/_n01601)
-     LUT4:I3->O            8   0.254   0.943  core_inst/_i000112/_n01601 (core_inst/_i000112/_n0160)
-     FDRE:R                    0.459          core_inst/_i000112/rx_buffer_1
+     LUT6:I1->O            3   0.254   0.766  core_inst/_i000135/_n016011 (core_inst/_i000135/_n01601)
+     LUT4:I3->O            8   0.254   0.943  core_inst/_i000135/_n01601 (core_inst/_i000135/_n0160)
+     FDRE:R                    0.459          core_inst/_i000135/rx_buffer_1
     ----------------------------------------
     Total                      5.275ns (2.295ns logic, 2.980ns route)
                                        (43.5% logic, 56.5% route)
@@ -6905,7 +6942,7 @@ Offset:              2.009ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock '_i000001/pll_base_inst/CLKOUT0'
   Total number of paths / destination ports: 31 / 12
 -------------------------------------------------------------------------
-Offset:              6.956ns (Levels of Logic = 2)
+Offset:              7.020ns (Levels of Logic = 2)
   Source:            sync_reset_inst/sync_reg_3 (FF)
   Destination:       led<1> (PAD)
   Source Clock:      _i000001/pll_base_inst/CLKOUT0 rising
@@ -6914,12 +6951,12 @@ Offset:              6.956ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q            585   0.525   2.588  sync_reset_inst/sync_reg_3 (sync_reset_inst/sync_reg_3)
+     FDP:C->Q            813   0.525   2.652  sync_reset_inst/sync_reg_3 (sync_reset_inst/sync_reg_3)
      LUT3:I1->O            1   0.250   0.681  core_inst/phy0_reset_n1 (ENET0_RST_N_OBUF)
      OBUF:I->O                 2.912          ENET0_RST_N_OBUF (ENET0_RST_N)
     ----------------------------------------
-    Total                      6.956ns (3.687ns logic, 3.269ns route)
-                                       (53.0% logic, 47.0% route)
+    Total                      7.020ns (3.687ns logic, 3.333ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -6951,7 +6988,7 @@ Clock to Setup on destination clock ENET0_RX_CLK
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
 ENET0_RX_CLK                  |    8.184|         |         |         |
-_i000001/pll_base_inst/CLKOUT0|    3.463|         |         |         |
+_i000001/pll_base_inst/CLKOUT0|    3.527|         |         |         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT0
@@ -6959,8 +6996,8 @@ Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT0
                               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ------------------------------+---------+---------+---------+---------+
-ENET0_RX_CLK                  |    1.364|         |         |         |
-_i000001/pll_base_inst/CLKOUT0|    9.059|         |    3.003|         |
+ENET0_RX_CLK                  |    1.402|         |         |         |
+_i000001/pll_base_inst/CLKOUT0|    9.735|    5.033|    3.527|         |
 ------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock _i000001/pll_base_inst/CLKOUT1
@@ -6974,15 +7011,15 @@ _i000001/pll_base_inst/CLKOUT0|    1.290|         |    1.290|         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 48.00 secs
-Total CPU time to Xst completion: 11.80 secs
+Total REAL time to Xst completion: 51.00 secs
+Total CPU time to Xst completion: 11.42 secs
  
 --> 
 
 
-Total memory usage is 672368 kilobytes
+Total memory usage is 673852 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings : 2599 (   0 filtered)
-Number of infos    :  418 (   0 filtered)
+Number of warnings : 2574 (   0 filtered)
+Number of infos    :  474 (   0 filtered)
 

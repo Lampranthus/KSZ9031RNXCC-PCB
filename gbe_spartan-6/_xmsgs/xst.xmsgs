@@ -20,52 +20,31 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/ipcore_dir/PLL.v" Line 124: Assignment to <arg fmt="%s" index="1">clkout5_unused</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 462: Port <arg fmt="%s" index="1">tx_axis_tkeep</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 499: Port <arg fmt="%s" index="1">tx_axis_tkeep</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 513: Port <arg fmt="%s" index="1">s_axis_tkeep</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 550: Port <arg fmt="%s" index="1">s_axis_tkeep</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 539: Port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 576: Port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 697: Port <arg fmt="%s" index="1">pause_req</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 734: Port <arg fmt="%s" index="1">pause_req</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 240: Using initial value of <arg fmt="%s" index="1">n_bytes</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 275: Using initial value of <arg fmt="%s" index="1">tx_fifo_axis_tuser</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 249: Using initial value of <arg fmt="%s" index="1">tx_fifo_axis_tuser</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 462: Using initial value of <arg fmt="%s" index="1">tx_udp_ip_dest_ip_reg</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 251: Using initial value of <arg fmt="%s" index="1">off_cycles</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 463: Using initial value of <arg fmt="%s" index="1">tx_udp_source_port_reg</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 254: Using initial value of <arg fmt="%s" index="1">pkt_n</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 464: Using initial value of <arg fmt="%s" index="1">tx_udp_dest_port_reg</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 425: Using initial value of <arg fmt="%s" index="1">tx_udp_ip_dest_ip_reg</arg> since it is never assigned
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 426: Using initial value of <arg fmt="%s" index="1">tx_udp_source_port_reg</arg> since it is never assigned
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 427: Using initial value of <arg fmt="%s" index="1">tx_udp_dest_port_reg</arg> since it is never assigned
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 320: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 328: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 332: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 375: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 423: Assignment to <arg fmt="%s" index="1">tx_udp_ip_source_ip</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 460: Assignment to <arg fmt="%s" index="1">tx_udp_ip_source_ip</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ise/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 254: Port <arg fmt="%s" index="1">s_pause_req</arg> is not connected to this instance
@@ -272,124 +251,124 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/lib/eth/rtl/udp_ip_tx.v" Line 394: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 592: Assignment to <arg fmt="%s" index="1">tx_ip_hdr_ready</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 629: Assignment to <arg fmt="%s" index="1">tx_ip_hdr_ready</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 602: Assignment to <arg fmt="%s" index="1">tx_ip_payload_axis_tready</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 639: Assignment to <arg fmt="%s" index="1">tx_ip_payload_axis_tready</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 606: Assignment to <arg fmt="%s" index="1">rx_ip_hdr_valid</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 643: Assignment to <arg fmt="%s" index="1">rx_ip_hdr_valid</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 608: Assignment to <arg fmt="%s" index="1">rx_ip_eth_dest_mac</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 645: Assignment to <arg fmt="%s" index="1">rx_ip_eth_dest_mac</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 609: Assignment to <arg fmt="%s" index="1">rx_ip_eth_src_mac</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 646: Assignment to <arg fmt="%s" index="1">rx_ip_eth_src_mac</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 610: Assignment to <arg fmt="%s" index="1">rx_ip_eth_type</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 647: Assignment to <arg fmt="%s" index="1">rx_ip_eth_type</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 611: Assignment to <arg fmt="%s" index="1">rx_ip_version</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 648: Assignment to <arg fmt="%s" index="1">rx_ip_version</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 612: Assignment to <arg fmt="%s" index="1">rx_ip_ihl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 649: Assignment to <arg fmt="%s" index="1">rx_ip_ihl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 613: Assignment to <arg fmt="%s" index="1">rx_ip_dscp</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 650: Assignment to <arg fmt="%s" index="1">rx_ip_dscp</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 614: Assignment to <arg fmt="%s" index="1">rx_ip_ecn</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 651: Assignment to <arg fmt="%s" index="1">rx_ip_ecn</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 615: Assignment to <arg fmt="%s" index="1">rx_ip_length</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 652: Assignment to <arg fmt="%s" index="1">rx_ip_length</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 616: Assignment to <arg fmt="%s" index="1">rx_ip_identification</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 653: Assignment to <arg fmt="%s" index="1">rx_ip_identification</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 617: Assignment to <arg fmt="%s" index="1">rx_ip_flags</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 654: Assignment to <arg fmt="%s" index="1">rx_ip_flags</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 618: Assignment to <arg fmt="%s" index="1">rx_ip_fragment_offset</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 655: Assignment to <arg fmt="%s" index="1">rx_ip_fragment_offset</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 619: Assignment to <arg fmt="%s" index="1">rx_ip_ttl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 656: Assignment to <arg fmt="%s" index="1">rx_ip_ttl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 620: Assignment to <arg fmt="%s" index="1">rx_ip_protocol</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 657: Assignment to <arg fmt="%s" index="1">rx_ip_protocol</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 621: Assignment to <arg fmt="%s" index="1">rx_ip_header_checksum</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 658: Assignment to <arg fmt="%s" index="1">rx_ip_header_checksum</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 622: Assignment to <arg fmt="%s" index="1">rx_ip_source_ip</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 659: Assignment to <arg fmt="%s" index="1">rx_ip_source_ip</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 623: Assignment to <arg fmt="%s" index="1">rx_ip_dest_ip</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 660: Assignment to <arg fmt="%s" index="1">rx_ip_dest_ip</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 624: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tdata</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 661: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tdata</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 625: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tvalid</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 662: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tvalid</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 627: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tlast</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 664: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tlast</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 628: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tuser</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 665: Assignment to <arg fmt="%s" index="1">rx_ip_payload_axis_tuser</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 649: Assignment to <arg fmt="%s" index="1">rx_udp_eth_dest_mac</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 686: Assignment to <arg fmt="%s" index="1">rx_udp_eth_dest_mac</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 650: Assignment to <arg fmt="%s" index="1">rx_udp_eth_src_mac</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 687: Assignment to <arg fmt="%s" index="1">rx_udp_eth_src_mac</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 651: Assignment to <arg fmt="%s" index="1">rx_udp_eth_type</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 688: Assignment to <arg fmt="%s" index="1">rx_udp_eth_type</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 652: Assignment to <arg fmt="%s" index="1">rx_udp_ip_version</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 689: Assignment to <arg fmt="%s" index="1">rx_udp_ip_version</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 653: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ihl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 690: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ihl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 654: Assignment to <arg fmt="%s" index="1">rx_udp_ip_dscp</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 691: Assignment to <arg fmt="%s" index="1">rx_udp_ip_dscp</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 655: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ecn</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 692: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ecn</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 656: Assignment to <arg fmt="%s" index="1">rx_udp_ip_length</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 693: Assignment to <arg fmt="%s" index="1">rx_udp_ip_length</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 657: Assignment to <arg fmt="%s" index="1">rx_udp_ip_identification</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 694: Assignment to <arg fmt="%s" index="1">rx_udp_ip_identification</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 658: Assignment to <arg fmt="%s" index="1">rx_udp_ip_flags</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 695: Assignment to <arg fmt="%s" index="1">rx_udp_ip_flags</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 659: Assignment to <arg fmt="%s" index="1">rx_udp_ip_fragment_offset</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 696: Assignment to <arg fmt="%s" index="1">rx_udp_ip_fragment_offset</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 660: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ttl</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 697: Assignment to <arg fmt="%s" index="1">rx_udp_ip_ttl</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 661: Assignment to <arg fmt="%s" index="1">rx_udp_ip_protocol</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 698: Assignment to <arg fmt="%s" index="1">rx_udp_ip_protocol</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 662: Assignment to <arg fmt="%s" index="1">rx_udp_ip_header_checksum</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 699: Assignment to <arg fmt="%s" index="1">rx_udp_ip_header_checksum</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 664: Assignment to <arg fmt="%s" index="1">rx_udp_ip_dest_ip</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 701: Assignment to <arg fmt="%s" index="1">rx_udp_ip_dest_ip</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 668: Assignment to <arg fmt="%s" index="1">rx_udp_checksum</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 705: Assignment to <arg fmt="%s" index="1">rx_udp_checksum</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 693: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">clear_arp_cache</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 730: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">clear_arp_cache</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 290: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
@@ -401,13 +380,13 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 399: Result of <arg fmt="%d" index="1">13</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">12</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 713: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 750: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 717: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 754: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 718: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 755: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/mdio_controller.v" Line 96: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
@@ -434,16 +413,16 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/ise/gbe_spartan-6/mdio_controller.v" Line 195: Result of <arg fmt="%d" index="1">6</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">5</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 472: Input port <arg fmt="%s" index="1">tx_axis_tkeep[0]</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 509: Input port <arg fmt="%s" index="1">tx_axis_tkeep[0]</arg> is not connected on this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 514: Input port <arg fmt="%s" index="1">s_axis_tkeep[0]</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 551: Input port <arg fmt="%s" index="1">s_axis_tkeep[0]</arg> is not connected on this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 540: Input port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep[0]</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 577: Input port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep[0]</arg> is not connected on this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 707: Input port <arg fmt="%s" index="1">pause_req</arg> is not connected on this instance
+<msg type="warning" file="HDLCompiler" num="552" delta="old" >"/home/ise/gbe_spartan-6/rtl/fpga_core.v" Line 744: Input port <arg fmt="%s" index="1">pause_req</arg> is not connected on this instance
 </msg>
 
 <msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/lib/eth/lib/axis/rtl/arbiter.v</arg>&quot; line <arg fmt="%d" index="2">91</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">priority_encoder_masked</arg>&gt; of block &lt;<arg fmt="%s" index="4">priority_encoder</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">arbiter</arg>&gt;. Underlying logic will be removed.
@@ -470,238 +449,238 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">V3_3</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">speed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">speed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">tx_error_underflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">tx_error_underflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">tx_fifo_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_bad_fcs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error_bad_fcs</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">472</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">509</arg>: Output port &lt;<arg fmt="%s" index="3">rx_fifo_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_mac_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">514</arg>: Output port &lt;<arg fmt="%s" index="3">m_eth_payload_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">551</arg>: Output port &lt;<arg fmt="%s" index="3">m_eth_payload_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">514</arg>: Output port &lt;<arg fmt="%s" index="3">busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">551</arg>: Output port &lt;<arg fmt="%s" index="3">busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">514</arg>: Output port &lt;<arg fmt="%s" index="3">error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">551</arg>: Output port &lt;<arg fmt="%s" index="3">error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_rx_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_tx_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">577</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_tx_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">540</arg>: Output port &lt;<arg fmt="%s" index="3">busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_tx_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">577</arg>: Output port &lt;<arg fmt="%s" index="3">busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth_axis_tx_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_dest_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_dest_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_src_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_src_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_type</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_eth_type</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_version</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_version</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ihl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ihl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_dscp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_dscp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ecn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ecn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_length</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_length</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_identification</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_identification</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_flags</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_flags</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_fragment_offset</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_fragment_offset</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ttl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_ttl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_protocol</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_protocol</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_header_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_header_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_source_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_source_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_dest_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_dest_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tdata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tdata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_dest_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_dest_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_src_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_src_mac</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_type</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_eth_type</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_version</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_version</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ihl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ihl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_dscp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_dscp</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ecn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ecn</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_length</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_length</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_identification</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_identification</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_flags</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_flags</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_fragment_offset</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_fragment_offset</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ttl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_ttl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_protocol</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_protocol</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_header_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_header_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_dest_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_ip_dest_ip</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_udp_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">s_ip_hdr_ready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">s_ip_hdr_ready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">s_ip_payload_axis_tready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">s_ip_payload_axis_tready</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_hdr_valid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_hdr_valid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tvalid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tlast</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tuser</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">m_ip_payload_axis_tuser</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">udp_tx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">udp_tx_busy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_invalid_header</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_invalid_header</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_invalid_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_rx_error_invalid_checksum</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_error_arp_failed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">ip_tx_error_arp_failed</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_error_header_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">udp_rx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">565</arg>: Output port &lt;<arg fmt="%s" index="3">udp_tx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">602</arg>: Output port &lt;<arg fmt="%s" index="3">udp_tx_error_payload_early_termination</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_complete_inst</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tkeep</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tid</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tdest</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">m_axis_tdest</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">status_depth</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">status_depth</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">status_depth_commit</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">status_depth_commit</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">pause_ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">pause_ack</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">status_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">status_overflow</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">status_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">status_bad_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">707</arg>: Output port &lt;<arg fmt="%s" index="3">status_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">744</arg>: Output port &lt;<arg fmt="%s" index="3">status_good_frame</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">udp_payload_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">750</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_i000112</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ise/gbe_spartan-6/rtl/fpga_core.v</arg>&quot; line <arg fmt="%s" index="2">787</arg>: Output port &lt;<arg fmt="%s" index="3">rx_error</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_i000135</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2898" delta="old" >Port &apos;<arg fmt="%s" index="1">s_pause_req</arg>&apos;, unconnected in block instance &apos;<arg fmt="%s" index="2">tx_fifo</arg>&apos;, is tied to GND.
@@ -1422,6 +1401,102 @@
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">m_eth_type_reg_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ip_eth_tx_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;m_eth_src_mac_reg_41&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_29&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">ip_ttl_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">udp_checksum_gen_inst</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">31 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ip_ttl_reg_1&gt; &lt;ip_ttl_reg_2&gt; &lt;ip_ttl_reg_3&gt; &lt;ip_ttl_reg_4&gt; &lt;ip_ttl_reg_5&gt; &lt;ip_ttl_reg_7&gt; &lt;ip_source_ip_reg_0&gt; &lt;ip_source_ip_reg_1&gt; &lt;ip_source_ip_reg_2&gt; &lt;ip_source_ip_reg_3&gt; &lt;ip_source_ip_reg_4&gt; &lt;ip_source_ip_reg_5&gt; &lt;ip_source_ip_reg_6&gt; &lt;ip_source_ip_reg_9&gt; &lt;ip_source_ip_reg_10&gt; &lt;ip_source_ip_reg_11&gt; &lt;ip_source_ip_reg_12&gt; &lt;ip_source_ip_reg_13&gt; &lt;ip_source_ip_reg_14&gt; &lt;ip_source_ip_reg_15&gt; &lt;ip_source_ip_reg_16&gt; &lt;ip_source_ip_reg_17&gt; &lt;ip_source_ip_reg_18&gt; &lt;ip_source_ip_reg_20&gt; &lt;ip_source_ip_reg_22&gt; &lt;ip_source_ip_reg_24&gt; &lt;ip_source_ip_reg_25&gt; &lt;ip_source_ip_reg_26&gt; &lt;ip_source_ip_reg_27&gt; &lt;ip_source_ip_reg_28&gt; &lt;ip_source_ip_reg_29&gt; </arg>
@@ -3807,6 +3882,102 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">m_eth_src_mac_reg_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ip_eth_tx</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;m_eth_type_reg_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_24</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_18</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_17</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_22</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_9</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_20</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_14</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_13</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_31&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_12</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_30</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_19</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_10</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_23</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_21</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">cache_query_request_ip_reg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">arp</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;arp_request_ip_reg_29&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">m_ip_protocol_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">udp_ip_rx</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;m_ip_protocol_reg_4&gt; </arg>
@@ -8489,10 +8660,10 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core_inst/udp_payload_fifo/overflow_reg</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">fpga</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core_inst/_i000112/rx_buffer_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">fpga</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core_inst/_i000135/rx_buffer_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">fpga</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core_inst/_i000112/rx_error</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">fpga</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">core_inst/_i000135/rx_error</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">fpga</arg>&gt;.
 </msg>
 
 <msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem61</arg>&gt;, &lt;<arg fmt="%s" index="2">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem62</arg>&gt; are equivalent, second RAM is removed
@@ -8505,33 +8676,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2399" delta="old" >RAMs &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ecn_mem2</arg>&gt;, &lt;<arg fmt="%s" index="2">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ecn_mem1</arg>&gt; are equivalent, second RAM is removed
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -8594,58 +8738,25 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">debounce_switch_inst/cnt_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -8669,16 +8780,22 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_retry_cnt_reg_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -8702,37 +8819,37 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">fpga</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_25</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_13&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_source_ip_reg_1&gt; </arg>
@@ -8795,46 +8912,22 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_30&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_0&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_26</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_14&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_2&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_27</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_15&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_3&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_1&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_28</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_16&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_4&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_2&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/eth_axis_tx_inst/eth_type_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/eth_axis_tx_inst/eth_type_reg_1&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_3&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_17&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_source_ip_reg_5&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_4</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_4&gt; </arg>
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_11</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_2&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_eth_rx_inst/m_eth_type_reg_1&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_5</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_5&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_6&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_7</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_7&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_ttl_reg_6</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_10&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_7&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_6&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_4&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/udp_source_port_reg_1&gt; </arg>
@@ -8849,10 +8942,10 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_src_mac_reg_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_11&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_src_mac_reg_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_flags_reg_1&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/_i000135/rx_busy</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/_i000135/rx_state&gt; </arg>
 </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">11 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_30&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_23&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_21&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_19&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_request_ip_reg_8&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_31&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_30&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_23&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_21&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_19&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_8&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_src_mac_reg_41</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/ip_flags_reg_1&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/eth_mac_inst/tx_fifo/fifo_inst/m_rst_sync1_reg</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/tx_rst_reg_3&gt; </arg>
@@ -8882,6 +8975,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_29</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_17&gt; &lt;core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg_5&gt; </arg>
 </msg>
 
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_30&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_23&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_21&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_19&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_8&gt; </arg>
+</msg>
+
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_31</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_30&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_23&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_21&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_19&gt; &lt;core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg_8&gt; </arg>
 </msg>
 
@@ -8895,9 +8991,6 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_ecn_reg_1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_ecn_reg_0&gt; </arg>
-</msg>
-
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/_i000112/rx_busy</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/_i000112/rx_state&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">fpga</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;core_inst/udp_complete_inst/ip_complete_inst/eth_arb_mux_inst/m_eth_type_reg_1&gt; </arg>

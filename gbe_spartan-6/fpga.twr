@@ -36,16 +36,16 @@ Setup/Hold to clock ENET0_RX_CLK
                 |Max Setup to|  Process   |Max Hold to |  Process   |                             | Clock  |
 Source          | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s)            | Phase  |
 ----------------+------------+------------+------------+------------+-----------------------------+--------+
-ENET0_RX_DATA<0>|   -0.340(R)|      FAST  |    2.021(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-                |   -0.268(F)|      FAST  |    1.959(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-ENET0_RX_DATA<1>|   -0.309(R)|      FAST  |    1.955(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+ENET0_RX_DATA<0>|   -0.341(R)|      FAST  |    2.022(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+                |   -0.270(F)|      FAST  |    1.961(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+ENET0_RX_DATA<1>|   -0.310(R)|      FAST  |    1.956(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+                |   -0.239(F)|      FAST  |    1.895(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+ENET0_RX_DATA<2>|   -0.309(R)|      FAST  |    1.955(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
                 |   -0.237(F)|      FAST  |    1.893(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-ENET0_RX_DATA<2>|   -0.308(R)|      FAST  |    1.954(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-                |   -0.236(F)|      FAST  |    1.892(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-ENET0_RX_DATA<3>|   -0.278(R)|      FAST  |    1.959(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-                |   -0.207(F)|      FAST  |    1.898(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-ENET0_RX_DV     |   -0.253(R)|      FAST  |    1.899(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
-                |   -0.181(F)|      FAST  |    1.837(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+ENET0_RX_DATA<3>|   -0.280(R)|      FAST  |    1.961(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+                |   -0.208(F)|      FAST  |    1.899(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+ENET0_RX_DV     |   -0.254(R)|      FAST  |    1.900(R)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
+                |   -0.182(F)|      FAST  |    1.838(F)|      SLOW  |core_inst/eth_mac_inst/rx_clk|   0.000|
 ----------------+------------+------------+------------+------------+-----------------------------+--------+
 
 Setup/Hold to clock clk
@@ -53,19 +53,19 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-MDIO        |    2.832(R)|      SLOW  |   -1.205(R)|      FAST  |clk_int           |   0.000|
-push<0>     |    3.805(R)|      SLOW  |   -2.015(R)|      FAST  |clk_int           |   0.000|
-push<1>     |    3.740(R)|      SLOW  |   -2.002(R)|      FAST  |clk_int           |   0.000|
-push<2>     |    8.889(R)|      SLOW  |   -4.561(R)|      FAST  |clk_int           |   0.000|
-rxd         |    4.601(R)|      SLOW  |   -0.942(R)|      FAST  |clk_int           |   0.000|
-sw<0>       |    3.683(R)|      SLOW  |   -1.905(R)|      FAST  |clk_int           |   0.000|
-sw<1>       |    3.233(R)|      SLOW  |   -1.647(R)|      FAST  |clk_int           |   0.000|
-sw<2>       |    3.357(R)|      SLOW  |   -1.697(R)|      FAST  |clk_int           |   0.000|
-sw<3>       |    3.348(R)|      SLOW  |   -1.777(R)|      FAST  |clk_int           |   0.000|
-sw<4>       |    2.548(R)|      SLOW  |   -1.219(R)|      FAST  |clk_int           |   0.000|
-sw<5>       |    2.792(R)|      SLOW  |   -1.415(R)|      FAST  |clk_int           |   0.000|
-sw<6>       |    3.100(R)|      SLOW  |   -1.579(R)|      FAST  |clk_int           |   0.000|
-sw<7>       |    2.552(R)|      SLOW  |   -1.270(R)|      FAST  |clk_int           |   0.000|
+MDIO        |    3.320(R)|      SLOW  |   -1.805(R)|      FAST  |clk_int           |   0.000|
+push<0>     |    4.014(R)|      SLOW  |   -2.184(R)|      FAST  |clk_int           |   0.000|
+push<1>     |    3.245(R)|      SLOW  |   -1.701(R)|      FAST  |clk_int           |   0.000|
+push<2>     |   10.074(R)|      SLOW  |   -5.428(R)|      FAST  |clk_int           |   0.000|
+rxd         |    5.734(R)|      SLOW  |   -1.832(R)|      FAST  |clk_int           |   0.000|
+sw<0>       |    3.132(R)|      SLOW  |   -1.587(R)|      FAST  |clk_int           |   0.000|
+sw<1>       |    3.498(R)|      SLOW  |   -1.832(R)|      FAST  |clk_int           |   0.000|
+sw<2>       |    3.704(R)|      SLOW  |   -1.887(R)|      FAST  |clk_int           |   0.000|
+sw<3>       |    3.447(R)|      SLOW  |   -1.834(R)|      FAST  |clk_int           |   0.000|
+sw<4>       |    2.764(R)|      SLOW  |   -1.353(R)|      FAST  |clk_int           |   0.000|
+sw<5>       |    2.347(R)|      SLOW  |   -1.166(R)|      FAST  |clk_int           |   0.000|
+sw<6>       |    2.773(R)|      SLOW  |   -1.405(R)|      FAST  |clk_int           |   0.000|
+sw<7>       |    2.914(R)|      SLOW  |   -1.542(R)|      FAST  |clk_int           |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -74,23 +74,23 @@ Clock clk to Pad
 Destination     |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ----------------+-----------------+------------+-----------------+------------+------------------+--------+
 ENET0_GTX_CLK   |         6.104(R)|      SLOW  |         2.441(R)|      FAST  |clk90_int         |   0.000|
-ENET0_RST_N     |        12.433(R)|      SLOW  |         5.420(R)|      FAST  |clk_int           |   0.000|
-ENET0_TX_DATA<0>|         6.176(R)|      SLOW  |         2.523(R)|      FAST  |clk_int           |   0.000|
-ENET0_TX_DATA<1>|         6.176(R)|      SLOW  |         2.523(R)|      FAST  |clk_int           |   0.000|
-ENET0_TX_DATA<2>|         6.109(R)|      SLOW  |         2.456(R)|      FAST  |clk_int           |   0.000|
-ENET0_TX_DATA<3>|         6.109(R)|      SLOW  |         2.456(R)|      FAST  |clk_int           |   0.000|
+ENET0_RST_N     |        12.436(R)|      SLOW  |         5.627(R)|      FAST  |clk_int           |   0.000|
+ENET0_TX_DATA<0>|         6.175(R)|      SLOW  |         2.522(R)|      FAST  |clk_int           |   0.000|
+ENET0_TX_DATA<1>|         6.175(R)|      SLOW  |         2.522(R)|      FAST  |clk_int           |   0.000|
+ENET0_TX_DATA<2>|         6.108(R)|      SLOW  |         2.455(R)|      FAST  |clk_int           |   0.000|
+ENET0_TX_DATA<3>|         6.108(R)|      SLOW  |         2.455(R)|      FAST  |clk_int           |   0.000|
 ENET0_TX_EN     |         6.079(R)|      SLOW  |         2.426(R)|      FAST  |clk_int           |   0.000|
-MDC             |         9.040(R)|      SLOW  |         3.622(R)|      FAST  |clk_int           |   0.000|
-MDIO            |         7.798(R)|      SLOW  |         3.233(R)|      FAST  |clk_int           |   0.000|
-led<0>          |         9.868(R)|      SLOW  |         4.383(R)|      FAST  |clk_int           |   0.000|
-led<1>          |        10.761(R)|      SLOW  |         4.418(R)|      FAST  |clk_int           |   0.000|
-led<2>          |         9.467(R)|      SLOW  |         4.345(R)|      FAST  |clk_int           |   0.000|
-led<3>          |         9.450(R)|      SLOW  |         4.337(R)|      FAST  |clk_int           |   0.000|
-led<4>          |        10.747(R)|      SLOW  |         4.270(R)|      FAST  |clk_int           |   0.000|
-led<5>          |        11.792(R)|      SLOW  |         4.568(R)|      FAST  |clk_int           |   0.000|
-led<6>          |         9.791(R)|      SLOW  |         3.573(R)|      FAST  |clk_int           |   0.000|
-led<7>          |        12.076(R)|      SLOW  |         4.118(R)|      FAST  |clk_int           |   0.000|
-txd             |         7.163(R)|      SLOW  |         3.070(R)|      FAST  |clk_int           |   0.000|
+MDC             |         9.303(R)|      SLOW  |         4.028(R)|      FAST  |clk_int           |   0.000|
+MDIO            |         8.733(R)|      SLOW  |         4.042(R)|      FAST  |clk_int           |   0.000|
+led<0>          |         9.832(R)|      SLOW  |         4.176(R)|      FAST  |clk_int           |   0.000|
+led<1>          |        11.872(R)|      SLOW  |         5.245(R)|      FAST  |clk_int           |   0.000|
+led<2>          |        11.120(R)|      SLOW  |         5.349(R)|      FAST  |clk_int           |   0.000|
+led<3>          |        10.127(R)|      SLOW  |         4.748(R)|      FAST  |clk_int           |   0.000|
+led<4>          |         9.693(R)|      SLOW  |         4.175(R)|      FAST  |clk_int           |   0.000|
+led<5>          |        10.952(R)|      SLOW  |         3.868(R)|      FAST  |clk_int           |   0.000|
+led<6>          |         9.444(R)|      SLOW  |         4.103(R)|      FAST  |clk_int           |   0.000|
+led<7>          |        10.822(R)|      SLOW  |         4.391(R)|      FAST  |clk_int           |   0.000|
+txd             |         7.245(R)|      SLOW  |         3.197(R)|      FAST  |clk_int           |   0.000|
 ----------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock ENET0_RX_CLK
@@ -98,8 +98,8 @@ Clock to Setup on destination clock ENET0_RX_CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ENET0_RX_CLK   |    6.308|         |         |         |
-clk            |    2.592|         |         |         |
+ENET0_RX_CLK   |    6.195|         |         |         |
+clk            |    5.339|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -107,27 +107,27 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ENET0_RX_CLK   |    4.518|         |         |         |
-clk            |    7.633|         |         |         |
+ENET0_RX_CLK   |    4.208|         |         |         |
+clk            |    8.563|    4.539|    3.052|    2.124|
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
 ---------------+---------------+---------+
 Source Pad     |Destination Pad|  Delay  |
 ---------------+---------------+---------+
-CLK_125MHZ     |led<2>         |   10.990|
-ENET0_INT_N    |led<3>         |   11.106|
+CLK_125MHZ     |led<2>         |   11.714|
+ENET0_INT_N    |led<3>         |   10.983|
 ---------------+---------------+---------+
 
 
-Analysis completed Mon Mar 23 21:27:45 2026 
+Analysis completed Tue Mar 24 18:09:00 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 446 MB
+Peak Memory Usage: 450 MB
 
 
 

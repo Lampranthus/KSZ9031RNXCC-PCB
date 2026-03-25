@@ -235,26 +235,47 @@ assign tx_ip_payload_axis_tvalid = 0;
 assign tx_ip_payload_axis_tlast = 0;
 assign tx_ip_payload_axis_tuser = 0;
 
+//udp command found
+
+reg [31:0] n_bytes; 
+reg [31:0] off_cycles; 
+reg [31:0] pkt_n; 
+
+always @ (posedge clk) begin
+	if (rst) begin
+	n_bytes <= 32'd1440;  //1440 bytes por paquete default;
+	off_cycles <= 32'd5; // ciclos de reoloj de separacion entre paquetes, 5 por defecto
+	pkt_n <= 32'd128;//por defecto ~184kB por cada pulso recibido de datos (128*8192)B = 184320B
+	end else begin
+		if (rx_reg[63:32] == 32'h23425F40) begin // "#B_@"
+			n_bytes <= rx_reg[31:0];
+		end
+		else if (rx_reg[63:32] == 32'h23505F40) begin // "#P_@"
+			pkt_n <= rx_reg[31:0];
+		end
+		else if (rx_reg[63:32] == 32'h234F5F40) begin  // "#O_@"
+			off_cycles <= rx_reg[31:0];
+		end else begin
+			n_bytes <= n_bytes;
+			pkt_n <= pkt_n;
+			off_cycles <= off_cycles;
+		end	
+	end
+end
+
 //transmision de paquetes de bytes
 
-reg [15:0] n_bytes = 16'd1440;  //1440 bytes por paquete
-reg [15:0] cont_reg = 16'd0;
-
-reg [7:0] tx_fifo_axis_tdata = 8'd0;
-reg [7:0] tx_fifo_axis_tdata_reg = 8'd0;
+reg [31:0] cont_reg;
+reg [7:0] tx_fifo_axis_tdata;
+reg [7:0] tx_fifo_axis_tdata_reg;
 reg [7:0] tx_axis_tdata_test = 8'h0A; //"\n"
-reg tx_fifo_axis_tvalid = 0;
+reg tx_fifo_axis_tvalid;
 wire tx_fifo_axis_tready;
-reg tx_fifo_axis_tlast = 0;
-reg tx_fifo_axis_tuser = 0;
-
-reg [4:0] off_cycles = 5'd20; // ciclos de reoloj de separacion entre paquetes, 20 ciclos no hay error en tx_ready
-reg [4:0] off_cycles_reg = 5'd0;
-
-reg [7:0] pkt_n = 8'd128; //por defecto ~184kB por cada pulso recibido de datos (128*8192)B = 184320B
-reg [7:0] pkt_n_reg = 8'd0;
-
-reg [2:0] state = 3'd0;
+reg tx_fifo_axis_tlast;
+reg tx_fifo_axis_tuser = 0; 
+reg [31:0] off_cycles_reg;
+reg [31:0] pkt_n_reg;
+reg [2:0] state;
 reg ocupado;
 
 reg [7:0] random_data;
@@ -282,10 +303,10 @@ always @(posedge clk) begin
         tx_fifo_axis_tdata <= 8'd0;
         tx_fifo_axis_tdata_reg <= 8'd0;
         tx_fifo_axis_tvalid <= 0;
-        cont_reg <= 0;
+        cont_reg <= 32'd0;
         tx_fifo_axis_tlast <= 0;
-        pkt_n_reg <= 0;
-        off_cycles_reg <= 5'd0;
+        pkt_n_reg <= 32'd0;
+        off_cycles_reg <= 32'd0;
         ocupado <= 0;
 		  
     end else begin
@@ -342,11 +363,11 @@ always @(posedge clk) begin
         // Estado 3: Último dato del paquete
         else if (state == 3'd3) begin
         
-            if (pkt_n_reg == (pkt_n)) begin
+            if (pkt_n_reg == pkt_n) begin
                 cont_reg <= 0;
                 pkt_n_reg <= 0;
                 tx_fifo_axis_tdata_reg <= 8'd0;
-                off_cycles_reg <= 5'd0;
+                off_cycles_reg <= 32'd0;
                 ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
                 state <= 3'd7; //si se llego al numero de mensajes ir a estado 7 para enviar uar salto de linea
                 tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
@@ -385,6 +406,22 @@ wire reg_fifo_udp_payload_axis_tready;
 wire reg_fifo_udp_payload_axis_tlast;
 wire reg_fifo_udp_payload_axis_tuser;
 
+//UDP config register //////////////
+//como los bytes que salen de udp complete estan en little endian con este registro los ultimos 64Bytes que llegan se vuelven big endian.
+
+reg [63:0] rx_reg; 
+
+always @ (negedge clk) begin
+	if (rst) begin
+	rx_reg <= 64'd0;
+	end else begin
+		if (reg_fifo_udp_payload_axis_tvalid) begin
+			rx_reg <= {rx_reg[55:0],reg_fifo_udp_payload_axis_tdata};
+		end else begin
+			rx_reg <= rx_reg;
+		end	
+	end
+end
 
 // Loop back UDP
 wire match_cond = rx_udp_dest_port == 1234;
@@ -434,7 +471,7 @@ assign tx_udp_dest_port = rx_loopb ? rx_udp_source_port : tx_udp_dest_port_reg;
 //assign tx_udp_source_port = rx_udp_dest_port;
 //assign tx_udp_dest_port = rx_udp_source_port;
 
-assign tx_udp_length = rx_loopb ? rx_udp_length :16'd1448;  // 1440 byte de payload;
+assign tx_udp_length = rx_loopb ? rx_udp_length : (n_bytes[15:0] + 16'd8);
 assign tx_udp_checksum = 0;
 
 assign tx_udp_payload_axis_tdata = rx_loopb ? reg_fifo_udp_payload_axis_tdata : tx_fifo_axis_tdata;
