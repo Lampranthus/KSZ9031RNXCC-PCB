@@ -1,12 +1,21 @@
-# FPGA UDP Communication Controller
+# FPGA 1GbE Interface
 ![bb2a6b14-ceca-4300-84da-205c0e84b861](https://github.com/user-attachments/assets/d1b2b5ab-4048-4e31-9e69-e21ac2fdd364)
 - **FPGA**: Xilinx Spartan-6 (XC6SLX9-2TQG144C)
 - **PHY**: KSZ9031RNXCC
 - **Conector**: ARJM11B1-502-AB-EW2
 ## Overview
-This project implements a UDP communication controller on FPGA with PHY management capabilities through MDIO interface. The system supports multiple operation modes and provides UART-based control interface.
 
-## Hardware Features
+This project implements a **1 Gbps Ethernet (1GbE) UDP communication system** on a Xilinx Spartan-6 FPGA, using the KSZ9031 Gigabit PHY. It achieves **~1 Gbps throughput** in both TX, RX, and full-duplex modes.
+
+### Key Features
+- **UDP TX/RX** — FPGA can send and receive UDP packets at line rate
+- **UART Control Interface** — configure and trigger tests via serial commands
+- **UDP Command Interface** — remotely control packet count, size, and rate over UDP
+- **Full Duplex** — simultaneous TX + RX at ~1 Gbps (237 MB/s measured)
+- **ARP Support** — FPGA responds to ARP requests
+- **Software Shutdown Mode** — low-power state controllable via command
+
+## Firmware Features
 
 ### Indicators LEDs and Switches
 
