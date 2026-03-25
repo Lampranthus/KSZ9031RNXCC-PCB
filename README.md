@@ -186,3 +186,106 @@ The command sequence follows a safety protocol:
 | LED[5] | UDP random data mode active |
 | LED[6] | UDP preset data transmission |
 | LED[7] | MDIO busy |
+
+## Ethernet Configuration Guide
+
+### Network Setup
+
+Set the network to `192.168.1.0/24`:
+
+| Device | IP Address |
+|--------|------------|
+| FPGA (fixed) | `192.168.1.128` |
+| PC | `192.168.1.100` |
+
+> IPv6 is disabled for compatibility reasons.
+
+Run the following commands to configure the interface:
+```bash
+sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1
+sudo sysctl -w net.ipv6.conf.default.disable_ipv6=1
+sudo ip addr flush dev eth0
+sudo ip addr add 192.168.1.100/24 dev eth0
+sudo ip link set eth0 up
+```
+
+Once configured, the PC can send UDP messages to the FPGA, and the FPGA can send UDP messages to the PC.
+
+---
+
+### Default Test
+
+The FPGA sends **128 UDP messages** to the PC by default.
+
+The FPGA also responds to ARP requests:
+```bash
+sudo arping -I eth0 -c 10 192.168.1.128
+```
+
+---
+
+### UDP Commands
+
+| Command | Description |
+|---------|-------------|
+| `#B_@` | Set number of bytes per package |
+| `#O_@` | Set number of cycles between packages |
+| `#P_@` | Set number of UDP packages to send |
+
+#### Set number of UDP packages (32-bit, default: 128)
+```bash
+echo -n -e "#P_@\x00\x10\x00\x00" | nc -u -b 192.168.1.128 1234
+```
+
+#### Set cycles between packages (32-bit, min: 1, default: 5)
+```bash
+echo -n -e "#O_@\x00\x00\x00\x01" | nc -u -b 192.168.1.128 1234
+```
+
+#### Set bytes per package (32-bit, lower 16 bits used, default: 1440 bytes)
+```bash
+echo -n -e "#B_@\x00\x00\x00\x00" | nc -u -b 192.168.1.128 1234
+```
+
+---
+
+### Throughput Tests
+
+#### TX Test (~1 Gbps)
+
+In terminal 1:
+```bash
+sudo tcpdump -i eth0 udp -w - | pv > /dev/null
+```
+In terminal 2, send `'T'` via UART. Use ~1M packages for accurate results.
+
+> **118 MB/s ≈ 0.994 Gbps (~1 Gbps)**
+
+---
+
+#### RX Test
+
+In terminal 1:
+```bash
+sudo hping3 192.168.1.128 -2 -p 1234 -d 1440 --flood
+```
+In terminal 2:
+```bash
+sudo tcpdump -i eth0 udp -w - | pv > /dev/null
+```
+
+---
+
+#### Full Duplex Test (RX + TX @ 1 Gbps)
+
+Run both the TX and RX tests simultaneously and monitor with:
+```bash
+sudo tcpdump -i eth0 udp -w - | pv > /dev/null
+```
+
+> **237 MB/s** — Full duplex at ~1 Gbps confirmed.
+>
+> ```
+> tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+> 26.9GiB 0:03:54 [236MiB/s]
+> ```
