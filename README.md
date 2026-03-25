@@ -1,5 +1,8 @@
 # FPGA UDP Communication Controller
-
+![bb2a6b14-ceca-4300-84da-205c0e84b861](https://github.com/user-attachments/assets/d1b2b5ab-4048-4e31-9e69-e21ac2fdd364)
+- **FPGA**: Xilinx Spartan-6 (XC6SLX9-2TQG144C)
+- **PHY**: KSZ9031RNXCC
+- **Conector**: ARJM11B1-502-AB-EW2
 ## Overview
 This project implements a UDP communication controller on FPGA with PHY management capabilities through MDIO interface. The system supports multiple operation modes and provides UART-based control interface.
 
@@ -289,3 +292,13 @@ sudo tcpdump -i eth0 udp -w - | pv > /dev/null
 > tcpdump: listening on eth0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 > 26.9GiB 0:03:54 [236MiB/s]
 > ```
+
+## Power Consumption
+
+All measurements include FPGA + PHY at 1 Gbps.
+
+| Mode | Current |
+|------|---------|
+| Standby (1 Gbps link up) | ~467 mA |
+| Software Shutdown | ~159 mA |
+| Full Duplex (1 Gbps) | ~552 mA |
