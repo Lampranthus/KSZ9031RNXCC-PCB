@@ -86,7 +86,6 @@ python3 send_uart.py command1 command2 command3
 ---
 
 ### UDP Control Commands
-
 | Command | Hex | Description |
 |---------|-----|-------------|
 | `loopback` | `6C6F6F706261636B` | Enable loopback mode (LED[4] on) |
@@ -99,8 +98,22 @@ python3 send_uart.py command1 command2 command3
 
 ---
 
-### MDIO / PHY Control Commands
+### IP / Network Configuration Commands
+| Command | Hex | Description |
+|---------|-----|-------------|
+| `ip_g\xII\xII\xII\xII` | `69705F67IIIIIIII` | Set gateway IP (32-bit) |
+| `ip_s\xII\xII\xII\xII` | `69705F73IIIIIIII` | Set local/source IP (32-bit) |
+| `ip_d\xII\xII\xII\xII` | `69705F64IIIIIIII` | Set destination IP (32-bit) |
+| `subm\xMM\xMM\xMM\xMM` | `7375626DMMMMMMM` | Set subnet mask (32-bit) |
+| `srport\xPP\xPP` | `7372706F7274PPPP` | Set UDP source port (16-bit) |
+| `dsport\xPP\xPP` | `6473706F7274PPPP` | Set UDP destination port (16-bit) |
 
+> **IP format:** IPs are sent as raw 32-bit big-endian values.
+> Example: `192.168.1.100` → `\xC0\xA8\x01\x64`
+
+---
+
+### MDIO / PHY Control Commands
 | Command | Hex | Description |
 |---------|-----|-------------|
 | `..mdio_w` | `2E2E6D64696F5F77` | Switch to MDIO write mode |
