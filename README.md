@@ -178,13 +178,97 @@ python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x00" "mdio_d\x11\x40" mdio_
 
 ---
 
+### MDIO MMD Register Access
+
+MMD (MIIM Managed Device) registers are accessed indirectly using the **MDIO address registers D (0x0D) and E (0x0E)**.
+
+The access sequence is always:
+1. Write the MMD device address to register `0x0D`
+2. Write the target register address to register `0x0E`
+3. Write the function (read/write + optional auto-increment) back to `0x0D`
+4. Read or write data via register `0x0E`
+
+#### Write MMD — Example: MMD device `0x02`, register `0x00` ← `0x0010`
+
+```bash
+# Step 1 — Select MMD device address (device = 0x02)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0D" "mdio_d\x00\x02" mdio_sta
+
+# Step 2 — Select target register inside the MMD (register = 0x0000)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0E" "mdio_d\x00\x00" mdio_sta
+
+# Step 3 — Switch to data function, no auto-increment (0x4000 | device)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0D" "mdio_d\x40\x02" mdio_sta
+
+# Step 4 — Write new data to the MMD register
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0E" "mdio_d\x00\x10" mdio_sta
+```
+
+> **`0x4002`** = data function (bits [15:14] = `01`) + device `0x02`, no auto-increment.
+> **`0x8002`** = data function with post-increment (bits [15:14] = `10`) + device `0x02`.
+
+---
+
+#### Read MMD — Example: MMD device `0x02`, registers `0x00` → `0x02` (burst with auto-increment)
+
+```bash
+# Step 1 — Select MMD device address (device = 0x02)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0D" "mdio_d\x00\x02" mdio_sta
+
+# Step 2 — Select starting register (register = 0x0000)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0E" "mdio_d\x00\x00" mdio_sta
+
+# Step 3 — Switch to data function WITH auto-increment (0x8000 | device)
+python3 send_uart.py ..mdio_w "phyaddr\x07" "regaddr\x0D" "mdio_d\x80\x02" mdio_sta
+
+# Step 4 — Read register 0x00
+python3 send_uart.py ..mdio_r "phyaddr\x07" "regaddr\x0E" mdio_sta
+
+# Step 5 — Read register 0x01 (auto-incremented)
+python3 send_uart.py ..mdio_r "phyaddr\x07" "regaddr\x0E" mdio_sta
+
+# Step 6 — Read register 0x02 (auto-incremented)
+python3 send_uart.py ..mdio_r "phyaddr\x07" "regaddr\x0E" mdio_sta
+```
+
+---
+
+#### One-liner shortcuts
+
+```bash
+# Full write — MMD 0x02, reg 0x00 ← 0x0008
+python3 send_uart.py ..mdio_w \
+  "phyaddr\x07" "regaddr\x0D" "mdio_d\x00\x02" mdio_sta \
+  "regaddr\x0E" "mdio_d\x00\x00"               mdio_sta \
+  "regaddr\x0D" "mdio_d\x40\x02"               mdio_sta \
+  "regaddr\x0E" "mdio_d\x00\x08"               mdio_sta
+
+# Full read — MMD 0x02, reg 0x00 (single, no auto-increment)
+python3 send_uart.py ..mdio_w \
+  "phyaddr\x07" "regaddr\x0D" "mdio_d\x00\x02" mdio_sta \
+  "regaddr\x0E" "mdio_d\x00\x00"               mdio_sta \
+  "regaddr\x0D" "mdio_d\x40\x02"               mdio_sta \
+  ..mdio_r "regaddr\x0E" mdio_sta
+```
+
+#### Register `0x0D` function field reference
+
+| Bits [15:14] | Value | Function |
+|---|---|---|
+| `00` | `0x0000` \| device | Address function — points to MMD register |
+| `01` | `0x4000` \| device | Data function — no auto-increment |
+| `10` | `0x8000` \| device | Data function — post-increment on each access read or write |
+| `11` | `0xC000` \| device | Data function — post increment on writes only |
+
+---
+
 ## Network Setup
 
-Set up a `192.168.1.0/24` network between your PC and the FPGA:
+Set up a `192.168.1.1/24` network between your PC and the FPGA:
 
 | Device | IP Address |
 |--------|------------|
-| FPGA (fixed) | `192.168.1.128` |
+| FPGA (default) | `192.168.1.12` |
 | PC | `192.168.1.100` |
 
 > IPv6 must be disabled on the interface for compatibility.
