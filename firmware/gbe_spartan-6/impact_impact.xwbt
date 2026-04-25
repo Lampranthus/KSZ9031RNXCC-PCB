@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/impact.xsl
+OUTFILE=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/impact.xsl
+FAMILY=None
+PART=None
+WORKINGDIR=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6
+LICENSE=iMPACT
+USER_INFO=iMPACT

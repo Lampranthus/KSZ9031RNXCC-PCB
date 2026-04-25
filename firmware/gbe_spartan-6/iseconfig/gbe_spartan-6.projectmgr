@@ -41,7 +41,7 @@
          <ClosedNode>/eth_phy_10g_rx_if |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_rx_if.v</ClosedNode>
          <ClosedNode>/eth_phy_10g_tx |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_tx.v</ClosedNode>
          <ClosedNode>/eth_phy_10g_tx_if |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_tx_if.v</ClosedNode>
-         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/dhcp_inst - dhcp</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/eth_mac_1g_inst - eth_mac_1g</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/eth_mac_1g_inst - eth_mac_1g/axis_gmii_tx_inst - axis_gmii_tx</ClosedNode>
@@ -49,9 +49,14 @@
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/rgmii_phy_if_inst - rgmii_phy_if/rx_ssio_ddr_inst - ssio_ddr_in</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/rx_fifo - axis_async_fifo_adapter</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/tx_fifo - axis_async_fifo_adapter</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_arb_mux_inst - ip_arb_mux</ClosedNode>
          <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_arb_mux_inst - ip_arb_mux/arb_inst - arbiter</ClosedNode>
-         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_complete_inst - ip_complete</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_complete_inst - ip_complete/arp_inst - arp</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_complete_inst - ip_complete/eth_arb_mux_inst - eth_arb_mux</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/ip_complete_inst - ip_complete/ip_inst - ip</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/udp_inst - udp</ClosedNode>
+         <ClosedNode>/fpga |home|ise|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/udp_complete_inst - udp_complete/udp_inst - udp/udp_checksum_gen_inst - udp_checksum_gen</ClosedNode>
          <ClosedNode>/gmii_phy_if |home|ise|gbe_spartan-6|lib|eth|rtl|gmii_phy_if.v</ClosedNode>
          <ClosedNode>/gmii_phy_if |home|ise|gbe_spartan-6|lib|eth|rtl|gmii_phy_if.v/tx_ssio_sdr_inst - ssio_sdr_out</ClosedNode>
          <ClosedNode>/ip_64 |home|ise|gbe_spartan-6|lib|eth|rtl|ip_64.v</ClosedNode>
@@ -70,13 +75,13 @@
          <ClosedNode>/udp_complete_64 |home|ise|gbe_spartan-6|lib|eth|rtl|udp_complete_64.v/ip_complete_64_inst - ip_complete_64/eth_arb_mux_inst - eth_arb_mux/arb_inst - arbiter</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>fpga (/home/ise/gbe_spartan-6/rtl/fpga.v)</SelectedItem>
+         <SelectedItem>core_inst - fpga_core (/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/rtl/fpga_core.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ee000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ee0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000237000000020000000000000000000000000200000064ffffffff000000810000000300000002000002370000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>fpga (/home/ise/gbe_spartan-6/rtl/fpga.v)</CurrentItem>
+      <CurrentItem>core_inst - fpga_core (/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/rtl/fpga_core.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -99,7 +104,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000250000000040101000100000000000000000000000064ffffffff000000810000000000000004000000510000000100000000000000290000000100000000000000840000000100000000000001520000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000610000000040101000100000000000000000000000064ffffffff000000810000000000000004000000510000000100000000000000290000000100000000000000840000000100000000000005120000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>arbiter.v</CurrentItem>
    </ItemView>
@@ -111,27 +116,26 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000128000000010001000100000000000000000000000064ffffffff000000810000000000000001000001280000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000011a000000010001000100000000000000000000000064ffffffff0000008100000000000000010000011a0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>work</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
-         <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Design Summary/Reports</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000e3000000010000000100000000000000000000000064ffffffff000000810000000000000001000000e30000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Design Summary/Reports</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -153,13 +157,13 @@
          <ClosedNode>CORE Generator</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f2000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f20000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000126000000b801000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

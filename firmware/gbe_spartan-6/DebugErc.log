@@ -1,0 +1,4 @@
+System Time     Process     Thread        ERC     ERC String                  Message
+2620871992      14018       452982464     3075    ercControlTransferFailed    USBC:FGetMAC
+2621031839      14171       348246464     3075    ercControlTransferFailed    USBC:FGetPDID
+2621031845      14171       348246464     3075    ercControlTransferFailed    USBC:FGetFWVER

@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-localhost.localdomain::  Fri Mar 27 23:07:57 2026
+lampranthus::  Fri Apr 17 08:11:07 2026
 
 par -w -intstyle ise -ol high -mt off fpga_map.ncd fpga.ncd fpga.pcf 
 
@@ -9,12 +9,6 @@ par -w -intstyle ise -ol high -mt off fpga_map.ncd fpga.ncd fpga.pcf
 Constraints file: fpga.pcf.
 Loading device for application Rf_Device from file '6slx9.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
    "fpga" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
-vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv
-INFO:Security:54 - 'xc6slx9' is a WebPack part.
-WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue
-to function, but you no longer qualify for Xilinx software updates or new releases.
-
-----------------------------------------------------------------------
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
 Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
@@ -32,39 +26,39 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 3,313 out of  11,440   28%
-    Number used as Flip Flops:               3,302
+  Number of Slice Registers:                 3,703 out of  11,440   32%
+    Number used as Flip Flops:               3,692
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               11
-  Number of Slice LUTs:                      3,000 out of   5,720   52%
-    Number used as logic:                    2,734 out of   5,720   47%
-      Number using O6 output only:           1,711
-      Number using O5 output only:             176
-      Number using O5 and O6:                  847
+  Number of Slice LUTs:                      3,392 out of   5,720   59%
+    Number used as logic:                    3,103 out of   5,720   54%
+      Number using O6 output only:           2,034
+      Number using O5 output only:             178
+      Number using O5 and O6:                  891
       Number used as ROM:                        0
-    Number used as Memory:                      99 out of   1,440    6%
-      Number used as Dual Port RAM:             96
-        Number using O6 output only:            16
+    Number used as Memory:                     119 out of   1,440    8%
+      Number used as Dual Port RAM:            116
+        Number using O6 output only:            20
         Number using O5 output only:             0
-        Number using O5 and O6:                 80
+        Number using O5 and O6:                 96
       Number used as Single Port RAM:            0
       Number used as Shift Register:             3
         Number using O6 output only:             3
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    167
-      Number with same-slice register load:    150
-      Number with same-slice carry load:        17
+    Number used exclusively as route-thrus:    170
+      Number with same-slice register load:    158
+      Number with same-slice carry load:        12
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,166 out of   1,430   81%
-  Number of MUXCYs used:                       704 out of   2,860   24%
-  Number of LUT Flip Flop pairs used:        3,781
-    Number with an unused Flip Flop:         1,039 out of   3,781   27%
-    Number with an unused LUT:                 781 out of   3,781   20%
-    Number of fully used LUT-FF pairs:       1,961 out of   3,781   51%
+  Number of occupied Slices:                 1,260 out of   1,430   88%
+  Number of MUXCYs used:                       740 out of   2,860   25%
+  Number of LUT Flip Flop pairs used:        4,199
+    Number with an unused Flip Flop:         1,112 out of   4,199   26%
+    Number with an unused LUT:                 807 out of   4,199   19%
+    Number of fully used LUT-FF pairs:       2,280 out of   4,199   54%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -116,31 +110,13 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 6 secs 
-Finished initial Timing Analysis.  REAL time: 6 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 WARNING:Par:288 - The signal V3_3_IBUF has no load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem4_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem2_RAMD_D1_O has no load. 
-   PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem3_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem1_RAMD_D1_O has no load.  PAR
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem2_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem2_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
@@ -148,36 +124,60 @@ WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_g
    will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem2_RAMD_D1_O has no load.  PAR
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem4_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem1_RAMD_D1_O has no load. 
    PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem3_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem2_RAMD_D1_O has no load. 
+   PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1_RAMD_D1_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 18322 unrouted;      REAL time: 6 secs 
+Phase  1  : 20842 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 15766 unrouted;      REAL time: 7 secs 
+Phase  2  : 18054 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 6251 unrouted;      REAL time: 18 secs 
+Phase  3  : 7821 unrouted;      REAL time: 12 secs 
 
-Phase  4  : 6251 unrouted; (Par is working to improve performance)     REAL time: 19 secs 
+Phase  4  : 7821 unrouted; (Par is working to improve performance)     REAL time: 12 secs 
 
 Updating file: fpga.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 30 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 22 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 32 secs 
-Total REAL time to Router completion: 32 secs 
-Total CPU time to Router completion: 28 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 23 secs 
+Total REAL time to Router completion: 23 secs 
+Total CPU time to Router completion: 24 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -197,11 +197,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     7.836ns|     N/A|           0
-  _int                                      | HOLD        |     0.334ns|            |       0|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     8.247ns|     N/A|           0
+  _int                                      | HOLD        |     0.298ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net cor | SETUP       |         N/A|     6.581ns|     N/A|           0
-  e_inst/eth_mac_inst/rx_clk                | HOLD        |     0.332ns|            |       0|           0
+  Autotimespec constraint for clock net cor | SETUP       |         N/A|     6.466ns|     N/A|           0
+  e_inst/eth_mac_inst/rx_clk                | HOLD        |     0.354ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -217,18 +217,18 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-WARNING:Par:283 - There are 17 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+WARNING:Par:283 - There are 20 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 33 secs 
-Total CPU time to PAR completion: 29 secs 
+Total REAL time to PAR completion: 24 secs 
+Total CPU time to PAR completion: 25 secs 
 
-Peak Memory Usage:  684 MB
+Peak Memory Usage:  676 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 19
+Number of warning messages: 22
 Number of info messages: 2
 
 Writing design to file fpga.ncd

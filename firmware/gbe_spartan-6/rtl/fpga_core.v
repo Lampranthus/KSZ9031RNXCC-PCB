@@ -212,12 +212,6 @@ wire tx_fifo_udp_payload_axis_tready;
 wire tx_fifo_udp_payload_axis_tlast;
 wire tx_fifo_udp_payload_axis_tuser;
 
-// Configuration
-wire [47:0] local_mac   = 48'h02_00_00_00_00_00;
-wire [31:0] local_ip    = {8'd192, 8'd168, 8'd1,   8'd128};
-wire [31:0] gateway_ip  = {8'd192, 8'd168, 8'd1,   8'd1};
-wire [31:0] subnet_mask = {8'd255, 8'd255, 8'd255, 8'd0};
-
 // IP ports not used
 assign rx_ip_hdr_ready = 1;
 assign rx_ip_payload_axis_tready = 1;
@@ -282,10 +276,10 @@ always @(posedge clk) begin
         ocupado <= 0;
 		  
     end else begin
-       // Estado 0: Esperando pulso o flood y esperandoa que link up RGMII IN-BAND STATUS if phy0_rx_ctl=0, phy0_rxd[0] is que link status.
+       // Estado 0: Esperando pulso o flood =0
         if (state == 3'd0) begin
         
-            if (((rx_trigger && ~rx_loopb) || ocupado || flood) && (phy0_rxd[0] && ~phy0_rx_ctl)) begin
+            if ((rx_trigger || ocupado || flood) && ~rx_loopb) begin
                 ocupado <= 1; //empieza el envio de los paquetes
                 state <= 3'd1;
                 tx_fifo_axis_tvalid <= 1; //tvalid 1 en el siguiente ciclo
@@ -323,6 +317,8 @@ always @(posedge clk) begin
                     state <= 3'd3;
                     tx_fifo_axis_tlast <= 1;
                     pkt_n_reg <= pkt_n_reg + 1;
+						  tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+						  x_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
                 end else if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
                 end else begin
@@ -431,10 +427,6 @@ assign tx_udp_ip_dscp = 0;
 assign tx_udp_ip_ecn = 0;
 assign tx_udp_ip_ttl = 64;
 assign tx_udp_ip_source_ip = local_ip;
-
-reg [31:0] tx_udp_ip_dest_ip_reg = {8'd192, 8'd168, 8'd1,   8'd100};
-reg [15:0] tx_udp_source_port_reg = 16'd1234;
-reg [15:0] tx_udp_dest_port_reg = 16'd9999;
 
 assign tx_udp_ip_dest_ip = rx_loopb ? rx_udp_ip_source_ip : tx_udp_ip_dest_ip_reg;
 assign tx_udp_source_port = rx_loopb ? rx_udp_dest_port : tx_udp_source_port_reg;
@@ -845,6 +837,18 @@ reg [15:0] n_bytes;
 reg [31:0] off_cycles; 
 reg [31:0] pkt_n;
 
+
+// Configuration
+wire [47:0] local_mac = 48'h02_00_00_00_00_00;
+
+reg [31:0] local_ip;
+reg [31:0] gateway_ip;
+reg [31:0] subnet_mask;
+
+reg [31:0] tx_udp_ip_dest_ip_reg;
+reg [15:0] tx_udp_source_port_reg;
+reg [15:0] tx_udp_dest_port_reg;
+
 always @(posedge clk) begin
     if (rst) begin
         flood <= 0;
@@ -861,6 +865,14 @@ always @(posedge clk) begin
 		  n_bytes <= 16'd1440;  //1440 bytes por paquete default;
 		  off_cycles <= 32'd1; // 1 por defecto ~8ns
 		  pkt_n <= 32'd1000000;//por defecto 1M mensajes
+		  
+		  gateway_ip  <= {8'd192, 8'd168, 8'd1,   8'd1};
+		  local_ip    <= {8'd192, 8'd168, 8'd1,   8'd12};
+		  tx_udp_ip_dest_ip_reg <= {8'd192, 8'd168, 8'd1,   8'd100};
+		  
+        subnet_mask <= {8'd255, 8'd255, 8'd255, 8'd0};
+        tx_udp_source_port_reg <= 16'd1234;
+        tx_udp_dest_port_reg <= 16'd9999;
 		  
     end else begin
 			//UDP CONTROL/////////////////////////////
@@ -886,12 +898,25 @@ always @(posedge clk) begin
 		  end else if (rx_uart_buff == 64'h6d64696f5f737461) begin //"mdio_sta"
 				mdio_start <= 1;
 				// UDP Mesagge configurations/*------------------*/
-		  end else if (rx_uart_buff == rx_uart_buff[63:16] == 48'h7564706d7475) begin //"udpmtu"16'hBBBB
+		  end else if (rx_uart_buff[63:16] == 48'h7564706d7475) begin //"udpmtu"16'hBBBB
 				n_bytes <= rx_uart_buff[15:0];
 		  end else if (rx_uart_buff[63:32] == 32'h6f666663) begin //"offc"32'hOOOOOOOO
 				off_cycles <= rx_uart_buff[31:0];
 		  end else if (rx_uart_buff[63:32] == 32'h706b746e) begin //"pktn"32'hPPPPPPPP
 				pkt_n <= rx_uart_buff[31:0];
+		  // ip configuration/*------------------*
+		  end else if (rx_uart_buff[63:32] == 32'h69705f67) begin //"ip_g"32'hIIIIIIII
+		      gateway_ip <= rx_uart_buff[31:0];
+		  end else if (rx_uart_buff[63:32] == 32'h69705f73) begin //"ip_s"32'hIIIIIIII
+		      local_ip <= rx_uart_buff[31:0];
+		  end else if (rx_uart_buff[63:32] == 32'h69705f64) begin //"ip_d"32'hIIIIIIII
+		      tx_udp_ip_dest_ip_reg <= rx_uart_buff[31:0];
+		  end else if (rx_uart_buff[63:32] == 32'h7375626d) begin //"subm"32'hMMMMMMMM
+		      subnet_mask <= rx_uart_buff[31:0];
+	     end else if (rx_uart_buff[63:16] == 48'h7372706f7274) begin //"srport"16'hPPPP
+		      tx_udp_source_port_reg <= rx_uart_buff[15:0];
+		  end else if (rx_uart_buff[63:16] == 48'h6473706f7274) begin //"dsport"16'hPPPP
+		      tx_udp_dest_port_reg <= rx_uart_buff[15:0];
 		  end else begin
 				flood <= flood;
 				rx_loopb <= rx_loopb;
@@ -907,6 +932,15 @@ always @(posedge clk) begin
 				n_bytes <= n_bytes;
 				off_cycles <= off_cycles;
 				pkt_n <= pkt_n;
+				
+			  gateway_ip  <= gateway_ip;
+			  local_ip    <= local_ip;
+			  tx_udp_ip_dest_ip_reg <= tx_udp_ip_dest_ip_reg;
+			  
+			  subnet_mask <= subnet_mask;
+			  tx_udp_source_port_reg <= tx_udp_source_port_reg;
+			  tx_udp_dest_port_reg <= tx_udp_dest_port_reg;
+
 		  end
     end
 end

@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/ise/gbe_spartan-6/fpga.ncd
-OUTFILE=/home/ise/gbe_spartan-6/fpga.bit
+INFILE=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/fpga.ncd
+OUTFILE=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/fpga.bit
 FAMILY=Spartan6
 PART=xc6slx9-2tqg144
-WORKINGDIR=/home/ise/gbe_spartan-6
-LICENSE=ISE
-USER_INFO=8416_11442_1478797146_620
+WORKINGDIR=/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6
+LICENSE=WebPack
+USER_INFO=__0_0_0

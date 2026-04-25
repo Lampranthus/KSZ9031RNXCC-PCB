@@ -2,12 +2,12 @@ Storage Target: Xilinx Flash/PROM
 Storage Family: Platform Flash
 xcf04s          [4 M]
 FF
-fix_tx_fsm
+control_ip_added
 /home/ise/VM_ISE
 
 MCS
 No
-/ise/VM_ISE
+M_ISE
 
 MCS
 No
