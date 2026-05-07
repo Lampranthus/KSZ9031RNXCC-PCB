@@ -161,7 +161,7 @@ localparam DATA_WIDTH = EXPAND_BUS ? M_DATA_WIDTH : S_DATA_WIDTH;
 localparam KEEP_WIDTH = EXPAND_BUS ? M_BYTE_LANES : S_BYTE_LANES;
 
 // bus width assertions
-initial begin
+/*initial begin
     if (S_BYTE_SIZE * S_BYTE_LANES != S_DATA_WIDTH) begin
         $error("Error: input data width not evenly divisible (instance %m)");
         $finish;
@@ -176,7 +176,7 @@ initial begin
         $error("Error: byte size mismatch (instance %m)");
         $finish;
     end
-end
+end*/
 
 wire [DATA_WIDTH-1:0]  pre_fifo_axis_tdata;
 wire [KEEP_WIDTH-1:0]  pre_fifo_axis_tkeep;

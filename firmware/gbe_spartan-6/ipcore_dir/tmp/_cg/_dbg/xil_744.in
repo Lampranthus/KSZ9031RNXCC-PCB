@@ -9,10 +9,10 @@ SET_PREFERENCE verilogsim true
 SET_PREFERENCE vhdlsim false
 SET_PREFERENCE simulationfiles Behavioral
 SET_PREFERENCE busformat BusFormatAngleBracketNotRipped
-SET_PREFERENCE outputdirectory /home/ise/gbe_spartan-6/ipcore_dir/
-SET_PREFERENCE workingdirectory /home/ise/gbe_spartan-6/ipcore_dir/tmp/
-SET_PREFERENCE subworkingdirectory /home/ise/gbe_spartan-6/ipcore_dir/tmp/_cg/
-SET_PREFERENCE transientdirectory /home/ise/gbe_spartan-6/ipcore_dir/tmp/_cg/_dbg/
+SET_PREFERENCE outputdirectory /home/ise/VM_ISE/gbe_spartan-6/ipcore_dir/
+SET_PREFERENCE workingdirectory /home/ise/VM_ISE/gbe_spartan-6/ipcore_dir/tmp/
+SET_PREFERENCE subworkingdirectory /home/ise/VM_ISE/gbe_spartan-6/ipcore_dir/tmp/_cg/
+SET_PREFERENCE transientdirectory /home/ise/VM_ISE/gbe_spartan-6/ipcore_dir/tmp/_cg/_dbg/
 SET_PREFERENCE designentry Verilog
 SET_PREFERENCE flowvendor Other
 SET_PREFERENCE addpads false
@@ -81,7 +81,7 @@ SET_PARAMETER Clkout1_Requested_Out_Freq 125.000
 SET_PARAMETER Clkout1_Requested_Phase 0.000
 SET_PARAMETER Clkout1_Requested_Duty_Cycle 50.000
 SET_PARAMETER Clkout2_Requested_Out_Freq 125.000
-SET_PARAMETER Clkout2_Requested_Phase 90.000
+SET_PARAMETER Clkout2_Requested_Phase 112.500
 SET_PARAMETER Clkout2_Requested_Duty_Cycle 50.000
 SET_PARAMETER Clkout3_Requested_Out_Freq 5.000
 SET_PARAMETER Clkout3_Requested_Phase 0.000
@@ -226,7 +226,7 @@ SET_PARAMETER Pll_Clkout0_Duty_Cycle 0.500
 SET_PARAMETER Pll_Clkout0_Phase 0.000
 SET_PARAMETER Pll_Clkout1_Divide 4
 SET_PARAMETER Pll_Clkout1_Duty_Cycle 0.500
-SET_PARAMETER Pll_Clkout1_Phase 90.000
+SET_PARAMETER Pll_Clkout1_Phase 112.500
 SET_PARAMETER Pll_Clkout2_Divide 100
 SET_PARAMETER Pll_Clkout2_Duty_Cycle 0.500
 SET_PARAMETER Pll_Clkout2_Phase 0.000

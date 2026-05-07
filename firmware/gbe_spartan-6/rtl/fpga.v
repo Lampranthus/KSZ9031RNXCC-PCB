@@ -44,6 +44,7 @@ module fpga (
     input  wire [2:0]  push,
     input  wire [7:0]  sw,
     output wire [7:0]  led,
+	 //output wire [1:0]  molex,
 	 
 	 /*
      * UART
@@ -83,7 +84,8 @@ wire pll_locked;
 
 wire clk90_int; //clock 90degre
 
-PLL(// Clock in ports
+PLL
+pll_inst(// Clock in ports
   .CLK_IN1(clk),
   // Clock out ports
   .CLK_OUT1(clk_int),//125Mhz
@@ -138,6 +140,7 @@ core_inst (
     .push(btn_int),
     .sw(sw_int),
     .led(led),
+	 //.molex(molex),
 	 
 	 /*
      * 1GbE PHY control (KSZ9031RNXCC) 

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2026-04-24T09:27:35</DateModified>
+  <DateModified>2026-05-06T01:46:53</DateModified>
   <ModuleName>fpga</ModuleName>
-  <SummaryTimeStamp>2026-03-22T05:52:02</SummaryTimeStamp>
-  <SavedFilePath>/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/iseconfig/fpga.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/luisfercrtez/KSZ9031RNXCC-PCB/firmware/gbe_spartan-6/</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2026-05-04T19:02:24</SummaryTimeStamp>
+  <SavedFilePath>/home/ise/VM_ISE/gbe_spartan-6/iseconfig/fpga.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/VM_ISE/gbe_spartan-6/</ImplementationReportsDirectory>
   <DateInitialized>2026-02-18T18:44:10</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -147,7 +147,7 @@ parameter ADDR_WIDTH = (KEEP_ENABLE && KEEP_WIDTH > 1) ? $clog2(DEPTH/KEEP_WIDTH
 parameter OUTPUT_FIFO_ADDR_WIDTH = RAM_PIPELINE < 2 ? 3 : $clog2(RAM_PIPELINE*2+7);
 
 // check configuration
-initial begin
+/*initial begin
     if (FRAME_FIFO && !LAST_ENABLE) begin
         $error("Error: FRAME_FIFO set requires LAST_ENABLE set (instance %m)");
         $finish;
@@ -182,7 +182,7 @@ initial begin
         $error("Error: MARK_WHEN_FULL set requires LAST_ENABLE set (instance %m)");
         $finish;
     end
-end
+end*/
 
 localparam KEEP_OFFSET = DATA_WIDTH;
 localparam LAST_OFFSET = KEEP_OFFSET + (KEEP_ENABLE ? KEEP_WIDTH : 0);

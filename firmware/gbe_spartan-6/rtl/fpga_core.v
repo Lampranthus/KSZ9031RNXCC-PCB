@@ -50,6 +50,7 @@ module fpga_core #
     input  wire [1:0]  push,
     input  wire [7:0]  sw,
     output wire [7:0]  led,
+	 //output wire [1:0]  molex,
 	 
 	 /*
      * 1GbE PHY control (KSZ9031RNXCC) 
@@ -58,6 +59,7 @@ module fpga_core #
 	 inout  wire MDIO,
 	 input  wire V3_3,
 	 input  wire CLK_125MHZ,
+	 
 	 
 	 /*
      * UART
@@ -234,12 +236,11 @@ assign tx_ip_payload_axis_tuser = 0;
 reg [15:0] cont_reg;
 reg [7:0] tx_fifo_axis_tdata;
 reg [7:0] tx_fifo_axis_tdata_reg;
-reg [7:0] tx_axis_tdata_test = 8'h0A; //"\n"
+reg [7:0] tx_axis_tdata_test = 8'h58; //"X"
 reg tx_fifo_axis_tvalid;
 wire tx_fifo_axis_tready;
 reg tx_fifo_axis_tlast;
 reg tx_fifo_axis_tuser = 0; 
-reg [31:0] off_cycles_reg;
 reg [31:0] pkt_n_reg;
 reg [2:0] state;
 reg ocupado;
@@ -257,7 +258,7 @@ assign feedback = lfsr[7] ^ lfsr[5] ^ lfsr[4] ^ lfsr[3];
 always @(posedge clk) begin
 
     if (rst) begin
-        lfsr <= 8'hAB; // Semilla inicial (no todos ceros)
+        lfsr <= 8'hAB; // Semilla inicial (no todos deben ser ceros)
     end else begin
         // Generar nuevo valor cada ciclo de reloj
         lfsr[7:0] <= {lfsr[6:0], feedback};
@@ -272,21 +273,22 @@ always @(posedge clk) begin
         cont_reg <= 16'd0;
         tx_fifo_axis_tlast <= 0;
         pkt_n_reg <= 32'd0;
-        off_cycles_reg <= 32'd0;
         ocupado <= 0;
 		  
     end else begin
-       // Estado 0: Esperando pulso o flood =0
+       // Estado 0: Esperando trigger o flood sin modo loopback
         if (state == 3'd0) begin
         
-            if ((rx_trigger || ocupado || flood) && ~rx_loopb) begin
+            if ((rx_trigger || flood) && ~rx_loopb) begin
                 ocupado <= 1; //empieza el envio de los paquetes
                 state <= 3'd1;
                 tx_fifo_axis_tvalid <= 1; //tvalid 1 en el siguiente ciclo
                 // primera palabra del mensaje
 					 if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
-                end else begin
+                end else if(rx_constante)begin
+						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
+					 end else begin
                     tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
                     tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
                 end
@@ -300,7 +302,9 @@ always @(posedge clk) begin
                 // Primer dato aceptado y ligiendo segunda palabra
                 if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
-                end else begin
+                end else if(rx_constante)begin
+						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
+					 end else begin
                     tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
                     tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
                 end
@@ -313,55 +317,73 @@ always @(posedge clk) begin
         
             if (tx_fifo_axis_tready) begin
                 cont_reg <= cont_reg + 1;
-                if (cont_reg == (n_bytes - 2)) begin
+                if (cont_reg == (n_bytes - 2)) begin // si se llego a la penultima palabra elegir el ultimo dato y enviarlo en el estado 3
                     state <= 3'd3;
                     tx_fifo_axis_tlast <= 1;
-                    pkt_n_reg <= pkt_n_reg + 1;
-						  tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-						  x_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  
+						  if(flood) begin
+								pkt_n_reg <= pkt_n; // si se esta en flood igualar a pkt_n para que cuando se desacative flood se dejen de enviar paketes en el siguient estado
+						  end else begin
+								pkt_n_reg <= pkt_n_reg + 1; // contar numero de paquete si no se esta en flood
+						  end
+                    
+						  if(rx_random) begin
+								tx_fifo_axis_tdata <= random_data;
+						  end else if(rx_constante)begin
+								tx_fifo_axis_tdata <= tx_axis_tdata_test;
+						  end else begin
+								tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+								tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  end
+					 // si no se ha lleado elegir la siguiente palabra del paquete y no salir del estado 2
                 end else if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
-                end else begin
+                end else if(rx_constante)begin
+						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
+					 end else begin
                     tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
                     tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
                 end
             end
 
         end
-        // Estado 3: Último dato del paquete
-        else if (state == 3'd3) begin
+        // Estado 3: ciclo donde se envia el ultimo dato del paquete, y se decide si seguir enviado o parar de enviar
+        else begin
         
-            if ((pkt_n_reg == pkt_n) || flood) begin
+            if (flood) begin //modo flood, envio sin parar
+					 state <= 3'd1; //si modo flood entonjces ir al estado 1 para enviar otro paquete
+                tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
+                cont_reg <= 0; //resetear cont_reg
+					 //seleccionar la siguiente palabra para ir a estado 1
+					 if(rx_random) begin
+							tx_fifo_axis_tdata <= random_data;
+					 end else if(rx_constante)begin
+							tx_fifo_axis_tdata <= tx_axis_tdata_test;
+					 end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+					 end
+				end else if (pkt_n_reg >= pkt_n) begin // si se llego a la ultimo paquete bajar valid y regresar a estado 0
                 cont_reg <= 0;
                 pkt_n_reg <= 0;
-                tx_fifo_axis_tdata_reg <= 8'd0;
-                off_cycles_reg <= 32'd0;
                 ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
                 state <= 3'd0; //volver a estado 0
                 tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
                 tx_fifo_axis_tvalid <= 0;//bajar tvalid
-            end else begin
-                state <= 3'd4; //si no se llego al numero de mensaje ir al estado 4 para esperar a que baje tready
+            end else begin //si no se llego a ultimo paquete elegir un dato para seguir enviando paquetes desde el estado 1
+                state <= 3'd1; //si no se llego al numero de mensaje ir al estado 1 para enviar otro paquete
                 tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
-                tx_fifo_axis_tvalid <= 0;//bajar tvalid
                 cont_reg <= 0; //resetear cont_reg
-            end
-        end
-         // Estado 4: esperando que tready baje para enviar otro mensaje
-        else if (state == 3'd4) begin
-        
-            if (~tx_fifo_axis_tready) begin 
-                state <= 3'd5; //cuando baje tready ir al estado 5 para esperas ciclos de separacion
-            end
-        end
-         // Estado 5: esperando ciclos de separacion para enviar el siguiente mensaje
-        else begin
-        
-            if (off_cycles_reg == (off_cycles - 1)) begin 
-                state <= 3'd0; // ir a estado 0
-                off_cycles_reg <= 0; //reiniciando off_cycles_reg
-            end else begin
-                off_cycles_reg <= off_cycles_reg + 1; 
+					 //seleccionar la siguiente palabra para ir a estado 1
+					 if(rx_random) begin
+							tx_fifo_axis_tdata <= random_data;
+					 end else if(rx_constante)begin
+							tx_fifo_axis_tdata <= tx_axis_tdata_test;
+					 end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+					 end
+
             end
         end
     end
@@ -374,26 +396,8 @@ wire reg_fifo_udp_payload_axis_tready;
 wire reg_fifo_udp_payload_axis_tlast;
 wire reg_fifo_udp_payload_axis_tuser;
 
-//UDP config register //////////////
-//como los bytes que salen de udp complete estan en little endian con este registro los ultimos 64Bytes que llegan se vuelven big endian.
-/*
-reg [63:0] rx_reg; 
-
-always @ (negedge clk) begin
-	if (rst) begin
-	rx_reg <= 64'd0;
-	end else begin
-		if (reg_fifo_udp_payload_axis_tvalid) begin
-			rx_reg <= {rx_reg[55:0],reg_fifo_udp_payload_axis_tdata};
-		end else begin
-			rx_reg <= rx_reg;
-		end	
-	end
-end
-*/
-
 // Loop back UDP
-wire match_cond = rx_udp_dest_port == 1234;
+wire match_cond = rx_udp_dest_port == 1234; // solo se escucha el puerto 1234 en el loopback
 wire no_match = !match_cond;
 
 reg match_cond_reg = 0;
@@ -466,9 +470,9 @@ eth_mac_1g_rgmii_fifo #(
     .USE_CLK90("TRUE"),
     .ENABLE_PADDING(1),
     .MIN_FRAME_LENGTH(64),
-    .TX_FIFO_DEPTH(1500),
+    .TX_FIFO_DEPTH(8192),
     .TX_FRAME_FIFO(1),
-    .RX_FIFO_DEPTH(1500),
+    .RX_FIFO_DEPTH(8192),
     .RX_FRAME_FIFO(1)
 )
 eth_mac_inst (
@@ -697,7 +701,7 @@ udp_complete_inst (
 );
 
 axis_fifo #(
-    .DEPTH(1500),
+    .DEPTH(8192),
     .DATA_WIDTH(8),
     .KEEP_ENABLE(0),
     .ID_ENABLE(0),
@@ -743,7 +747,7 @@ assign led[1] = phy0_reset_n && sw[1]; //reset_n phy encendido cuando run
 assign led[2] = CLK_125MHZ && sw[2];
 assign led[3] = ~phy0_int_n && sw[3];
 assign led[4] = rx_loopb && sw[4]; //decarctivar indicador con sw
-assign led[5] = rx_random && sw[5];
+assign led[5] = (rx_random || rx_constante) && sw[5];
 assign led[6]= ocupado && sw[6]; //desactivar indicador con sw
 assign led[7]= mdio_busy && sw[7];
 
@@ -751,7 +755,8 @@ assign led[7]= mdio_busy && sw[7];
 wire rx_busy;
 wire tx_busy;
 
-uart(
+uart
+uart_inst(
 	  .clk(clk),
 	  .reset_n(rst || push[1]),
 	  .tx_ena(tx_ena),
@@ -826,6 +831,7 @@ reg flood;
 reg rx_loopb;
 reg rx_trigger;
 reg rx_random;
+reg rx_constante;
 
 reg mdio_op;
 reg [4:0] mdio_phy;
@@ -839,7 +845,7 @@ reg [31:0] pkt_n;
 
 
 // Configuration
-wire [47:0] local_mac = 48'h02_00_00_00_00_00;
+wire [47:0] local_mac = 48'h02_00_00_00_00_00; //direccion fisica de la fpga
 
 reg [31:0] local_ip;
 reg [31:0] gateway_ip;
@@ -855,6 +861,7 @@ always @(posedge clk) begin
 		  rx_loopb <= 0;
 		  rx_trigger <= 0;
 		  rx_random <= 0;
+		  rx_constante <= 0;
 		  
 		  mdio_op <= 1; //default read
 		  mdio_phy <= 5'b00111; // default 7
@@ -863,16 +870,16 @@ always @(posedge clk) begin
 		  mdio_start <= 0;
 		  
 		  n_bytes <= 16'd1440;  //1440 bytes por paquete default;
-		  off_cycles <= 32'd1; // 1 por defecto ~8ns
-		  pkt_n <= 32'd1000000;//por defecto 1M mensajes
+		  off_cycles <= 32'd1; // 1 por defecto ~8ns (caracteristica desactivada ya no jau offcycles)
+		  pkt_n <= 32'd1;//por defecto 1 mensaje
 		  
 		  gateway_ip  <= {8'd192, 8'd168, 8'd1,   8'd1};
 		  local_ip    <= {8'd192, 8'd168, 8'd1,   8'd12};
-		  tx_udp_ip_dest_ip_reg <= {8'd192, 8'd168, 8'd1,   8'd100};
+		  tx_udp_ip_dest_ip_reg <= {8'd192, 8'd168, 8'd1,   8'd11};
 		  
         subnet_mask <= {8'd255, 8'd255, 8'd255, 8'd0};
-        tx_udp_source_port_reg <= 16'd1234;
-        tx_udp_dest_port_reg <= 16'd9999;
+        tx_udp_source_port_reg <= 16'd1234; //puerto por defecto para envio, source, desde la fpga
+        tx_udp_dest_port_reg <= 16'd9999; //puerto por defecto para envio, destination hacia la pc
 		  
     end else begin
 			//UDP CONTROL/////////////////////////////
@@ -884,6 +891,8 @@ always @(posedge clk) begin
 				rx_trigger <= 1;
 		  end else if (rx_uart_buff == 64'h2e2e72616e646f6d) begin //"..random"
 				rx_random <= ~rx_random;
+		  end else if (rx_uart_buff == 64'h636f6e7374616e74) begin //"constant"
+				rx_constante <= ~rx_constante;
 				// PHY CONTROLLER/*------------------*//
 		  end else if (rx_uart_buff == 64'h2e2e6d64696f5f72) begin //"..mdio_r"
 				mdio_op <= 1;

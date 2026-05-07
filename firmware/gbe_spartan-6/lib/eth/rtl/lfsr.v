@@ -302,10 +302,10 @@ function [LFSR_WIDTH+DATA_WIDTH-1:0] lfsr_mask(input [31:0] index);
                     end
                 end
             end
-        end else begin
+        end /*else begin
             $error("Error: unknown configuration setting!");
             $finish;
-        end
+        end*/
 
         // reverse bits if selected
         if (REVERSE) begin

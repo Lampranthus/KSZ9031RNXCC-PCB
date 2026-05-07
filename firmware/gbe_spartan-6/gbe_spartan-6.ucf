@@ -1,5 +1,10 @@
+NET "*" IOSTANDARD=LVCMOS33;
+CONFIG VCCAUX = "2.5" ;
+
 // 50Mhz Clock
 NET "clk" LOC = "P56";
+NET "clk" TNM_NET = "sys_clk_pin";
+TIMESPEC "TS_sys_clk_pin" = PERIOD "sys_clk_pin" 20.000ns HIGH 50%;
 
 // Dip Switch
 NET "sw<0>" LOC = "P35";
@@ -37,23 +42,25 @@ NET "rxd" LOC = "P101";
 // Single
 //NET "pin0" LOC = "P139";
 
-// Pin Header
-NET "ENET0_TX_DATA<0>" LOC = "P138"; //adc_clk
-NET "ENET0_TX_DATA<1>" LOC = "P137"; // d9
-NET "ENET0_TX_DATA<2>" LOC = "P134"; // d8
-NET "ENET0_TX_DATA<3>" LOC = "P133"; // d7
+// Pin Header 
+NET "ENET0_TX_DATA<0>" LOC = "P138" | SLEW = SLOW | DRIVE = 4; // RGMMII TXD0
+NET "ENET0_TX_DATA<1>" LOC = "P137" | SLEW = SLOW | DRIVE = 4; // RGMMII TXD1
+NET "ENET0_TX_DATA<2>" LOC = "P134" | SLEW = SLOW | DRIVE = 4; // RGMMII TXD2
+NET "ENET0_TX_DATA<3>" LOC = "P133" | SLEW = SLOW | DRIVE = 4; // RGMMII TXD3
 //NET "NC0" LOC = "P132"; // No connection
-NET "ENET0_GTX_CLK" LOC = "P131"; // d6
-NET "ENET0_TX_EN" LOC = "P127"; // d5
-NET "ENET0_RX_DATA<3>" LOC = "P126"; // d4
-NET "ENET0_RX_DATA<2>" LOC = "P124"; // d3
-NET "ENET0_RX_CLK" LOC = "P123"; // d2
-NET "ENET0_RX_DATA<1>" LOC = "P121"; // d1
-NET "ENET0_RX_DATA<0>" LOC = "P120"; // d0
-NET "ENET0_RX_DV" LOC = "P119"; // No connection
-NET "V3_3" LOC = "P118"; // 3.3V when adc on
-NET "MDC" LOC = "P117"; // int_rst
-NET "MDIO" LOC = "P116"; // trigg 0 start
-NET "ENET0_INT_N" LOC = "P115"; // trigg 1 stop
-NET "CLK_125MHZ" LOC = "P114"; // debug 0
-NET "ENET0_RST_N" LOC = "P112"; // debug 1
+NET "ENET0_GTX_CLK" LOC = "P131" | SLEW = SLOW | DRIVE = 4; // RGMMII GTX_CLK
+NET "ENET0_TX_EN" LOC = "P127" | SLEW = SLOW | DRIVE = 4; // RGMMII TX_EN
+NET "ENET0_RX_DATA<3>" LOC = "P126" | IOB = TRUE; // RGMMII RXD3
+NET "ENET0_RX_DATA<2>" LOC = "P124" | IOB = TRUE; // RGMMII RXD2 
+NET "ENET0_RX_CLK" LOC = "P123" | IOB = TRUE; // RGMMII RX_CLK 
+NET "ENET0_RX_CLK" TNM_NET = "rx_clk_pin";
+TIMESPEC "TS_rx_clk_pin" = PERIOD "rx_clk_pin" 8.000ns HIGH 50%;
+NET "ENET0_RX_DATA<1>" LOC = "P121" | IOB = TRUE; // RGMMII RXD1 
+NET "ENET0_RX_DATA<0>" LOC = "P120" | IOB = TRUE; // RGMMII RXD0 
+NET "ENET0_RX_DV" LOC = "P119" | IOB = TRUE; // RGMMII RX_DV
+NET "V3_3" LOC = "P118"; // 3.3V in when pcb energized
+NET "MDC" LOC = "P117";
+NET "MDIO" LOC = "P116";
+NET "ENET0_INT_N" LOC = "P115";
+NET "CLK_125MHZ" LOC = "P114";
+NET "ENET0_RST_N" LOC = "P112";  // RGMMII RST_N

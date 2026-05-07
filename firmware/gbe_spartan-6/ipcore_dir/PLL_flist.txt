@@ -52,3 +52,4 @@ PLL.xdc
 PLL.xise
 PLL_flist.txt
 PLL_xmdf.tcl
+_xmsgs/pn_parser.xmsgs

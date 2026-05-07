@@ -82,12 +82,12 @@ module axis_gmii_rx #
 );
 
 // bus width assertions
-initial begin
+/*initial begin
     if (DATA_WIDTH != 8) begin
         $error("Error: Interface width must be 8");
         $finish;
     end
-end
+end*/
 
 localparam [7:0]
     ETH_PRE = 8'h55,

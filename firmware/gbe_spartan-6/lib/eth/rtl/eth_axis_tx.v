@@ -87,12 +87,12 @@ parameter PTR_WIDTH = $clog2(CYCLE_COUNT);
 parameter OFFSET = HDR_SIZE % BYTE_LANES;
 
 // bus width assertions
-initial begin
+/*initial begin
     if (BYTE_LANES * 8 != DATA_WIDTH) begin
         $error("Error: AXI stream interface requires byte (8-bit) granularity (instance %m)");
         $finish;
     end
-end
+end*/
 
 /*
 

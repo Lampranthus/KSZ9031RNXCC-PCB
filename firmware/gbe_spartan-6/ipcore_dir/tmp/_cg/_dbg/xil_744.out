@@ -34,7 +34,7 @@ SET_PARAMETER mmcm_bandwidth OPTIMIZED
 SET_PARAMETER mmcm_clkin1_period 10.000
 SET_PARAMETER override_mmcm false
 SET_PARAMETER mmcm_clkout5_use_fine_ps false
-SET_PARAMETER pll_clkout1_phase 90.000
+SET_PARAMETER pll_clkout1_phase 112.500
 SET_PARAMETER dcm_clkgen_clk_out3_port CLKFX
 SET_PARAMETER pll_clkout2_divide 100
 SET_PARAMETER use_min_power false
@@ -132,7 +132,7 @@ SET_PARAMETER pll_compensation SYSTEM_SYNCHRONOUS
 SET_PARAMETER clkout4_used false
 SET_PARAMETER clkfb_in_n_port CLKFB_IN_N
 SET_PARAMETER clk_out2_port CLK_OUT2
-SET_PARAMETER clkout2_requested_phase 90.000
+SET_PARAMETER clkout2_requested_phase 112.500
 SET_PARAMETER use_locked true
 SET_PARAMETER den_port DEN
 SET_PARAMETER clk_out1_use_fine_ps_gui false

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/lfsr.v" Line 352: Parameter declaration becomes local in <arg fmt="%s" index="1">lfsr</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/priority_encoder.v" Line 47: Parameter declaration becomes local in <arg fmt="%s" index="1">priority_encoder</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/priority_encoder.v" Line 48: Parameter declaration becomes local in <arg fmt="%s" index="1">priority_encoder</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_tx.v" Line 101: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_tx.v" Line 103: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_tx.v" Line 105: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_tx.v" Line 107: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_tx.v" Line 109: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_rx.v" Line 112: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_rx.v" Line 114: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_rx.v" Line 116: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_rx.v" Line 118: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/mac_ctrl_rx.v" Line 120: Parameter declaration becomes local in <arg fmt="%s" index="1">mac_ctrl_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/axis_gmii_tx.v" Line 93: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_gmii_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_tx.v" Line 85: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_tx.v" Line 87: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_tx.v" Line 89: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_tx.v" Line 91: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_tx.v" Line 93: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_rx.v" Line 89: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_rx.v" Line 91: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_rx.v" Line 93: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_rx.v" Line 95: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/arp_eth_rx.v" Line 97: Parameter declaration becomes local in <arg fmt="%s" index="1">arp_eth_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 137: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 139: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_fifo.v" Line 254: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.v" Line 143: Parameter declaration becomes local in <arg fmt="%s" index="1">udp_checksum_gen</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g.v" Line 191: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_mac_1g</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g.v" Line 192: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_mac_1g</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_arb_mux.v" Line 90: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_arb_mux</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_async_fifo.v" Line 145: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_async_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_async_fifo.v" Line 147: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_async_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/lib/axis/rtl/axis_async_fifo.v" Line 344: Parameter declaration becomes local in <arg fmt="%s" index="1">axis_async_fifo</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/ip_arb_mux.v" Line 116: Parameter declaration becomes local in <arg fmt="%s" index="1">ip_arb_mux</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/mdio_controller.v" Line 59: Parameter declaration becomes local in <arg fmt="%s" index="1">mdio_controller</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_tx.v" Line 79: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_tx.v" Line 81: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_tx.v" Line 83: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_tx.v" Line 85: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_tx.v" Line 87: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_tx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_rx.v" Line 80: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_rx.v" Line 82: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_rx.v" Line 84: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_rx.v" Line 86: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="693" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_axis_rx.v" Line 88: Parameter declaration becomes local in <arg fmt="%s" index="1">eth_axis_rx</arg> with formal parameter declaration list
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 438: Port <arg fmt="%s" index="1">tx_axis_tkeep</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 489: Port <arg fmt="%s" index="1">s_axis_tkeep</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 515: Port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 673: Port <arg fmt="%s" index="1">pause_req</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 254: Port <arg fmt="%s" index="1">s_pause_req</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 305: Port <arg fmt="%s" index="1">s_pause_req</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii.v" Line 218: Port <arg fmt="%s" index="1">tx_ptp_ts</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 282: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 283: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 329: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 333: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/eth_mac_1g_rgmii_fifo.v" Line 334: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 669: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">clear_arp_cache</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 375: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_eth_dest_mac</arg>&gt;. Formal port size is <arg fmt="%d" index="2">96</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 376: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_eth_src_mac</arg>&gt;. Formal port size is <arg fmt="%d" index="2">96</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 378: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_version</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 379: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_ihl</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 384: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_flags</arg>&gt;. Formal port size is <arg fmt="%d" index="2">6</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 385: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_fragment_offset</arg>&gt;. Formal port size is <arg fmt="%d" index="2">26</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 392: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_payload_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 396: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_payload_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_complete.v" Line 397: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_ip_payload_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/ip_complete.v" Line 395: Port <arg fmt="%s" index="1">s_eth_payload_axis_tkeep</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/ip_complete.v" Line 279: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_eth_payload_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">2</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/ip_complete.v" Line 283: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_eth_payload_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/ip_complete.v" Line 284: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_eth_payload_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.v" Line 203: Port <arg fmt="%s" index="1">pause_req</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.v" Line 219: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.v" Line 223: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/udp_checksum_gen.v" Line 224: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 689: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tkeep</arg>&gt;. Formal port size is <arg fmt="%d" index="2">1</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 693: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tid</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="189" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga_core.v" Line 694: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">s_axis_tdest</arg>&gt;. Formal port size is <arg fmt="%d" index="2">8</arg>-bit while actual signal size is <arg fmt="%d" index="1">32</arg>-bit.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1007" delta="unknown" >"/home/ise/VM_ISE/gbe_spartan-6/lib/eth/rtl/axis_gmii_tx.v" Line 204: Element index <arg fmt="%d" index="1">1</arg> into <arg fmt="%s" index="2">s_axis_tuser</arg> is out of bounds
+</msg>
+
+</messages>
+
