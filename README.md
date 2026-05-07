@@ -31,15 +31,14 @@ A **1 Gbps Ethernet UDP communication system** implemented on a Xilinx Spartan-6
 
 | Switch | Function | LED | Indicates |
 |--------|----------|-----|-----------|
-| SW[0] | PHY hardware reset | — | — |
-| SW[1] | Global reset_n | LED[0] | Global reset active |
-| SW[1] | PHY reset_n | LED[1] | PHY reset active |
-| SW[2] | — | LED[2] | PHY PLL 125 MHz locked |
-| SW[3] | — | LED[3] | PHY interrupt_n |
-| SW[4] | — | LED[4] | UDP loopback mode active |
-| SW[5] | — | LED[5] | UDP random data mode active |
-| SW[6] | — | LED[6] | UDP preset data transmitting |
-| SW[7] | — | LED[7] | MDIO busy |
+| SW[0] | Indicator state | LED[0] | Global reset_n |
+| SW[1] | Indicator state | LED[1] | UART/MDIO reset_n |
+| SW[2] | Indicator state | LED[2] | PHY PLL 125 MHz_n |
+| SW[3] | Indicator state | LED[3] | PHY interrupt |
+| SW[4] | Indicator state | LED[4] | UDP loopback mode |
+| SW[5] | Indicator state | LED[5] | UDP random or constant data mode |
+| SW[6] | Indicator state | LED[6] | UDP transmitting |
+| SW[7] | Indicator state | LED[7] | MDIO busy |
 
 ### Push Buttons
 
@@ -55,10 +54,10 @@ A **1 Gbps Ethernet UDP communication system** implemented on a Xilinx Spartan-6
 
 | Mode | Description |
 |------|-------------|
-| Default | Standard UDP operation |
+| Default | Generate and transmit sequence data |
 | Loopback | Echo received packets back to sender |
-| Random data | Generate and transmit random data packets |
-| Preset data | Transmit predefined data patterns |
+| Random data | Generate and transmit random data |
+| Constant data | Transmit predefined data "X" or h58 |
 
 ---
 
@@ -93,8 +92,7 @@ python3 send_uart.py command1 command2 command3
 | `..random` | `2E2E72616E646F6D` | Enable random data mode (LED[5] on) |
 | `...flood` | `2E2E2E666C6F6F64` | Transmit as fast as possible |
 | `udpmtu\xHH\xHH` | `7564706D7475HHHH` | Set MTU size (16-bit, default `\x05\xA0` = 1440 B) |
-| `offc\xHH\xHH\x00\x00` | `6F666663HHHHHHHH` | Set inter-packet offset cycles (32-bit, default `\x00\x00\x00\x01`) |
-| `pktn\xHH\xHH\x00\x00` | `706B746EHHHHHHHH` | Set packet count per trigger (32-bit, default `\x00\x0F\x42\x40` = 1 M) |
+| `pktn\xHH\xHH\x00\x00` | `706B746EHHHHHHHH` | Set packet count per trigger (32-bit, default `\x00\x00\x00\x01` = 1) |
 
 ---
 
@@ -269,7 +267,7 @@ Set up a `192.168.1.1/24` network between your PC and the FPGA:
 | Device | IP Address |
 |--------|------------|
 | FPGA (default) | `192.168.1.12` |
-| PC | `192.168.1.100` |
+| PC (default) | `192.168.1.11` |
 
 > IPv6 must be disabled on the interface for compatibility.
 
@@ -277,14 +275,14 @@ Configure the PC interface:
 
 ```bash
 sudo ip addr flush dev eth0
-sudo ip addr add 192.168.1.100/24 dev eth0
+sudo ip addr add 192.168.1.11/24 dev eth0
 sudo ip link set eth0 up
 ```
 
 Verify ARP (confirms the FPGA link is up):
 
 ```bash
-sudo arping -I eth0 -c 10 192.168.1.128
+sudo arping -I eth0 -c 10 192.168.1.12
 ```
 
 ---
@@ -311,7 +309,7 @@ python3 send_uart.py .trigger
 
 Terminal 1 — flood UDP packets to the FPGA:
 ```bash
-sudo hping3 192.168.1.128 -2 -p 1234 -d 1440 --flood
+sudo hping3 192.168.1.12 -2 -p 1234 -d 1440 --flood
 ```
 
 Terminal 2 — monitor received traffic:
