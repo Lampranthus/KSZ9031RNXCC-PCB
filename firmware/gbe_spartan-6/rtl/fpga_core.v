@@ -236,7 +236,7 @@ assign tx_ip_payload_axis_tuser = 0;
 reg [15:0] cont_reg;
 reg [7:0] tx_fifo_axis_tdata;
 reg [7:0] tx_fifo_axis_tdata_reg;
-reg [7:0] tx_axis_tdata_test = 8'h58; //"X"
+reg [7:0] tx_axis_tdata_test = "X"; //"X"
 reg tx_fifo_axis_tvalid;
 wire tx_fifo_axis_tready;
 reg tx_fifo_axis_tlast;
@@ -244,6 +244,10 @@ reg tx_fifo_axis_tuser = 0;
 reg [31:0] pkt_n_reg;
 reg [2:0] state;
 reg ocupado;
+reg send_regs;
+reg [15:0] udp_bit_regs;
+
+reg send_mdio;
 
 reg [7:0] random_data;
 // Linear-feedback shift register
@@ -257,10 +261,10 @@ assign feedback = lfsr[7] ^ lfsr[5] ^ lfsr[4] ^ lfsr[3];
 // maquina de estados para trasnmision 
 always @(posedge clk) begin
 
-    if (rst) begin
+    if (~rx_random) begin
         lfsr <= 8'hAB; // Semilla inicial (no todos deben ser ceros)
     end else begin
-        // Generar nuevo valor cada ciclo de reloj
+        // Generar nuevo valor cada ciclo de reloj cuando rx_random esta en alto
         lfsr[7:0] <= {lfsr[6:0], feedback};
         random_data <= lfsr;
     end
@@ -274,6 +278,9 @@ always @(posedge clk) begin
         tx_fifo_axis_tlast <= 0;
         pkt_n_reg <= 32'd0;
         ocupado <= 0;
+		  send_regs <= 0;
+		  udp_bit_regs <= 0;
+		  send_mdio <= 0;
 		  
     end else begin
        // Estado 0: Esperando trigger o flood sin modo loopback
@@ -292,15 +299,32 @@ always @(posedge clk) begin
                     tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
                     tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
                 end
-            end
+            end else if (full_reg_flag) begin
+					 ocupado <= 1;
+					 send_regs <= 1;
+					 tx_fifo_axis_tvalid <= 1; //tvalid 1 en el siguiente ciclo
+					 tx_fifo_axis_tdata <= full_registro[FRAME_BITS-1:FRAME_BITS-8];
+					 state <= 3'd1;
+				end else if (mdio_read_ready) begin
+					 ocupado <= 1;
+					 send_mdio <= 1;
+					 tx_fifo_axis_tvalid <= 1;
+					 tx_fifo_axis_tdata <= {3'd0,mdio_reg};
+					 state <= 3'd1;
+				end
+				
         end 
         // Estado 1: Enviando primera palabra del mensaje
         else if (state == 3'd1) begin
  
             if (tx_fifo_axis_tready) begin
                 state <= 3'd2;
-                // Primer dato aceptado y ligiendo segunda palabra
-                if(rx_random) begin
+                // Primer dato aceptado y eligiendo segunda palabra
+					 if(send_regs) begin
+						  tx_fifo_axis_tdata <= full_registro[FRAME_BITS-9:FRAME_BITS-16];
+					 end else if(send_mdio) begin
+						tx_fifo_axis_tdata <= mdio_rdata_reg[15:8];
+                end else if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
                 end else if(rx_constante)begin
 						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
@@ -317,7 +341,7 @@ always @(posedge clk) begin
         
             if (tx_fifo_axis_tready) begin
                 cont_reg <= cont_reg + 1;
-                if (cont_reg == (n_bytes - 2)) begin // si se llego a la penultima palabra elegir el ultimo dato y enviarlo en el estado 3
+                if (cont_reg == (n_bytes - 2) || (cont_reg == (FRAME_BYTES-2) && send_regs) || send_mdio) begin // si se llego a la penultima palabra elegir el ultimo dato y enviarlo en el estado 3
                     state <= 3'd3;
                     tx_fifo_axis_tlast <= 1;
 						  
@@ -327,7 +351,11 @@ always @(posedge clk) begin
 								pkt_n_reg <= pkt_n_reg + 1; // contar numero de paquete si no se esta en flood
 						  end
                     
-						  if(rx_random) begin
+						  if(send_regs) begin
+						      tx_fifo_axis_tdata <= full_registro[7:0];
+						  end else if(send_mdio) begin
+								tx_fifo_axis_tdata <= mdio_rdata_reg[7:0];
+						  end else if(rx_random) begin
 								tx_fifo_axis_tdata <= random_data;
 						  end else if(rx_constante)begin
 								tx_fifo_axis_tdata <= tx_axis_tdata_test;
@@ -336,6 +364,9 @@ always @(posedge clk) begin
 								tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
 						  end
 					 // si no se ha lleado elegir la siguiente palabra del paquete y no salir del estado 2
+                end else if(send_regs) begin
+						  tx_fifo_axis_tdata <= full_registro[(FRAME_BITS - 17 - udp_bit_regs) -: 8];
+						  udp_bit_regs <= udp_bit_regs + 8;
                 end else if(rx_random) begin
                     tx_fifo_axis_tdata <= random_data;
                 end else if(rx_constante)begin
@@ -363,8 +394,11 @@ always @(posedge clk) begin
 							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
 							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
 					 end
-				end else if (pkt_n_reg >= pkt_n) begin // si se llego a la ultimo paquete bajar valid y regresar a estado 0
+				end else if (pkt_n_reg >= pkt_n || send_regs || send_mdio) begin // si se llego a la ultimo paquete bajar valid y regresar a estado 0
                 cont_reg <= 0;
+					 udp_bit_regs <= 0;
+					 send_regs <= 0;
+					 send_mdio <= 0;
                 pkt_n_reg <= 0;
                 ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
                 state <= 3'd0; //volver a estado 0
@@ -396,33 +430,46 @@ wire reg_fifo_udp_payload_axis_tready;
 wire reg_fifo_udp_payload_axis_tlast;
 wire reg_fifo_udp_payload_axis_tuser;
 
-// Loop back UDP
+// Reception ////////////////////////////////////////////////////////////////////////////
+
+//Port Control UDP
+wire match_cond_control = rx_udp_dest_port == 55555; // puerto 55555 para control
+wire no_match_control = !match_cond_control;
+reg match_cond_reg_control = 0;
+reg no_match_reg_control = 0;
+
+// Port Loopback UDP
 wire match_cond = rx_udp_dest_port == 1234; // solo se escucha el puerto 1234 en el loopback
 wire no_match = !match_cond;
-
 reg match_cond_reg = 0;
 reg no_match_reg = 0;
 
 always @(posedge clk) begin
     if (rst) begin
-        match_cond_reg <= 0;
+        match_cond_reg_control <= 0;
+        no_match_reg_control <= 0;
+		  match_cond_reg <= 0;
         no_match_reg <= 0;
     end else begin
         if (rx_udp_payload_axis_tvalid) begin
-            if ((!match_cond_reg && !no_match_reg) ||
+            if ((!match_cond_reg_control && !no_match_reg_control) || (!match_cond_reg && !no_match_reg) ||
                 (rx_udp_payload_axis_tvalid && rx_udp_payload_axis_tready && rx_udp_payload_axis_tlast)) begin
-                match_cond_reg <= match_cond;
+                match_cond_reg_control <= match_cond_control;
+                no_match_reg_control <= no_match_control;
+					 match_cond_reg <= match_cond;
                 no_match_reg <= no_match;
             end
         end else begin
+				match_cond_reg_control <= 0;
+            no_match_reg_control <= 0;
 				match_cond_reg <= 0;
             no_match_reg <= 0;
         end
     end
 end
 
-assign tx_udp_hdr_valid = rx_loopb ? (rx_udp_hdr_valid & match_cond) : (tx_udp_payload_axis_tvalid && tx_udp_hdr_ready);
-assign rx_udp_hdr_ready = rx_loopb ? ((tx_udp_hdr_ready & match_cond) | no_match) : (match_cond | no_match);
+assign tx_udp_hdr_valid = rx_loopb ? (rx_udp_hdr_valid && match_cond) : (tx_udp_payload_axis_tvalid && tx_udp_hdr_ready);
+assign rx_udp_hdr_ready = rx_loopb ? ((tx_udp_hdr_ready && match_cond) || no_match) : 1'b1;
 
 //assign tx_udp_hdr_valid = rx_udp_hdr_valid && match_cond;
 //assign rx_udp_hdr_ready = (tx_eth_hdr_ready && match_cond) || no_match;
@@ -470,9 +517,9 @@ eth_mac_1g_rgmii_fifo #(
     .USE_CLK90("TRUE"),
     .ENABLE_PADDING(1),
     .MIN_FRAME_LENGTH(64),
-    .TX_FIFO_DEPTH(8192),
+    .TX_FIFO_DEPTH(2048),
     .TX_FRAME_FIFO(1),
-    .RX_FIFO_DEPTH(8192),
+    .RX_FIFO_DEPTH(2048),
     .RX_FRAME_FIFO(1)
 )
 eth_mac_inst (
@@ -501,21 +548,166 @@ eth_mac_inst (
     .rgmii_txd(phy0_txd),
     .rgmii_tx_ctl(phy0_tx_ctl),
     
-    .tx_fifo_overflow(),
-    .tx_fifo_bad_frame(),
-    .tx_fifo_good_frame(),
-    .rx_error_bad_frame(),
-    .rx_error_bad_fcs(),
-    .rx_fifo_overflow(),
-    .rx_fifo_bad_frame(),
-    .rx_fifo_good_frame(),
-    .speed(),
+    .tx_fifo_overflow(tx_fifo_overflow),
+    .tx_fifo_bad_frame(tx_fifo_bad_frame),
+    .tx_fifo_good_frame(tx_fifo_good_frame),
+    .rx_error_bad_frame(rx_error_bad_frame),
+    .rx_error_bad_fcs(rx_error_bad_fcs),
+    .rx_fifo_overflow(rx_fifo_overflow),
+    .rx_fifo_bad_frame(rx_fifo_bad_frame),
+    .rx_fifo_good_frame(rx_fifo_good_frame),
+    .speed(speed),
 
     .cfg_ifg(8'd12),
     .cfg_tx_enable(1'b1),
     .cfg_rx_enable(1'b1)
 );
 
+//ETH status signals
+wire tx_fifo_overflow;
+wire tx_fifo_bad_frame;
+wire tx_fifo_good_frame;
+wire rx_error_bad_frame;
+wire rx_error_bad_fcs;
+wire rx_fifo_overflow;
+wire rx_fifo_bad_frame;
+wire rx_fifo_good_frame;
+wire eth_rx_error_header_early_termination;
+
+//UDP, IP, ARP status, signals
+wire ip_rx_error_header_early_termination;
+wire ip_rx_error_payload_early_termination;
+wire ip_rx_error_invalid_header;
+wire ip_rx_error_invalid_checksum;
+wire ip_tx_error_payload_early_termination;
+wire ip_tx_error_arp_failed;
+wire udp_rx_error_header_early_termination;
+wire udp_rx_error_payload_early_termination;
+wire udp_tx_error_payload_early_termination;
+
+//contadores eth 304b 38Bytes
+reg [31:0] tx_fifo_overflow_reg; 
+reg [31:0] tx_fifo_bad_frame_reg;
+reg [39:0] tx_fifo_good_frame_reg;
+reg [31:0] rx_error_bad_frame_reg;
+reg [31:0] rx_error_bad_fcs_reg;
+reg [31:0] rx_fifo_overflow_reg;
+reg [31:0] rx_fifo_bad_frame_reg;
+reg [39:0] rx_fifo_good_frame_reg;
+reg [31:0] eth_rx_error_header_early_termination_reg;
+
+//contadores udp, ip, arp //288b 36Bytes
+reg [31:0] ip_rx_error_header_early_termination_reg;
+reg [31:0] ip_rx_error_payload_early_termination_reg;
+reg [31:0] ip_rx_error_invalid_header_reg;
+reg [31:0] ip_rx_error_invalid_checksum_reg;
+reg [31:0] ip_tx_error_payload_early_termination_reg;
+reg [31:0] ip_tx_error_arp_failed_reg;
+reg [31:0] udp_rx_error_header_early_termination_reg;
+reg [31:0] udp_rx_error_payload_early_termination_reg;
+reg [31:0] udp_tx_error_payload_early_termination_reg;
+
+wire [1:0] speed;
+
+// 74Bytes for counters 592bits, 2bits for speed, 
+
+always @(posedge clk) begin
+    if (rst) begin
+		  tx_fifo_overflow_reg <= 0;
+		  tx_fifo_bad_frame_reg <= 0;
+		  tx_fifo_good_frame_reg <= 0;
+		  rx_error_bad_frame_reg <= 0;
+		  rx_error_bad_fcs_reg <= 0;
+		  rx_fifo_overflow_reg <= 0;
+		  rx_fifo_bad_frame_reg <= 0;
+		  rx_fifo_good_frame_reg <= 0;
+		  eth_rx_error_header_early_termination_reg <= 0;
+		  
+		  ip_rx_error_header_early_termination_reg <= 0;
+		  ip_rx_error_payload_early_termination_reg <= 0;
+		  ip_rx_error_invalid_header_reg <= 0;
+		  ip_rx_error_invalid_checksum_reg <= 0;
+		  ip_tx_error_payload_early_termination_reg <= 0;
+		  ip_tx_error_arp_failed_reg <= 0;
+		  udp_rx_error_header_early_termination_reg <= 0;
+		  udp_rx_error_payload_early_termination_reg <= 0;
+		  udp_tx_error_payload_early_termination_reg <= 0;
+		  
+    end else begin
+        if (tx_fifo_overflow) begin 
+				tx_fifo_overflow_reg <= tx_fifo_overflow_reg + 1;
+			end
+			
+			if (tx_fifo_bad_frame) begin
+				tx_fifo_bad_frame_reg <= tx_fifo_bad_frame_reg + 1;
+			end
+			
+			if (tx_fifo_good_frame) begin
+				tx_fifo_good_frame_reg <= tx_fifo_good_frame_reg + 1;
+			end
+			
+			if (rx_error_bad_frame) begin
+				rx_error_bad_frame_reg <= rx_error_bad_frame_reg + 1;
+			end
+			
+			if (rx_error_bad_fcs) begin
+				rx_error_bad_fcs_reg <= rx_error_bad_fcs_reg + 1;
+			end
+			
+			if (rx_fifo_overflow) begin
+				rx_fifo_overflow_reg <= rx_fifo_overflow_reg + 1;
+			end
+			
+			if (rx_fifo_bad_frame) begin
+				rx_fifo_bad_frame_reg <= rx_fifo_bad_frame_reg + 1;
+			end
+			
+			if (rx_fifo_good_frame) begin
+				rx_fifo_good_frame_reg <= rx_fifo_good_frame_reg + 1;
+			end
+			
+			if (eth_rx_error_header_early_termination) begin
+				eth_rx_error_header_early_termination_reg <= eth_rx_error_header_early_termination_reg + 1;
+			end
+        if (ip_rx_error_header_early_termination) begin 
+				ip_rx_error_header_early_termination_reg <= ip_rx_error_header_early_termination_reg + 1;
+			end
+			
+			if (ip_rx_error_payload_early_termination) begin
+				ip_rx_error_payload_early_termination_reg <= ip_rx_error_payload_early_termination_reg + 1;
+			end
+			
+			if (ip_rx_error_invalid_header) begin
+				ip_rx_error_invalid_header_reg <= ip_rx_error_invalid_header_reg + 1;
+			end
+			
+			if (ip_rx_error_invalid_checksum) begin
+				ip_rx_error_invalid_checksum_reg <= ip_rx_error_invalid_checksum_reg + 1;
+			end
+			
+			if (ip_tx_error_payload_early_termination) begin
+				ip_tx_error_payload_early_termination_reg <= ip_tx_error_payload_early_termination_reg + 1;
+			end
+			
+			if (ip_tx_error_arp_failed) begin
+				ip_tx_error_arp_failed_reg <= ip_tx_error_arp_failed_reg + 1;
+			end
+			
+			if (udp_rx_error_header_early_termination) begin
+				udp_rx_error_header_early_termination_reg <= udp_rx_error_header_early_termination_reg + 1;
+			end
+			
+			if (udp_rx_error_payload_early_termination) begin
+				udp_rx_error_payload_early_termination_reg <= udp_rx_error_payload_early_termination_reg + 1;
+			end
+			
+			if (udp_tx_error_payload_early_termination) begin
+				udp_tx_error_payload_early_termination_reg <= udp_tx_error_payload_early_termination_reg + 1;
+			end
+    end
+end
+
+////////////////////////////////////////////////
 eth_axis_rx
 eth_axis_rx_inst (
     .clk(clk),
@@ -539,8 +731,9 @@ eth_axis_rx_inst (
     .m_eth_payload_axis_tuser(rx_eth_payload_axis_tuser),
     // Status signals
     .busy(),
-    .error_header_early_termination()
+    .error_header_early_termination(eth_rx_error_header_early_termination)
 );
+
 
 eth_axis_tx
 eth_axis_tx_inst (
@@ -682,26 +875,25 @@ udp_complete_inst (
     .ip_tx_busy(),
     .udp_rx_busy(),
     .udp_tx_busy(),
-    .ip_rx_error_header_early_termination(),
-    .ip_rx_error_payload_early_termination(),
-    .ip_rx_error_invalid_header(),
-    .ip_rx_error_invalid_checksum(),
-    .ip_tx_error_payload_early_termination(),
-    .ip_tx_error_arp_failed(),
-    .udp_rx_error_header_early_termination(),
-    .udp_rx_error_payload_early_termination(),
-    .udp_tx_error_payload_early_termination(),
+    .ip_rx_error_header_early_termination(ip_rx_error_header_early_termination),
+    .ip_rx_error_payload_early_termination(ip_rx_error_payload_early_termination),
+    .ip_rx_error_invalid_header(ip_rx_error_invalid_header),
+    .ip_rx_error_invalid_checksum(ip_rx_error_invalid_checksum),
+    .ip_tx_error_payload_early_termination(ip_tx_error_payload_early_termination),
+    .ip_tx_error_arp_failed(ip_tx_error_arp_failed),
+    .udp_rx_error_header_early_termination(udp_rx_error_header_early_termination),
+    .udp_rx_error_payload_early_termination(udp_rx_error_payload_early_termination),
+    .udp_tx_error_payload_early_termination(udp_tx_error_payload_early_termination),
     // Configuration
     .local_mac(local_mac),
     .local_ip(local_ip),
     .gateway_ip(gateway_ip),
     .subnet_mask(subnet_mask),
     .clear_arp_cache(0)
-	 
 );
 
 axis_fifo #(
-    .DEPTH(8192),
+    .DEPTH(2048),
     .DATA_WIDTH(8),
     .KEEP_ENABLE(0),
     .ID_ENABLE(0),
@@ -804,7 +996,7 @@ always @(posedge clk) begin
     end
 end
 
-//buffer 8 bytes------------------------
+//uart buffer 8 bytes------------------------
 reg [63:0] rx_uart_buff;
 reg [3:0] nbyte_buff;
 always @(posedge clk) begin
@@ -812,7 +1004,7 @@ always @(posedge clk) begin
         rx_uart_buff <= 64'd0;
 		  nbyte_buff <= 4'd0;
     end else begin
-			//esperando valid registrar hasta 8BYtes y borrar
+			//esperando valid registrar hasta 8 Bytes y borrar
         if (rx_valid) begin 
 				rx_uart_buff <= {rx_uart_buff[55:0],rx_data_s_reg};
 				nbyte_buff <= nbyte_buff + 4'd1;
@@ -826,6 +1018,26 @@ always @(posedge clk) begin
     end
 end
 
+//udp buffer 8 bytes
+reg [63:0] rx_udp_buff = 64'd0;
+reg rx_udp_cmd = 0;
+
+always @ (posedge clk) begin
+	if (rst) begin
+	rx_udp_buff <= 64'd0;
+	rx_udp_cmd <= 0;
+	end else begin
+		if (rx_udp_payload_axis_tvalid && match_cond_reg_control) begin
+			rx_udp_cmd <= 1;
+			rx_udp_buff <= {rx_udp_buff[55:0],rx_udp_payload_axis_tdata};
+		end else begin
+			rx_udp_cmd <= 0;
+			rx_udp_buff <= 64'd0;
+		end	
+	end
+end
+
+
 ////////////////////////////////////////////////////////////
 reg flood;
 reg rx_loopb;
@@ -833,19 +1045,22 @@ reg rx_trigger;
 reg rx_random;
 reg rx_constante;
 
+//5 bits for mode trasimtion
+
 reg mdio_op;
 reg [4:0] mdio_phy;
 reg [4:0] mdio_reg;
 reg [15:0] mdio_wdata;
 reg mdio_start;
 
+
 reg [15:0] n_bytes; 
-reg [31:0] off_cycles; 
 reg [31:0] pkt_n;
+//48 bits for trasmition configurarion
 
 
 // Configuration
-wire [47:0] local_mac = 48'h02_00_00_00_00_00; //direccion fisica de la fpga
+reg [47:0] local_mac = 48'h66_70_67_61_3A_30; //direccion fisica de la fpga "fpga:0"
 
 reg [31:0] local_ip;
 reg [31:0] gateway_ip;
@@ -854,6 +1069,10 @@ reg [31:0] subnet_mask;
 reg [31:0] tx_udp_ip_dest_ip_reg;
 reg [15:0] tx_udp_source_port_reg;
 reg [15:0] tx_udp_dest_port_reg;
+
+//208 bits for network config
+
+reg trigger_send;
 
 always @(posedge clk) begin
     if (rst) begin
@@ -870,7 +1089,6 @@ always @(posedge clk) begin
 		  mdio_start <= 0;
 		  
 		  n_bytes <= 16'd1440;  //1440 bytes por paquete default;
-		  off_cycles <= 32'd1; // 1 por defecto ~8ns (caracteristica desactivada ya no jau offcycles)
 		  pkt_n <= 32'd1;//por defecto 1 mensaje
 		  
 		  gateway_ip  <= {8'd192, 8'd168, 8'd1,   8'd1};
@@ -881,51 +1099,54 @@ always @(posedge clk) begin
         tx_udp_source_port_reg <= 16'd1234; //puerto por defecto para envio, source, desde la fpga
         tx_udp_dest_port_reg <= 16'd9999; //puerto por defecto para envio, destination hacia la pc
 		  
+		  trigger_send  <= 0;
+		  
     end else begin
 			//UDP CONTROL/////////////////////////////
-        if (rx_uart_buff == 64'h2e2e2e666c6f6f64) begin //"...flood"
+        if ((rx_uart_buff == "...flood") || (rx_udp_buff == "...flood")) begin //"...flood"
 				flood <= ~flood;
-        end else if (rx_uart_buff == 64'h6c6f6f706261636b) begin //"loopback"
+        end else if ((rx_uart_buff == "loopback") || (rx_udp_buff == "loopback")) begin //"loopback"
 				rx_loopb <= ~rx_loopb;
-		  end else if (rx_uart_buff == 64'h2e74726967676572) begin //".trigger"
+		  end else if ((rx_uart_buff == ".trigger") || (rx_udp_buff == ".trigger")) begin //".trigger"
 				rx_trigger <= 1;
-		  end else if (rx_uart_buff == 64'h2e2e72616e646f6d) begin //"..random"
+		  end else if ((rx_uart_buff == "..random") || (rx_udp_buff == "..random")) begin //"..random"
 				rx_random <= ~rx_random;
-		  end else if (rx_uart_buff == 64'h636f6e7374616e74) begin //"constant"
+		  end else if ((rx_uart_buff == "constant") || (rx_udp_buff == "constant")) begin //"constant"
 				rx_constante <= ~rx_constante;
 				// PHY CONTROLLER/*------------------*//
-		  end else if (rx_uart_buff == 64'h2e2e6d64696f5f72) begin //"..mdio_r"
+		  end else if ((rx_uart_buff == "..mdio_r") || (rx_udp_buff == "..mdio_r")) begin //"..mdio_r"
 				mdio_op <= 1;
-		  end else if (rx_uart_buff == 64'h2e2e6d64696f5f77) begin //"..mdio_w"
+		  end else if ((rx_uart_buff == "..mdio_w") || (rx_udp_buff == "..mdio_w")) begin //"..mdio_w"
 				mdio_op <= 0;
-		  end else if (rx_uart_buff[63:8] == 56'h70687961646472) begin //"phyaddr"8'bXXXAAAAA
-				mdio_phy <= rx_uart_buff[4:0];
-		  end else if (rx_uart_buff[63:8] == 56'h72656761646472) begin //"regaddr"8'bXXXRRRRR
-				mdio_reg <= rx_uart_buff[4:0];
-		  end else if (rx_uart_buff[63:16] == 48'h6d64696f5f64) begin //"mdio_d"16'hDDDD
-				mdio_wdata <= rx_uart_buff[15:0];
-		  end else if (rx_uart_buff == 64'h6d64696f5f737461) begin //"mdio_sta"
+		  end else if ((rx_uart_buff[63:8] == "phyaddr") || (rx_udp_buff[63:8] == "phyaddr")) begin //"phyaddr"8'bXXXAAAAA
+				mdio_phy <= rx_udp_cmd ? rx_udp_buff[4:0] : rx_uart_buff[4:0];
+		  end else if ((rx_uart_buff[63:8] == "regaddr") || (rx_udp_buff[63:8] == "regaddr")) begin //"regaddr"8'bXXXRRRRR
+				mdio_reg <= rx_udp_cmd ? rx_udp_buff[4:0] : rx_uart_buff[4:0];
+		  end else if ((rx_uart_buff[63:16] == "mdio_d") || (rx_udp_buff[63:16] == "mdio_d")) begin //"mdio_d"16'hDDDD
+				mdio_wdata <= rx_udp_cmd ? rx_udp_buff[15:0] : rx_uart_buff[15:0];
+		  end else if ((rx_uart_buff == "mdio_sta") || (rx_udp_buff == "mdio_sta")) begin //"mdio_sta"
 				mdio_start <= 1;
 				// UDP Mesagge configurations/*------------------*/
-		  end else if (rx_uart_buff[63:16] == 48'h7564706d7475) begin //"udpmtu"16'hBBBB
-				n_bytes <= rx_uart_buff[15:0];
-		  end else if (rx_uart_buff[63:32] == 32'h6f666663) begin //"offc"32'hOOOOOOOO
-				off_cycles <= rx_uart_buff[31:0];
-		  end else if (rx_uart_buff[63:32] == 32'h706b746e) begin //"pktn"32'hPPPPPPPP
-				pkt_n <= rx_uart_buff[31:0];
+		  end else if ((rx_uart_buff[63:16] == "udpmtu") || (rx_udp_buff[63:16] == "udpmtu")) begin //"udpmtu"16'hBBBB
+				n_bytes <= rx_udp_cmd ? rx_udp_buff[15:0] : rx_uart_buff[15:0];
+		  end else if ((rx_uart_buff[63:32] == "pktn") || (rx_udp_buff[63:32] == "pktn")) begin //"pktn"32'hPPPPPPPP
+				pkt_n <= rx_udp_cmd ? rx_udp_buff[31:0] : rx_uart_buff[31:0];
 		  // ip configuration/*------------------*
-		  end else if (rx_uart_buff[63:32] == 32'h69705f67) begin //"ip_g"32'hIIIIIIII
-		      gateway_ip <= rx_uart_buff[31:0];
-		  end else if (rx_uart_buff[63:32] == 32'h69705f73) begin //"ip_s"32'hIIIIIIII
-		      local_ip <= rx_uart_buff[31:0];
-		  end else if (rx_uart_buff[63:32] == 32'h69705f64) begin //"ip_d"32'hIIIIIIII
-		      tx_udp_ip_dest_ip_reg <= rx_uart_buff[31:0];
-		  end else if (rx_uart_buff[63:32] == 32'h7375626d) begin //"subm"32'hMMMMMMMM
-		      subnet_mask <= rx_uart_buff[31:0];
-	     end else if (rx_uart_buff[63:16] == 48'h7372706f7274) begin //"srport"16'hPPPP
-		      tx_udp_source_port_reg <= rx_uart_buff[15:0];
-		  end else if (rx_uart_buff[63:16] == 48'h6473706f7274) begin //"dsport"16'hPPPP
-		      tx_udp_dest_port_reg <= rx_uart_buff[15:0];
+		  end else if ((rx_uart_buff[63:32] == "ip_g") || (rx_udp_buff[63:32] == "ip_g")) begin //"ip_g"32'hIIIIIIII
+		      gateway_ip <= rx_udp_cmd ? rx_udp_buff[31:0] : rx_uart_buff[31:0];
+		  end else if ((rx_uart_buff[63:32] == "ip_s") || (rx_udp_buff[63:32] == "ip_s")) begin //"ip_s"32'hIIIIIIII
+		      local_ip <= rx_udp_cmd ? rx_udp_buff[31:0] : rx_uart_buff[31:0];
+		  end else if ((rx_uart_buff[63:32] == "ip_d") || (rx_udp_buff[63:32] == "ip_d")) begin //"ip_d"32'hIIIIIIII
+		      tx_udp_ip_dest_ip_reg <= rx_udp_cmd ? rx_udp_buff[31:0] : rx_uart_buff[31:0];
+		  end else if ((rx_uart_buff[63:32] == "subm") || (rx_udp_buff[63:32] == "subm")) begin //"subm"32'hMMMMMMMM
+		      subnet_mask <= rx_udp_cmd ? rx_udp_buff[31:0] : rx_uart_buff[31:0];
+	     end else if ((rx_uart_buff[63:16] == "srport") || (rx_udp_buff[63:16] == "srport")) begin //"srport"16'hPPPP
+		      tx_udp_source_port_reg <= rx_udp_cmd ? rx_udp_buff[15:0] : rx_uart_buff[15:0];
+		  end else if ((rx_uart_buff[63:16] == "dsport") || (rx_udp_buff[63:16] == "dsport")) begin //"dsport"16'hPPPP
+		      tx_udp_dest_port_reg <= rx_udp_cmd ? rx_udp_buff[15:0] : rx_uart_buff[15:0];
+		   // uart register log/*------------------*
+		  end else if ((rx_uart_buff[63:0] == "regstats") ||(rx_udp_buff[63:0] == "regstats") ) begin //"regstats" pulse for log registers
+		      trigger_send <= 1;
 		  end else begin
 				flood <= flood;
 				rx_loopb <= rx_loopb;
@@ -939,7 +1160,6 @@ always @(posedge clk) begin
 				mdio_start <= 0;
 				
 				n_bytes <= n_bytes;
-				off_cycles <= off_cycles;
 				pkt_n <= pkt_n;
 				
 			  gateway_ip  <= gateway_ip;
@@ -949,6 +1169,8 @@ always @(posedge clk) begin
 			  subnet_mask <= subnet_mask;
 			  tx_udp_source_port_reg <= tx_udp_source_port_reg;
 			  tx_udp_dest_port_reg <= tx_udp_dest_port_reg;
+			  
+			  trigger_send <= 0;
 
 		  end
     end
@@ -1004,42 +1226,141 @@ end
 //UART TX////////////////////////////////////
 reg tx_ena;
 reg [7:0] tx_data;
-reg [2:0] state_uart_tx = 2'd0;
+reg [2:0] state_uart_tx = 3'd0;
+
+reg [6:0] tx_byte_count; // Contador para saber cuántos bytes llevamos (hasta 115)
 
 always @(posedge clk) begin
     if (rst) begin
 		  tx_ena <= 0;
 		  tx_data <= 8'd0;
-		  state_uart_tx <= 2'd0;
+		  state_uart_tx <= 3'd0;
     end else begin
 			//estado 0: esperando mdio_read_ready
-        if (state_uart_tx == 2'd0) begin
+        if (state_uart_tx == 3'd0) begin
 				if (mdio_read_ready) begin
 					tx_data <= mdio_rdata_reg[15:8];
 					tx_ena <= 1;
-					state_uart_tx <= 2'd1;
+					state_uart_tx <= 3'd1;
+				end else if(trigger_send) begin
+					state_uart_tx <= 3'd4;
 				end
         end
 			//estado 1
-		  else if (state_uart_tx == 2'd1) begin
+		  else if (state_uart_tx == 3'd1) begin
 				tx_ena <= 0;
-				state_uart_tx <= 2'd2; // pasar a estado 2
+				state_uart_tx <= 3'd2; // pasar a estado 2
         end 
 		  //estado 2: esperando a que se envie primero 8 bits
-		  else if (state_uart_tx == 2'd2) begin
+		  else if (state_uart_tx == 3'd2) begin
 				if (~tx_busy) begin
 					tx_data <= mdio_rdata_reg[7:0];
 					tx_ena <= 1;
-					state_uart_tx <= 2'd3; // pasar a estado 3
+					state_uart_tx <= 3'd3; // pasar a estado 3
 				end
 		  end
 		  //estado 3: esperar a que se envie segunda palabra para volver a estado 0
-		  else begin
+		  else if (state_uart_tx == 3'd3) begin
 				tx_ena <= 0; 
 				if (~tx_busy) begin
-				state_uart_tx <= 2'd0; // pasar a estado 0
+				state_uart_tx <= 3'd0; // pasar a estado 0
 				end
-		  end
+		  // estado 4: Inicializar contador.
+		  end else if (state_uart_tx == 3'd4) begin
+            tx_byte_count <= 115; // Total de bytes a enviar (920 bits / 8)
+            state_uart_tx <= 3'd5;
+        end
+		  // estado 5: Iniciar transmisión del byte actual.
+		  else if (state_uart_tx == 3'd5) begin
+            // Tomamos siempre los 8 bits de la extrema izquierda
+            tx_data <= full_registro[ (tx_byte_count * 8) - 1 -: 8 ];
+            tx_ena <= 1;
+				if(tx_busy) begin // esperando al que el tx_busy suba
+					state_uart_tx <= 3'd6;
+				end
+        end
+		  // ESTADO 6: Esperar a que el UART envíe y recorrer
+		  else if (state_uart_tx == 3'd6) begin
+            tx_ena <= 0;
+            // Esperar a que tx_busy baje (UART terminó)
+				if (~tx_busy) begin
+                tx_byte_count <= tx_byte_count - 1;
+                
+                // Si aún quedan bytes, recorremos el registro y repetimos
+                if (tx_byte_count > 1) begin
+                    state_uart_tx <= 3'd5; // Regresa al estado 5 para el siguiente byte
+                end else begin
+                    // Ya terminamos, volvemos al inicio
+                    state_uart_tx <= 3'd0;
+					 end
+            end
+        end
+    end
+end
+
+// 115 Bytes en total = 920 Bits
+parameter FRAME_BITS = 920;
+parameter FRAME_BYTES = FRAME_BITS/8; 
+reg [FRAME_BITS-1:0] full_registro;
+reg [31:0] start_frame = 32'hAA_55_AA_55;
+reg [31:0] end_frame = 32'hEE_FF_EE_FF;
+reg full_reg_flag;
+
+always @(posedge clk) begin
+    if (rst) begin
+		  full_registro <= 920'd0;
+		  full_reg_flag <= 0;
+    end else begin
+        if (trigger_send) begin
+			 full_registro <= {
+			 // 1. CABECERA (4 Bytes)
+			 start_frame,
+			 
+			 // 2. CONTADORES ETH MAC (38 Bytes / 304 bits)
+			 tx_fifo_overflow_reg,
+			 tx_fifo_bad_frame_reg,
+			 tx_fifo_good_frame_reg,
+			 rx_error_bad_frame_reg,
+			 rx_error_bad_fcs_reg,
+			 rx_fifo_overflow_reg,
+			 rx_fifo_bad_frame_reg,
+			 rx_fifo_good_frame_reg,
+			 eth_rx_error_header_early_termination_reg,
+			 
+			 // 3. CONTADORES UDP/IP/ARP (36 Bytes / 288 bits)
+			 ip_rx_error_header_early_termination_reg,
+			 ip_rx_error_payload_early_termination_reg,
+			 ip_rx_error_invalid_header_reg,
+			 ip_rx_error_invalid_checksum_reg,
+			 ip_tx_error_payload_early_termination_reg,
+			 ip_tx_error_arp_failed_reg,
+			 udp_rx_error_header_early_termination_reg,
+			 udp_rx_error_payload_early_termination_reg,
+			 udp_tx_error_payload_early_termination_reg,
+			 
+			 // 4. MODO Y BANDERAS (Acomodados en 1 Byte / 8 bits)
+			 // Juntamos todo rellenando con un '0' al principio para cuadrar los 8 bits
+			 {1'b0, speed, flood, rx_loopb, ocupado, rx_random, rx_constante},
+
+			 // 5. CONFIGURACIÓN DE TRANSMISIÓN (6 Bytes / 48 bits)
+			 n_bytes,
+			 pkt_n,
+
+			 // 6. CONFIGURACIÓN DE RED (26 Bytes / 208 bits)
+			 local_mac,
+			 local_ip,
+			 gateway_ip,
+			 subnet_mask,tx_udp_ip_dest_ip_reg,
+			 tx_udp_source_port_reg,
+			 tx_udp_dest_port_reg,
+
+			 // 7. PIE DE TRAMA / FOOTER (4 Bytes) - Indica el final del mensaje
+			 end_frame};
+			 full_reg_flag <= 1;
+        end else begin
+			 full_registro <= full_registro;
+			 full_reg_flag <= 0;
+        end 
     end
 end
 

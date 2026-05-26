@@ -41,6 +41,8 @@
          <ClosedNode>/eth_phy_10g_rx_if |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_rx_if.v</ClosedNode>
          <ClosedNode>/eth_phy_10g_tx |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_tx.v</ClosedNode>
          <ClosedNode>/eth_phy_10g_tx_if |home|ise|gbe_spartan-6|lib|eth|rtl|eth_phy_10g_tx_if.v</ClosedNode>
+         <ClosedNode>/fpga |home|ise|VM_ISE|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core</ClosedNode>
+         <ClosedNode>/fpga |home|ise|VM_ISE|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo</ClosedNode>
          <ClosedNode>/fpga |home|ise|VM_ISE|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/eth_mac_1g_inst - eth_mac_1g</ClosedNode>
          <ClosedNode>/fpga |home|ise|VM_ISE|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/eth_mac_1g_inst - eth_mac_1g/axis_gmii_tx_inst - axis_gmii_tx</ClosedNode>
          <ClosedNode>/fpga |home|ise|VM_ISE|gbe_spartan-6|rtl|fpga.v/core_inst - fpga_core/eth_mac_inst - eth_mac_1g_rgmii_fifo/eth_mac_1g_rgmii_inst - eth_mac_1g_rgmii/rgmii_phy_if_inst - rgmii_phy_if/rx_ssio_ddr_inst - ssio_ddr_in</ClosedNode>
@@ -90,7 +92,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000022e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000022e0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001ee000000020000000000000000000000000200000064ffffffff000000810000000300000002000001ee0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>fpga (/home/ise/VM_ISE/gbe_spartan-6/rtl/fpga.v)</CurrentItem>
    </ItemView>
@@ -140,13 +142,13 @@
          <ClosedNode>Implement Design/Translate</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem>Manage Configuration Project (iMPACT)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >17</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bd000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bd0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem>Manage Configuration Project (iMPACT)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
       <ClosedNodes>
@@ -154,13 +156,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001cc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001cc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
       <ClosedNodes>

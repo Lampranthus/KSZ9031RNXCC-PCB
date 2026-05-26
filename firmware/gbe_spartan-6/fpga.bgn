@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '6slx9.nph' in environment
    "fpga" is an NCD, version 3.2, device xc6slx9, package tqg144, speed -2
 Opened constraints file fpga.pcf.
 
-Wed May  6 02:17:58 2026
+Tue May 26 20:07:52 2026
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g Reset_on_err:No -g ConfigRate:2 -g ProgPin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g ExtMasterCclk_en:No -g SPI_buswidth:1 -g TIMER_CFG:0xFFFF -g multipin_wakeup:No -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No -g en_sw_gsr:No -g drive_awake:No -g sw_clk:Startupclk -g sw_gwe_cycle:5 -g sw_gts_cycle:4 fpga.ncd 
 
@@ -134,9 +134,65 @@ There were 1 CONFIG constraint(s) processed from fpga.pcf.
 
 Running DRC.
 WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
+   _mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
+   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1_
+   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
+   _mem5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
+   _mem3_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
    em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
    design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
+   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
+   _mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
+   ort_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
+   _mem4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em3_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
+   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
+   design.
+WARNING:PhysDesignRules:367 - The signal
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
+   ort_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   the design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
    _mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
@@ -146,69 +202,13 @@ WARNING:PhysDesignRules:367 - The signal
    t_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
 WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
-   _mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
+   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
+   _mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
 WARNING:PhysDesignRules:367 - The signal
    <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_por
    t_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
    the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum
-   _mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em3_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_m
-   em4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem4_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem3_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem5_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
-   ort_mem2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_p
-   ort_mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip
-   _mem1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in
-   the design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1_
-   RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
-   em2_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
-WARNING:PhysDesignRules:367 - The signal
-   <core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_m
-   em1_RAMD_D1_O> is incomplete. The signal does not drive any load pins in the
-   design.
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs
    (RAMB8BWER).  9K Block RAM initialization data, both user defined and
    default, may be incorrect and should not be used.  For more information,
