@@ -66,7 +66,7 @@ sudo arping -I eth0 192.168.1.12
 ```
 
 ---
-Si hay respuesta, fijar la MAC estáticamente en el Kernel del PC para evitar tormentas ARP durante las pruebas de alto rendimiento (la MAC fija de la FPGA es `02:00:00:00:00:00`):
+Si hay respuesta, fijar la MAC estáticamente en el Kernel del PC para evitar tormentas ARP durante las pruebas de alto rendimiento:
 ​
 ```bash
 sudo arp -s 192.168.1.12 66:70:67:61:3A:30
