@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o /home/ise/VM_ISE/gbe_spartan-6//seq16bitmapok -x xcf04s -u 00000000 /home/ise/VM_ISE/gbe_spartan-6/fpga.bit 
+
+PROM /home/ise/VM_ISE/gbe_spartan-6/seq16bitmapok.prm map: Wed Jun 24 23:15:57 2026
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 036f78d4
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:37e3     Jun 24 23:15:10 2026 /home/ise/VM_ISE/gbe_spartan-6/fpga.bit
