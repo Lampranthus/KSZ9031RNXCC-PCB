@@ -235,8 +235,9 @@ assign tx_ip_payload_axis_tuser = 0;
 
 reg [15:0] cont_reg;
 reg [7:0] tx_fifo_axis_tdata;
-reg [7:0] tx_fifo_axis_tdata_reg;
-reg [7:0] tx_axis_tdata_test = "X"; //"X"
+reg [15:0] tx_fifo_axis_tdata_reg; // sequential data
+reg word_flag;
+reg [7:0] tx_axis_tdata_test = "X"; //"X" constant data
 reg tx_fifo_axis_tvalid;
 wire tx_fifo_axis_tready;
 reg tx_fifo_axis_tlast;
@@ -249,7 +250,7 @@ reg [15:0] udp_bit_regs;
 
 reg send_mdio;
 
-reg [7:0] random_data;
+reg [7:0] random_data; //random_data
 // Linear-feedback shift register
 reg [7:0] lfsr;
 
@@ -272,7 +273,8 @@ always @(posedge clk) begin
     if (rst) begin
         state <=  3'd0;
         tx_fifo_axis_tdata <= 8'd0;
-        tx_fifo_axis_tdata_reg <= 8'd0;
+        tx_fifo_axis_tdata_reg <= 16'd0;
+		  word_flag <= 0;
         tx_fifo_axis_tvalid <= 0;
         cont_reg <= 16'd0;
         tx_fifo_axis_tlast <= 0;
@@ -281,6 +283,7 @@ always @(posedge clk) begin
 		  send_regs <= 0;
 		  udp_bit_regs <= 0;
 		  send_mdio <= 0;
+		  
 		  
     end else begin
        // Estado 0: Esperando trigger o flood sin modo loopback
@@ -296,8 +299,14 @@ always @(posedge clk) begin
                 end else if(rx_constante)begin
 						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
 					 end else begin
-                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+							word_flag <= 0;
+						  end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+							word_flag <= 1;
+						  end   
                 end
             end else if (full_reg_flag) begin
 					 ocupado <= 1;
@@ -329,8 +338,14 @@ always @(posedge clk) begin
                 end else if(rx_constante)begin
 						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
 					 end else begin
-                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+							word_flag <= 0;
+						  end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+							word_flag <= 1;
+						  end ;
                 end
                 cont_reg <= cont_reg + 1;
             end
@@ -360,8 +375,14 @@ always @(posedge clk) begin
 						  end else if(rx_constante)begin
 								tx_fifo_axis_tdata <= tx_axis_tdata_test;
 						  end else begin
-								tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-								tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+							  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+								tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+								tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+								word_flag <= 0;
+							  end else begin
+								tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+								word_flag <= 1;
+							  end 
 						  end
 					 // si no se ha lleado elegir la siguiente palabra del paquete y no salir del estado 2
                 end else if(send_regs) begin
@@ -372,8 +393,14 @@ always @(posedge clk) begin
                 end else if(rx_constante)begin
 						  tx_fifo_axis_tdata <= tx_axis_tdata_test;
 					 end else begin
-                    tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-                    tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+							word_flag <= 0;
+						  end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+							word_flag <= 1;
+						  end 
                 end
             end
 
@@ -391,8 +418,14 @@ always @(posedge clk) begin
 					 end else if(rx_constante)begin
 							tx_fifo_axis_tdata <= tx_axis_tdata_test;
 					 end else begin
-							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+							word_flag <= 0;
+						  end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+							word_flag <= 1;
+						  end 
 					 end
 				end else if (pkt_n_reg >= pkt_n || send_regs || send_mdio) begin // si se llego a la ultimo paquete bajar valid y regresar a estado 0
                 cont_reg <= 0;
@@ -402,7 +435,8 @@ always @(posedge clk) begin
                 pkt_n_reg <= 0;
                 ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
                 state <= 3'd0; //volver a estado 0
-					 tx_fifo_axis_tdata_reg <= 8'd0;//reset contador data
+					 tx_fifo_axis_tdata_reg <= 16'd0;//reset contador data
+					 word_flag <= 0;//reset flag
                 tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
                 tx_fifo_axis_tvalid <= 0;//bajar tvalid
             end else begin //si no se llego a ultimo paquete elegir un dato para seguir enviando paquetes desde el estado 1
@@ -415,10 +449,15 @@ always @(posedge clk) begin
 					 end else if(rx_constante)begin
 							tx_fifo_axis_tdata <= tx_axis_tdata_test;
 					 end else begin
-							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg;
-							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 8'd1;
+						  if (word_flag) begin //if word flag send the lsB increase the sequense and reset word flag else send msB and rise word flag
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[7:0];
+							tx_fifo_axis_tdata_reg <= tx_fifo_axis_tdata_reg + 16'd1;
+							word_flag <= 0;
+						  end else begin
+							tx_fifo_axis_tdata <= tx_fifo_axis_tdata_reg[15:8];
+							word_flag <= 1;
+						  end 
 					 end
-
             end
         end
     end
