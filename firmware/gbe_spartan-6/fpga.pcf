@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue May 26 20:04:22 2026
+// Written by: Map P.20131013 on Wed Jun 24 09:02:13 2026
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -170,38 +170,38 @@ PIN
 TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "sync_reset_inst/sync_reg_2" BEL "sync_reset_inst/sync_reg_1" BEL
         "sync_reset_inst/sync_reg_0" BEL "pll_inst/clkout1_buf" BEL
-        "core_inst/rx_fifo_bad_frame_reg_31" BEL
-        "core_inst/rx_fifo_bad_frame_reg_30" BEL
-        "core_inst/rx_fifo_bad_frame_reg_29" BEL
-        "core_inst/rx_fifo_bad_frame_reg_28" BEL
-        "core_inst/rx_fifo_bad_frame_reg_27" BEL
-        "core_inst/rx_fifo_bad_frame_reg_26" BEL
-        "core_inst/rx_fifo_bad_frame_reg_25" BEL
-        "core_inst/rx_fifo_bad_frame_reg_24" BEL
-        "core_inst/rx_fifo_bad_frame_reg_23" BEL
-        "core_inst/rx_fifo_bad_frame_reg_22" BEL
-        "core_inst/rx_fifo_bad_frame_reg_21" BEL
-        "core_inst/rx_fifo_bad_frame_reg_20" BEL
-        "core_inst/rx_fifo_bad_frame_reg_19" BEL
-        "core_inst/rx_fifo_bad_frame_reg_18" BEL
-        "core_inst/rx_fifo_bad_frame_reg_17" BEL
-        "core_inst/rx_fifo_bad_frame_reg_16" BEL
-        "core_inst/rx_fifo_bad_frame_reg_15" BEL
-        "core_inst/rx_fifo_bad_frame_reg_14" BEL
-        "core_inst/rx_fifo_bad_frame_reg_13" BEL
-        "core_inst/rx_fifo_bad_frame_reg_12" BEL
-        "core_inst/rx_fifo_bad_frame_reg_11" BEL
-        "core_inst/rx_fifo_bad_frame_reg_10" BEL
-        "core_inst/rx_fifo_bad_frame_reg_9" BEL
-        "core_inst/rx_fifo_bad_frame_reg_8" BEL
-        "core_inst/rx_fifo_bad_frame_reg_7" BEL
-        "core_inst/rx_fifo_bad_frame_reg_6" BEL
-        "core_inst/rx_fifo_bad_frame_reg_5" BEL
-        "core_inst/rx_fifo_bad_frame_reg_4" BEL
-        "core_inst/rx_fifo_bad_frame_reg_3" BEL
-        "core_inst/rx_fifo_bad_frame_reg_2" BEL
-        "core_inst/rx_fifo_bad_frame_reg_1" BEL
-        "core_inst/rx_fifo_bad_frame_reg_0" BEL
+        "core_inst/rx_fifo_overflow_reg_31" BEL
+        "core_inst/rx_fifo_overflow_reg_30" BEL
+        "core_inst/rx_fifo_overflow_reg_29" BEL
+        "core_inst/rx_fifo_overflow_reg_28" BEL
+        "core_inst/rx_fifo_overflow_reg_27" BEL
+        "core_inst/rx_fifo_overflow_reg_26" BEL
+        "core_inst/rx_fifo_overflow_reg_25" BEL
+        "core_inst/rx_fifo_overflow_reg_24" BEL
+        "core_inst/rx_fifo_overflow_reg_23" BEL
+        "core_inst/rx_fifo_overflow_reg_22" BEL
+        "core_inst/rx_fifo_overflow_reg_21" BEL
+        "core_inst/rx_fifo_overflow_reg_20" BEL
+        "core_inst/rx_fifo_overflow_reg_19" BEL
+        "core_inst/rx_fifo_overflow_reg_18" BEL
+        "core_inst/rx_fifo_overflow_reg_17" BEL
+        "core_inst/rx_fifo_overflow_reg_16" BEL
+        "core_inst/rx_fifo_overflow_reg_15" BEL
+        "core_inst/rx_fifo_overflow_reg_14" BEL
+        "core_inst/rx_fifo_overflow_reg_13" BEL
+        "core_inst/rx_fifo_overflow_reg_12" BEL
+        "core_inst/rx_fifo_overflow_reg_11" BEL
+        "core_inst/rx_fifo_overflow_reg_10" BEL
+        "core_inst/rx_fifo_overflow_reg_9" BEL
+        "core_inst/rx_fifo_overflow_reg_8" BEL
+        "core_inst/rx_fifo_overflow_reg_7" BEL
+        "core_inst/rx_fifo_overflow_reg_6" BEL
+        "core_inst/rx_fifo_overflow_reg_5" BEL
+        "core_inst/rx_fifo_overflow_reg_4" BEL
+        "core_inst/rx_fifo_overflow_reg_3" BEL
+        "core_inst/rx_fifo_overflow_reg_2" BEL
+        "core_inst/rx_fifo_overflow_reg_1" BEL
+        "core_inst/rx_fifo_overflow_reg_0" BEL
         "core_inst/rx_fifo_good_frame_reg_39" BEL
         "core_inst/rx_fifo_good_frame_reg_38" BEL
         "core_inst/rx_fifo_good_frame_reg_37" BEL
@@ -242,38 +242,70 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/rx_fifo_good_frame_reg_2" BEL
         "core_inst/rx_fifo_good_frame_reg_1" BEL
         "core_inst/rx_fifo_good_frame_reg_0" BEL
-        "core_inst/rx_fifo_overflow_reg_31" BEL
-        "core_inst/rx_fifo_overflow_reg_30" BEL
-        "core_inst/rx_fifo_overflow_reg_29" BEL
-        "core_inst/rx_fifo_overflow_reg_28" BEL
-        "core_inst/rx_fifo_overflow_reg_27" BEL
-        "core_inst/rx_fifo_overflow_reg_26" BEL
-        "core_inst/rx_fifo_overflow_reg_25" BEL
-        "core_inst/rx_fifo_overflow_reg_24" BEL
-        "core_inst/rx_fifo_overflow_reg_23" BEL
-        "core_inst/rx_fifo_overflow_reg_22" BEL
-        "core_inst/rx_fifo_overflow_reg_21" BEL
-        "core_inst/rx_fifo_overflow_reg_20" BEL
-        "core_inst/rx_fifo_overflow_reg_19" BEL
-        "core_inst/rx_fifo_overflow_reg_18" BEL
-        "core_inst/rx_fifo_overflow_reg_17" BEL
-        "core_inst/rx_fifo_overflow_reg_16" BEL
-        "core_inst/rx_fifo_overflow_reg_15" BEL
-        "core_inst/rx_fifo_overflow_reg_14" BEL
-        "core_inst/rx_fifo_overflow_reg_13" BEL
-        "core_inst/rx_fifo_overflow_reg_12" BEL
-        "core_inst/rx_fifo_overflow_reg_11" BEL
-        "core_inst/rx_fifo_overflow_reg_10" BEL
-        "core_inst/rx_fifo_overflow_reg_9" BEL
-        "core_inst/rx_fifo_overflow_reg_8" BEL
-        "core_inst/rx_fifo_overflow_reg_7" BEL
-        "core_inst/rx_fifo_overflow_reg_6" BEL
-        "core_inst/rx_fifo_overflow_reg_5" BEL
-        "core_inst/rx_fifo_overflow_reg_4" BEL
-        "core_inst/rx_fifo_overflow_reg_3" BEL
-        "core_inst/rx_fifo_overflow_reg_2" BEL
-        "core_inst/rx_fifo_overflow_reg_1" BEL
-        "core_inst/rx_fifo_overflow_reg_0" BEL
+        "core_inst/rx_fifo_bad_frame_reg_31" BEL
+        "core_inst/rx_fifo_bad_frame_reg_30" BEL
+        "core_inst/rx_fifo_bad_frame_reg_29" BEL
+        "core_inst/rx_fifo_bad_frame_reg_28" BEL
+        "core_inst/rx_fifo_bad_frame_reg_27" BEL
+        "core_inst/rx_fifo_bad_frame_reg_26" BEL
+        "core_inst/rx_fifo_bad_frame_reg_25" BEL
+        "core_inst/rx_fifo_bad_frame_reg_24" BEL
+        "core_inst/rx_fifo_bad_frame_reg_23" BEL
+        "core_inst/rx_fifo_bad_frame_reg_22" BEL
+        "core_inst/rx_fifo_bad_frame_reg_21" BEL
+        "core_inst/rx_fifo_bad_frame_reg_20" BEL
+        "core_inst/rx_fifo_bad_frame_reg_19" BEL
+        "core_inst/rx_fifo_bad_frame_reg_18" BEL
+        "core_inst/rx_fifo_bad_frame_reg_17" BEL
+        "core_inst/rx_fifo_bad_frame_reg_16" BEL
+        "core_inst/rx_fifo_bad_frame_reg_15" BEL
+        "core_inst/rx_fifo_bad_frame_reg_14" BEL
+        "core_inst/rx_fifo_bad_frame_reg_13" BEL
+        "core_inst/rx_fifo_bad_frame_reg_12" BEL
+        "core_inst/rx_fifo_bad_frame_reg_11" BEL
+        "core_inst/rx_fifo_bad_frame_reg_10" BEL
+        "core_inst/rx_fifo_bad_frame_reg_9" BEL
+        "core_inst/rx_fifo_bad_frame_reg_8" BEL
+        "core_inst/rx_fifo_bad_frame_reg_7" BEL
+        "core_inst/rx_fifo_bad_frame_reg_6" BEL
+        "core_inst/rx_fifo_bad_frame_reg_5" BEL
+        "core_inst/rx_fifo_bad_frame_reg_4" BEL
+        "core_inst/rx_fifo_bad_frame_reg_3" BEL
+        "core_inst/rx_fifo_bad_frame_reg_2" BEL
+        "core_inst/rx_fifo_bad_frame_reg_1" BEL
+        "core_inst/rx_fifo_bad_frame_reg_0" BEL
+        "core_inst/rx_error_bad_frame_reg_31" BEL
+        "core_inst/rx_error_bad_frame_reg_30" BEL
+        "core_inst/rx_error_bad_frame_reg_29" BEL
+        "core_inst/rx_error_bad_frame_reg_28" BEL
+        "core_inst/rx_error_bad_frame_reg_27" BEL
+        "core_inst/rx_error_bad_frame_reg_26" BEL
+        "core_inst/rx_error_bad_frame_reg_25" BEL
+        "core_inst/rx_error_bad_frame_reg_24" BEL
+        "core_inst/rx_error_bad_frame_reg_23" BEL
+        "core_inst/rx_error_bad_frame_reg_22" BEL
+        "core_inst/rx_error_bad_frame_reg_21" BEL
+        "core_inst/rx_error_bad_frame_reg_20" BEL
+        "core_inst/rx_error_bad_frame_reg_19" BEL
+        "core_inst/rx_error_bad_frame_reg_18" BEL
+        "core_inst/rx_error_bad_frame_reg_17" BEL
+        "core_inst/rx_error_bad_frame_reg_16" BEL
+        "core_inst/rx_error_bad_frame_reg_15" BEL
+        "core_inst/rx_error_bad_frame_reg_14" BEL
+        "core_inst/rx_error_bad_frame_reg_13" BEL
+        "core_inst/rx_error_bad_frame_reg_12" BEL
+        "core_inst/rx_error_bad_frame_reg_11" BEL
+        "core_inst/rx_error_bad_frame_reg_10" BEL
+        "core_inst/rx_error_bad_frame_reg_9" BEL
+        "core_inst/rx_error_bad_frame_reg_8" BEL
+        "core_inst/rx_error_bad_frame_reg_7" BEL
+        "core_inst/rx_error_bad_frame_reg_6" BEL
+        "core_inst/rx_error_bad_frame_reg_5" BEL
+        "core_inst/rx_error_bad_frame_reg_4" BEL
+        "core_inst/rx_error_bad_frame_reg_3" BEL
+        "core_inst/rx_error_bad_frame_reg_2" BEL
+        "core_inst/rx_error_bad_frame_reg_1" BEL
+        "core_inst/rx_error_bad_frame_reg_0" BEL
         "core_inst/tx_fifo_good_frame_reg_39" BEL
         "core_inst/tx_fifo_good_frame_reg_38" BEL
         "core_inst/tx_fifo_good_frame_reg_37" BEL
@@ -346,38 +378,6 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/rx_error_bad_fcs_reg_2" BEL
         "core_inst/rx_error_bad_fcs_reg_1" BEL
         "core_inst/rx_error_bad_fcs_reg_0" BEL
-        "core_inst/rx_error_bad_frame_reg_31" BEL
-        "core_inst/rx_error_bad_frame_reg_30" BEL
-        "core_inst/rx_error_bad_frame_reg_29" BEL
-        "core_inst/rx_error_bad_frame_reg_28" BEL
-        "core_inst/rx_error_bad_frame_reg_27" BEL
-        "core_inst/rx_error_bad_frame_reg_26" BEL
-        "core_inst/rx_error_bad_frame_reg_25" BEL
-        "core_inst/rx_error_bad_frame_reg_24" BEL
-        "core_inst/rx_error_bad_frame_reg_23" BEL
-        "core_inst/rx_error_bad_frame_reg_22" BEL
-        "core_inst/rx_error_bad_frame_reg_21" BEL
-        "core_inst/rx_error_bad_frame_reg_20" BEL
-        "core_inst/rx_error_bad_frame_reg_19" BEL
-        "core_inst/rx_error_bad_frame_reg_18" BEL
-        "core_inst/rx_error_bad_frame_reg_17" BEL
-        "core_inst/rx_error_bad_frame_reg_16" BEL
-        "core_inst/rx_error_bad_frame_reg_15" BEL
-        "core_inst/rx_error_bad_frame_reg_14" BEL
-        "core_inst/rx_error_bad_frame_reg_13" BEL
-        "core_inst/rx_error_bad_frame_reg_12" BEL
-        "core_inst/rx_error_bad_frame_reg_11" BEL
-        "core_inst/rx_error_bad_frame_reg_10" BEL
-        "core_inst/rx_error_bad_frame_reg_9" BEL
-        "core_inst/rx_error_bad_frame_reg_8" BEL
-        "core_inst/rx_error_bad_frame_reg_7" BEL
-        "core_inst/rx_error_bad_frame_reg_6" BEL
-        "core_inst/rx_error_bad_frame_reg_5" BEL
-        "core_inst/rx_error_bad_frame_reg_4" BEL
-        "core_inst/rx_error_bad_frame_reg_3" BEL
-        "core_inst/rx_error_bad_frame_reg_2" BEL
-        "core_inst/rx_error_bad_frame_reg_1" BEL
-        "core_inst/rx_error_bad_frame_reg_0" BEL
         "core_inst/tx_fifo_bad_frame_reg_31" BEL
         "core_inst/tx_fifo_bad_frame_reg_30" BEL
         "core_inst/tx_fifo_bad_frame_reg_29" BEL
@@ -474,102 +474,6 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/udp_tx_error_payload_early_termination_reg_2" BEL
         "core_inst/udp_tx_error_payload_early_termination_reg_1" BEL
         "core_inst/udp_tx_error_payload_early_termination_reg_0" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_31" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_30" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_29" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_28" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_27" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_26" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_25" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_24" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_23" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_22" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_21" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_20" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_19" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_18" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_17" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_16" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_15" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_14" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_13" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_12" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_11" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_10" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_9" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_8" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_7" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_6" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_5" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_4" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_3" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_2" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_1" BEL
-        "core_inst/udp_rx_error_payload_early_termination_reg_0" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_31" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_30" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_29" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_28" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_27" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_26" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_25" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_24" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_23" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_22" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_21" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_20" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_19" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_18" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_17" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_16" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_15" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_14" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_13" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_12" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_11" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_10" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_9" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_8" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_7" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_6" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_5" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_4" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_3" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_2" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_1" BEL
-        "core_inst/ip_tx_error_arp_failed_reg_0" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_31" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_30" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_29" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_28" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_27" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_26" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_25" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_24" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_23" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_22" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_21" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_20" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_19" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_18" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_17" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_16" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_15" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_14" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_13" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_12" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_11" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_10" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_9" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_8" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_7" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_6" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_5" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_4" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_3" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_2" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_1" BEL
-        "core_inst/ip_tx_error_payload_early_termination_reg_0" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_31" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_30" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_29" BEL
@@ -602,38 +506,102 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_2" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_1" BEL
         "core_inst/udp_rx_error_header_early_termination_reg_0" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_31" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_30" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_29" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_28" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_27" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_26" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_25" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_24" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_23" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_22" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_21" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_20" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_19" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_18" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_17" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_16" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_15" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_14" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_13" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_12" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_11" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_10" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_9" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_8" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_7" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_6" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_5" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_4" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_3" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_2" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_1" BEL
-        "core_inst/ip_rx_error_payload_early_termination_reg_0" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_31" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_30" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_29" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_28" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_27" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_26" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_25" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_24" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_23" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_22" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_21" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_20" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_19" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_18" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_17" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_16" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_15" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_14" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_13" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_12" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_11" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_10" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_9" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_8" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_7" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_6" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_5" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_4" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_3" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_2" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_1" BEL
+        "core_inst/ip_tx_error_payload_early_termination_reg_0" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_31" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_30" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_29" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_28" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_27" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_26" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_25" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_24" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_23" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_22" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_21" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_20" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_19" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_18" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_17" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_16" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_15" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_14" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_13" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_12" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_11" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_10" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_9" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_8" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_7" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_6" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_5" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_4" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_3" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_2" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_1" BEL
+        "core_inst/ip_tx_error_arp_failed_reg_0" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_31" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_30" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_29" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_28" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_27" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_26" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_25" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_24" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_23" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_22" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_21" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_20" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_19" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_18" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_17" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_16" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_15" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_14" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_13" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_12" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_11" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_10" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_9" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_8" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_7" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_6" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_5" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_4" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_3" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_2" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_1" BEL
+        "core_inst/udp_rx_error_payload_early_termination_reg_0" BEL
         "core_inst/ip_rx_error_invalid_header_reg_31" BEL
         "core_inst/ip_rx_error_invalid_header_reg_30" BEL
         "core_inst/ip_rx_error_invalid_header_reg_29" BEL
@@ -666,6 +634,38 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/ip_rx_error_invalid_header_reg_2" BEL
         "core_inst/ip_rx_error_invalid_header_reg_1" BEL
         "core_inst/ip_rx_error_invalid_header_reg_0" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_31" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_30" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_29" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_28" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_27" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_26" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_25" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_24" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_23" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_22" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_21" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_20" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_19" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_18" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_17" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_16" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_15" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_14" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_13" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_12" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_11" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_10" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_9" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_8" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_7" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_6" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_5" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_4" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_3" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_2" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_1" BEL
+        "core_inst/ip_rx_error_payload_early_termination_reg_0" BEL
         "core_inst/ip_rx_error_invalid_checksum_reg_31" BEL
         "core_inst/ip_rx_error_invalid_checksum_reg_30" BEL
         "core_inst/ip_rx_error_invalid_checksum_reg_29" BEL
@@ -3096,6 +3096,102 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_query_request_ip_reg_0"
         BEL
         "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_write_request_valid_reg"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_47"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_46"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_45"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_44"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_43"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_42"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_41"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_40"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_39"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_38"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_37"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_36"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_35"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_34"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_33"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_32"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_31"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_30"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_29"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_28"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_27"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_26"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_25"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_24"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_23"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_22"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_21"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_20"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_19"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_18"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_17"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_16"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_15"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_14"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_13"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_12"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_11"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_10"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_9"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_8"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_7"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_6"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_5"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_4"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_3"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_2"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_1"
+        BEL
+        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_0"
         BEL
         "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/cache_write_request_ip_reg_31"
         BEL
@@ -6680,104 +6776,9 @@ TIMEGRP pll_inst_clkout0 = BEL "sync_reset_inst/sync_reg_3" BEL
         "core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/state_reg_FSM_FFd3"
         BEL "core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/speed_reg_0" BEL
         "core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_tx_inst/mii_odd_reg"
-        BEL "core_inst/udp_bit_regs_4_1" BEL "core_inst/udp_bit_regs_5_1" BEL
-        "core_inst/udp_bit_regs_6_1" BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_47"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_46"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_45"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_44"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_43"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_42"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_41"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_40"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_39"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_38"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_37"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_36"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_35"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_34"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_33"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_32"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_31"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_30"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_29"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_28"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_27"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_26"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_25"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_24"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_23"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_22"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_21"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_20"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_19"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_18"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_17"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_16"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_15"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_14"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_13"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_12"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_11"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_10"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_9"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_8"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_7"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_6"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_5"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_4"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_3"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_2"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_1"
-        BEL
-        "core_inst/udp_complete_inst/ip_complete_inst/arp_inst/outgoing_arp_tha_reg_0"
-        BEL "core_inst/mdio_controller_inst/mdio_out_reg" PIN
+        BEL "core_inst/udp_bit_regs_5_1" BEL "core_inst/udp_bit_regs_6_1" BEL
+        "core_inst/udp_bit_regs_4_1" BEL
+        "core_inst/mdio_controller_inst/mdio_out_reg" PIN
         "core_inst/eth_mac_inst/tx_fifo/fifo_inst/Mram_mem2_pins<26>" PIN
         "core_inst/eth_mac_inst/tx_fifo/fifo_inst/Mram_mem2_pins<27>" PIN
         "core_inst/eth_mac_inst/tx_fifo/fifo_inst/Mram_mem1_pins<22>" PIN

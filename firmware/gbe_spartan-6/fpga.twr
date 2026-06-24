@@ -68,17 +68,17 @@ For more information, see Period Analysis in the Timing Closure User Guide (UG61
 
  7312 paths analyzed, 864 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   6.756ns.
+ Minimum period is   7.385ns.
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAMB16_X1Y18.WEA1), 51 paths
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAMB16_X1Y24.WEA1), 51 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     1.244ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 (FF)
+Slack (setup path):     0.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 (FF)
   Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.706ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.015ns (0.289 - 0.304)
+  Data Path Delay:      7.291ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.059ns (0.663 - 0.722)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -89,38 +89,38 @@ Slack (setup path):     1.244ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X19Y38.AQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0
-    SLICE_X19Y37.C2      net (fanout=1)        1.160   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<0>
-    SLICE_X19Y37.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_sync2_reg
+    SLICE_X6Y61.DQ       Tcko                  0.476   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3
+    SLICE_X2Y61.D6       net (fanout=1)        1.163   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C6      net (fanout=1)        0.731   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA1    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB16_X1Y24.WEA1    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     -------------------------------------------------  ---------------------------
-    Total                                      6.706ns (1.874ns logic, 4.832ns route)
-                                                       (27.9% logic, 72.1% route)
+    Total                                      7.291ns (1.892ns logic, 5.399ns route)
+                                                       (25.9% logic, 74.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.283ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 (FF)
+Slack (setup path):     0.627ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 (FF)
   Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.659ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.023ns (0.289 - 0.312)
+  Data Path Delay:      7.281ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.057ns (0.663 - 0.720)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -131,35 +131,83 @@ Slack (setup path):     1.283ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y42.BQ      Tcko                  0.525   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9
-    SLICE_X21Y39.C1      net (fanout=6)        1.710   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<9>
-    SLICE_X21Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C2      net (fanout=1)        0.734   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X7Y60.CMUX     Tshcko                0.518   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0
+    SLICE_X2Y61.D2       net (fanout=1)        1.111   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<0>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA1    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB16_X1Y24.WEA1    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     -------------------------------------------------  ---------------------------
-    Total                                      6.659ns (1.710ns logic, 4.949ns route)
+    Total                                      7.281ns (1.934ns logic, 5.347ns route)
+                                                       (26.6% logic, 73.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.658ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      7.259ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.048ns (0.663 - 0.711)
+  Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
+  Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y55.DQ       Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11
+    SLICE_X4Y61.D5       net (fanout=1)        0.929   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.D        Tilo                  0.254   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C3       net (fanout=1)        0.788   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.WEA1    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.259ns (1.865ns logic, 5.394ns route)
                                                        (25.7% logic, 74.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.287ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 (FF)
+
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAMB16_X1Y24.WEA3), 51 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 (FF)
   Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.658ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.020ns (0.289 - 0.309)
+  Data Path Delay:      7.291ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.059ns (0.663 - 0.722)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -170,83 +218,38 @@ Slack (setup path):     1.287ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y41.CQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8
-    SLICE_X21Y38.B3      net (fanout=1)        1.214   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-    SLICE_X21Y38.B       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C3      net (fanout=1)        0.629   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA1    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-    -------------------------------------------------  ---------------------------
-    Total                                      6.658ns (1.874ns logic, 4.784ns route)
-                                                       (28.1% logic, 71.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAMB16_X1Y18.WEA3), 51 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.244ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
-  Requirement:          8.000ns
-  Data Path Delay:      6.706ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.015ns (0.289 - 0.304)
-  Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
-  Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X19Y38.AQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0
-    SLICE_X19Y37.C2      net (fanout=1)        1.160   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<0>
-    SLICE_X19Y37.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_sync2_reg
+    SLICE_X6Y61.DQ       Tcko                  0.476   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3
+    SLICE_X2Y61.D6       net (fanout=1)        1.163   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C6      net (fanout=1)        0.731   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA3    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB16_X1Y24.WEA3    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     -------------------------------------------------  ---------------------------
-    Total                                      6.706ns (1.874ns logic, 4.832ns route)
-                                                       (27.9% logic, 72.1% route)
+    Total                                      7.291ns (1.892ns logic, 5.399ns route)
+                                                       (25.9% logic, 74.1% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.283ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 (FF)
+Slack (setup path):     0.627ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 (FF)
   Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.659ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.023ns (0.289 - 0.312)
+  Data Path Delay:      7.281ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.057ns (0.663 - 0.720)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -257,35 +260,83 @@ Slack (setup path):     1.283ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y42.BQ      Tcko                  0.525   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9
-    SLICE_X21Y39.C1      net (fanout=6)        1.710   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<9>
-    SLICE_X21Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C2      net (fanout=1)        0.734   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X7Y60.CMUX     Tshcko                0.518   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0
+    SLICE_X2Y61.D2       net (fanout=1)        1.111   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<0>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA3    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB16_X1Y24.WEA3    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
     -------------------------------------------------  ---------------------------
-    Total                                      6.659ns (1.710ns logic, 4.949ns route)
+    Total                                      7.281ns (1.934ns logic, 5.347ns route)
+                                                       (26.6% logic, 73.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.658ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
+  Requirement:          8.000ns
+  Data Path Delay:      7.259ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.048ns (0.663 - 0.711)
+  Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
+  Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y55.DQ       Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11
+    SLICE_X4Y61.D5       net (fanout=1)        0.929   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.D        Tilo                  0.254   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C3       net (fanout=1)        0.788   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.WEA3    net (fanout=6)        0.844   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB16_X1Y24.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    -------------------------------------------------  ---------------------------
+    Total                                      7.259ns (1.865ns logic, 5.394ns route)
                                                        (25.7% logic, 74.3% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.287ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
+
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2 (RAMB8_X1Y26.WEAWEL1), 51 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.615ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.658ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.020ns (0.289 - 0.309)
+  Data Path Delay:      7.284ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.066ns (0.656 - 0.722)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -296,83 +347,38 @@ Slack (setup path):     1.287ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y41.CQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8
-    SLICE_X21Y38.B3      net (fanout=1)        1.214   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-    SLICE_X21Y38.B       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C3      net (fanout=1)        0.629   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA3    net (fanout=6)        1.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-    -------------------------------------------------  ---------------------------
-    Total                                      6.658ns (1.874ns logic, 4.784ns route)
-                                                       (28.1% logic, 71.9% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAMB16_X1Y18.WEA0), 51 paths
---------------------------------------------------------------------------------
-Slack (setup path):     1.449ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
-  Requirement:          8.000ns
-  Data Path Delay:      6.501ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.015ns (0.289 - 0.304)
-  Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
-  Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
-  Clock Uncertainty:    0.035ns
-
-  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Total Input Jitter (TIJ):   0.000ns
-    Discrete Jitter (DJ):       0.000ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X19Y38.AQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_0
-    SLICE_X19Y37.C2      net (fanout=1)        1.160   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<0>
-    SLICE_X19Y37.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_sync2_reg
+    SLICE_X6Y61.DQ       Tcko                  0.476   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_3
+    SLICE_X2Y61.D6       net (fanout=1)        1.163   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<3>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C6      net (fanout=1)        0.731   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA0    net (fanout=6)        1.132   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB8_X1Y26.WEAWEL1  net (fanout=6)        0.837   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB8_X1Y26.CLKAWRCLKTrcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     -------------------------------------------------  ---------------------------
-    Total                                      6.501ns (1.874ns logic, 4.627ns route)
-                                                       (28.8% logic, 71.2% route)
+    Total                                      7.284ns (1.892ns logic, 5.392ns route)
+                                                       (26.0% logic, 74.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.488ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
+Slack (setup path):     0.627ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.454ns (Levels of Logic = 3)
-  Clock Path Skew:      -0.023ns (0.289 - 0.312)
+  Data Path Delay:      7.274ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.064ns (0.656 - 0.720)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -383,35 +389,38 @@ Slack (setup path):     1.488ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X20Y42.BQ      Tcko                  0.525   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg_9
-    SLICE_X21Y39.C1      net (fanout=6)        1.710   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_reg<9>
-    SLICE_X21Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg<3>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C2      net (fanout=1)        0.734   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o8
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X7Y60.CMUX     Tshcko                0.518   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_0
+    SLICE_X2Y61.D2       net (fanout=1)        1.111   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<0>
+    SLICE_X2Y61.D        Tilo                  0.235   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tlast_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C6       net (fanout=1)        0.559   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o2
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA0    net (fanout=6)        1.132   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB8_X1Y26.WEAWEL1  net (fanout=6)        0.837   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB8_X1Y26.CLKAWRCLKTrcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     -------------------------------------------------  ---------------------------
-    Total                                      6.454ns (1.710ns logic, 4.744ns route)
-                                                       (26.5% logic, 73.5% route)
+    Total                                      7.274ns (1.934ns logic, 5.340ns route)
+                                                       (26.6% logic, 73.4% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     1.492ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1 (RAM)
+Slack (setup path):     0.658ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2 (RAM)
   Requirement:          8.000ns
-  Data Path Delay:      6.453ns (Levels of Logic = 4)
-  Clock Path Skew:      -0.020ns (0.289 - 0.309)
+  Data Path Delay:      7.252ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.055ns (0.656 - 0.711)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 0.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.035ns
@@ -422,114 +431,115 @@ Slack (setup path):     1.492ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.000ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+  Maximum Data Path at Slow Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X21Y41.CQ      Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg_8
-    SLICE_X21Y38.B3      net (fanout=1)        1.214   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_gray_reg<8>
-    SLICE_X21Y38.B       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C3      net (fanout=1)        0.629   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o3
-    SLICE_X21Y38.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X7Y55.DQ       Tcko                  0.430   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg_11
+    SLICE_X4Y61.D5       net (fanout=1)        0.929   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync2_reg<11>
+    SLICE_X4Y61.D        Tilo                  0.254   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C3       net (fanout=1)        0.788   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o4
+    SLICE_X4Y61.C        Tilo                  0.255   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/count_reg<2>
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C5      net (fanout=1)        0.436   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
-    SLICE_X23Y39.C       Tilo                  0.259   core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_commit_sync_reg<3>
+    SLICE_X9Y60.A4       net (fanout=1)        0.802   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o5
+    SLICE_X9Y60.A        Tilo                  0.259   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/eth_mac_1g_inst/axis_gmii_rx_inst/m_axis_tuser_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o10
-    SLICE_X19Y32.A4      net (fanout=30)       1.168   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
-    SLICE_X19Y32.AMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
+    SLICE_X15Y53.C3      net (fanout=30)       2.031   core_inst/eth_mac_inst/rx_fifo/fifo_inst/full_drop_frame_reg_OR_129_o
+    SLICE_X15Y53.CMUX    Tilo                  0.337   core_inst/eth_mac_inst/rx_fifo/fifo_inst/overflow_reg
                                                        core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.WEA0    net (fanout=6)        1.132   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
-    RAMB16_X1Y18.CLKA    Trcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1
+    RAMB8_X1Y26.WEAWEL1  net (fanout=6)        0.837   core_inst/eth_mac_inst/rx_fifo/fifo_inst/write_ctrl
+    RAMB8_X1Y26.CLKAWRCLKTrcck_WEA             0.330   core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2
     -------------------------------------------------  ---------------------------
-    Total                                      6.453ns (1.874ns logic, 4.579ns route)
-                                                       (29.0% logic, 71.0% route)
+    Total                                      7.252ns (1.865ns logic, 5.387ns route)
+                                                       (25.7% logic, 74.3% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: TS_rx_clk_pin = PERIOD TIMEGRP "rx_clk_pin" 8 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync1_reg (SLICE_X23Y43.SR), 1 path
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg (SLICE_X22Y61.D6), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.325ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync1_reg (FF)
+Slack (hold path):      0.417ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.324ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.039 - 0.040)
+  Data Path Delay:      0.417ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync1_reg
+  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg to core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y45.AQ      Tcko                  0.198   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<3>
-                                                       core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0
-    SLICE_X23Y43.SR      net (fanout=38)       0.264   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<0>
-    SLICE_X23Y43.CLK     Tcksr       (-Th)     0.138   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync1_reg
+    SLICE_X22Y61.DQ      Tcko                  0.200   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
+    SLICE_X22Y61.D6      net (fanout=2)        0.027   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
+    SLICE_X22Y61.CLK     Tah         (-Th)    -0.190   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mxor_bad_frame_sync1_reg_bad_frame_reg_XOR_1819_o_xo<0>1
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
     -------------------------------------------------  ---------------------------
-    Total                                      0.324ns (0.060ns logic, 0.264ns route)
-                                                       (18.5% logic, 81.5% route)
+    Total                                      0.417ns (0.390ns logic, 0.027ns route)
+                                                       (93.5% logic, 6.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_valid_reg (SLICE_X23Y43.SR), 1 path
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_0 (SLICE_X9Y53.SR), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.332ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.429ns (requirement - (clock path skew + uncertainty - data path))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_valid_reg (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.331ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.039 - 0.040)
+  Data Path Delay:      0.433ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.036 - 0.032)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_valid_reg
+  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y45.AQ      Tcko                  0.198   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<3>
+    SLICE_X9Y54.AQ       Tcko                  0.198   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<3>
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0
-    SLICE_X23Y43.SR      net (fanout=38)       0.264   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<0>
-    SLICE_X23Y43.CLK     Tcksr       (-Th)     0.131   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_valid_reg
+    SLICE_X9Y53.SR       net (fanout=37)       0.366   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<0>
+    SLICE_X9Y53.CLK      Tcksr       (-Th)     0.131   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg<3>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_0
     -------------------------------------------------  ---------------------------
-    Total                                      0.331ns (0.067ns logic, 0.264ns route)
-                                                       (20.2% logic, 79.8% route)
+    Total                                      0.433ns (0.067ns logic, 0.366ns route)
+                                                       (15.5% logic, 84.5% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync2_reg (SLICE_X23Y43.SR), 1 path
+Paths for end point core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_1 (SLICE_X9Y53.SR), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.335ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      0.432ns (requirement - (clock path skew + uncertainty - data path))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 (FF)
-  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync2_reg (FF)
+  Destination:          core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      0.334ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.001ns (0.039 - 0.040)
+  Data Path Delay:      0.436ns (Levels of Logic = 0)
+  Clock Path Skew:      0.004ns (0.036 - 0.032)
   Source Clock:         core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Destination Clock:    core_inst/eth_mac_inst/rx_clk rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync2_reg
+  Minimum Data Path at Fast Process Corner: core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0 to core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_1
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X23Y45.AQ      Tcko                  0.198   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<3>
+    SLICE_X9Y54.AQ       Tcko                  0.198   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<3>
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg_0
-    SLICE_X23Y43.SR      net (fanout=38)       0.264   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<0>
-    SLICE_X23Y43.CLK     Tcksr       (-Th)     0.128   core_inst/eth_mac_inst/rx_fifo/fifo_inst/bad_frame_sync1_reg
-                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/wr_ptr_update_ack_sync2_reg
+    SLICE_X9Y53.SR       net (fanout=37)       0.366   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rx_rst_reg<0>
+    SLICE_X9Y53.CLK      Tcksr       (-Th)     0.128   core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg<3>
+                                                       core_inst/eth_mac_inst/rx_fifo/fifo_inst/rd_ptr_gray_sync1_reg_1
     -------------------------------------------------  ---------------------------
-    Total                                      0.334ns (0.070ns logic, 0.264ns route)
-                                                       (21.0% logic, 79.0% route)
+    Total                                      0.436ns (0.070ns logic, 0.366ns route)
+                                                       (16.1% logic, 83.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -540,7 +550,7 @@ Slack: 4.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1/CLKA
   Logical resource: core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem1/CLKA
-  Location pin: RAMB16_X1Y18.CLKA
+  Location pin: RAMB16_X1Y24.CLKA
   Clock network: core_inst/eth_mac_inst/rx_clk
 --------------------------------------------------------------------------------
 Slack: 4.430ns (period - min period limit)
@@ -548,7 +558,7 @@ Slack: 4.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2/CLKAWRCLK
   Logical resource: core_inst/eth_mac_inst/rx_fifo/fifo_inst/Mram_mem2/CLKAWRCLK
-  Location pin: RAMB8_X1Y17.CLKAWRCLK
+  Location pin: RAMB8_X1Y26.CLKAWRCLK
   Clock network: core_inst/eth_mac_inst/rx_clk
 --------------------------------------------------------------------------------
 Slack: 5.334ns (period - min period limit)
@@ -565,19 +575,19 @@ Timing constraint: TS_pll_inst_clkout1 = PERIOD TIMEGRP "pll_inst_clkout1"
 TS_sys_clk_pin / 2.5         PHASE 2.5 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 2 paths analyzed, 2 endpoints analyzed, 2 failing endpoints
- 2 timing errors detected. (2 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.576ns.
+ 2 paths analyzed, 2 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   7.920ns.
 --------------------------------------------------------------------------------
 
 Paths for end point core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (OLOGIC_X6Y60.D1), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.180ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     0.025ns (requirement - (data path - clock path skew + uncertainty))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1 (FF)
   Destination:          core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (FF)
   Requirement:          2.500ns
-  Data Path Delay:      2.324ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.121ns (1.911 - 2.032)
+  Data Path Delay:      2.086ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.154ns (1.911 - 2.065)
   Source Clock:         clk_int rising at 0.000ns
   Destination Clock:    clk90_int rising at 2.500ns
   Clock Uncertainty:    0.235ns
@@ -591,25 +601,25 @@ Slack (setup path):     -0.180ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y62.BQ      Tcko                  0.476   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    SLICE_X7Y61.BQ       Tcko                  0.430   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
-    OLOGIC_X6Y60.D1      net (fanout=2)        0.882   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
+    OLOGIC_X6Y60.D1      net (fanout=2)        0.690   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
     OLOGIC_X6Y60.CLK0    Todck                 0.966   ENET0_GTX_CLK_OBUF
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst
     -------------------------------------------------  ---------------------------
-    Total                                      2.324ns (1.442ns logic, 0.882ns route)
-                                                       (62.0% logic, 38.0% route)
+    Total                                      2.086ns (1.396ns logic, 0.690ns route)
+                                                       (66.9% logic, 33.1% route)
 
 --------------------------------------------------------------------------------
 
 Paths for end point core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (OLOGIC_X6Y60.D2), 1 path
 --------------------------------------------------------------------------------
-Slack (setup path):     -0.051ns (requirement - (data path - clock path skew + uncertainty))
+Slack (setup path):     0.170ns (requirement - (data path - clock path skew + uncertainty))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2 (FF)
   Destination:          core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (FF)
   Requirement:          2.500ns
-  Data Path Delay:      2.195ns (Levels of Logic = 0)
-  Clock Path Skew:      -0.121ns (1.911 - 2.032)
+  Data Path Delay:      1.941ns (Levels of Logic = 0)
+  Clock Path Skew:      -0.154ns (1.911 - 2.065)
   Source Clock:         clk_int rising at 0.000ns
   Destination Clock:    clk90_int rising at 2.500ns
   Clock Uncertainty:    0.235ns
@@ -623,14 +633,14 @@ Slack (setup path):     -0.051ns (requirement - (data path - clock path skew + u
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y62.CQ      Tcko                  0.476   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    SLICE_X7Y61.CQ       Tcko                  0.430   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
-    OLOGIC_X6Y60.D2      net (fanout=3)        0.888   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    OLOGIC_X6Y60.D2      net (fanout=3)        0.680   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
     OLOGIC_X6Y60.CLK0    Todck                 0.831   ENET0_GTX_CLK_OBUF
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst
     -------------------------------------------------  ---------------------------
-    Total                                      2.195ns (1.307ns logic, 0.888ns route)
-                                                       (59.5% logic, 40.5% route)
+    Total                                      1.941ns (1.261ns logic, 0.680ns route)
+                                                       (65.0% logic, 35.0% route)
 
 --------------------------------------------------------------------------------
 
@@ -640,12 +650,12 @@ Hold Paths: TS_pll_inst_clkout1 = PERIOD TIMEGRP "pll_inst_clkout1" TS_sys_clk_p
 
 Paths for end point core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (OLOGIC_X6Y60.D2), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      5.326ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      5.106ns (requirement - (clock path skew + uncertainty - data path))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2 (FF)
   Destination:          core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (FF)
   Requirement:          5.500ns
-  Data Path Delay:      1.307ns (Levels of Logic = 0)
-  Clock Path Skew:      1.246ns (2.634 - 1.388)
+  Data Path Delay:      1.054ns (Levels of Logic = 0)
+  Clock Path Skew:      1.213ns (2.634 - 1.421)
   Source Clock:         clk_int rising at 8.000ns
   Destination Clock:    clk90_int rising at 2.500ns
   Clock Uncertainty:    0.235ns
@@ -659,25 +669,25 @@ Slack (hold path):      5.326ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y62.CQ      Tcko                  0.449   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    SLICE_X7Y61.CQ       Tcko                  0.405   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
-    OLOGIC_X6Y60.D2      net (fanout=3)        0.853   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    OLOGIC_X6Y60.D2      net (fanout=3)        0.644   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
     OLOGIC_X6Y60.CLK0    Tockd       (-Th)    -0.005   ENET0_GTX_CLK_OBUF
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst
     -------------------------------------------------  ---------------------------
-    Total                                      1.307ns (0.454ns logic, 0.853ns route)
-                                                       (34.7% logic, 65.3% route)
+    Total                                      1.054ns (0.410ns logic, 0.644ns route)
+                                                       (38.9% logic, 61.1% route)
 
 --------------------------------------------------------------------------------
 
 Paths for end point core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (OLOGIC_X6Y60.D1), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      5.497ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      5.291ns (requirement - (clock path skew + uncertainty - data path))
   Source:               core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1 (FF)
   Destination:          core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst (FF)
   Requirement:          5.500ns
-  Data Path Delay:      1.478ns (Levels of Logic = 0)
-  Clock Path Skew:      1.246ns (2.634 - 1.388)
+  Data Path Delay:      1.239ns (Levels of Logic = 0)
+  Clock Path Skew:      1.213ns (2.634 - 1.421)
   Source Clock:         clk_int rising at 8.000ns
   Destination Clock:    clk90_int rising at 2.500ns
   Clock Uncertainty:    0.235ns
@@ -691,14 +701,14 @@ Slack (hold path):      5.497ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X14Y62.BQ      Tcko                  0.449   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
+    SLICE_X7Y61.BQ       Tcko                  0.405   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_2
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
-    OLOGIC_X6Y60.D1      net (fanout=2)        0.849   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
+    OLOGIC_X6Y60.D1      net (fanout=2)        0.654   core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/rgmii_tx_clk_1
     OLOGIC_X6Y60.CLK0    Tockd       (-Th)    -0.180   ENET0_GTX_CLK_OBUF
                                                        core_inst/eth_mac_inst/eth_mac_1g_rgmii_inst/rgmii_phy_if_inst/clk_oddr_inst/oddr[0].oddr_inst
     -------------------------------------------------  ---------------------------
-    Total                                      1.478ns (0.629ns logic, 0.849ns route)
-                                                       (42.6% logic, 57.4% route)
+    Total                                      1.239ns (0.585ns logic, 0.654ns route)
+                                                       (47.2% logic, 52.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -735,19 +745,19 @@ Timing constraint: TS_pll_inst_clkout0 = PERIOD TIMEGRP "pll_inst_clkout0"
 TS_sys_clk_pin / 2.5         HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 869618 paths analyzed, 22434 endpoints analyzed, 0 failing endpoints
- 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   7.897ns.
+ 881597 paths analyzed, 22427 endpoints analyzed, 98 failing endpoints
+ 98 timing errors detected. (98 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.938ns.
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/tx_udp_ip_dest_ip_reg_1 (SLICE_X13Y42.B6), 960 paths
+Paths for end point core_inst/tx_udp_ip_dest_ip_reg_30 (SLICE_X13Y27.C6), 960 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     0.103ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_37 (FF)
-  Destination:          core_inst/tx_udp_ip_dest_ip_reg_1 (FF)
+Slack (setup path):     -0.938ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_14 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_30 (FF)
   Requirement:          8.000ns
-  Data Path Delay:      7.709ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.073ns (0.594 - 0.667)
+  Data Path Delay:      8.730ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.093ns (0.597 - 0.690)
   Source Clock:         clk_int rising at 0.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.115ns
@@ -757,42 +767,339 @@ Slack (setup path):     0.103ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.218ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_37 to core_inst/tx_udp_ip_dest_ip_reg_1
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_14 to core_inst/tx_udp_ip_dest_ip_reg_30
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y43.BQ       Tcko                  0.525   core_inst/rx_uart_buff<38>
-                                                       core_inst/rx_uart_buff_37
-    SLICE_X2Y39.B1       net (fanout=3)        1.502   core_inst/rx_uart_buff<37>
-    SLICE_X2Y39.B        Tilo                  0.235   core_inst/full_registro<94>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D5       net (fanout=6)        0.916   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A3       net (fanout=6)        0.565   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y42.B6      net (fanout=20)       0.839   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y42.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<3>
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1_dpot1
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1
+    SLICE_X23Y11.CMUX    Tshcko                0.518   core_inst/rx_udp_buff<15>
+                                                       core_inst/rx_udp_buff_14
+    SLICE_X19Y17.B6      net (fanout=9)        0.990   core_inst/rx_udp_buff<14>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.C6      net (fanout=20)       0.925   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30
     -------------------------------------------------  ---------------------------
-    Total                                      7.709ns (2.159ns logic, 5.550ns route)
+    Total                                      8.730ns (2.421ns logic, 6.309ns route)
+                                                       (27.7% logic, 72.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.913ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_56 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_30 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.710ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.088ns (0.597 - 0.685)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_56 to core_inst/tx_udp_ip_dest_ip_reg_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y11.DQ      Tcko                  0.430   core_inst/rx_udp_buff<56>
+                                                       core_inst/rx_udp_buff_56
+    SLICE_X19Y17.B2      net (fanout=10)       1.058   core_inst/rx_udp_buff<56>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.C6      net (fanout=20)       0.925   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30
+    -------------------------------------------------  ---------------------------
+    Total                                      8.710ns (2.333ns logic, 6.377ns route)
+                                                       (26.8% logic, 73.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.898ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_60 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_30 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.689ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.094ns (0.597 - 0.691)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_60 to core_inst/tx_udp_ip_dest_ip_reg_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y15.DMUX    Tshcko                0.518   core_inst/rx_udp_buff<58>
+                                                       core_inst/rx_udp_buff_60
+    SLICE_X19Y17.B1      net (fanout=10)       0.949   core_inst/rx_udp_buff<60>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.C6      net (fanout=20)       0.925   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_30
+    -------------------------------------------------  ---------------------------
+    Total                                      8.689ns (2.421ns logic, 6.268ns route)
+                                                       (27.9% logic, 72.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point core_inst/tx_udp_ip_dest_ip_reg_28 (SLICE_X13Y27.B6), 960 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.839ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_14 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_28 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.631ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.093ns (0.597 - 0.690)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_14 to core_inst/tx_udp_ip_dest_ip_reg_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y11.CMUX    Tshcko                0.518   core_inst/rx_udp_buff<15>
+                                                       core_inst/rx_udp_buff_14
+    SLICE_X19Y17.B6      net (fanout=9)        0.990   core_inst/rx_udp_buff<14>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.B6      net (fanout=20)       0.826   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28
+    -------------------------------------------------  ---------------------------
+    Total                                      8.631ns (2.421ns logic, 6.210ns route)
+                                                       (28.1% logic, 71.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.814ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_56 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_28 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.611ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.088ns (0.597 - 0.685)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_56 to core_inst/tx_udp_ip_dest_ip_reg_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y11.DQ      Tcko                  0.430   core_inst/rx_udp_buff<56>
+                                                       core_inst/rx_udp_buff_56
+    SLICE_X19Y17.B2      net (fanout=10)       1.058   core_inst/rx_udp_buff<56>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.B6      net (fanout=20)       0.826   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28
+    -------------------------------------------------  ---------------------------
+    Total                                      8.611ns (2.333ns logic, 6.278ns route)
+                                                       (27.1% logic, 72.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.799ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_60 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_28 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.590ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.094ns (0.597 - 0.691)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_60 to core_inst/tx_udp_ip_dest_ip_reg_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X19Y15.DMUX    Tshcko                0.518   core_inst/rx_udp_buff<58>
+                                                       core_inst/rx_udp_buff_60
+    SLICE_X19Y17.B1      net (fanout=10)       0.949   core_inst/rx_udp_buff<60>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X13Y27.B6      net (fanout=20)       0.826   core_inst/_n1836_inv211_rstpot3
+    SLICE_X13Y27.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<11>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_28
+    -------------------------------------------------  ---------------------------
+    Total                                      8.590ns (2.421ns logic, 6.169ns route)
+                                                       (28.2% logic, 71.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point core_inst/tx_udp_ip_dest_ip_reg_29 (SLICE_X12Y28.A6), 960 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -0.718ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_14 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_29 (FF)
+  Requirement:          8.000ns
+  Data Path Delay:      8.513ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.090ns (0.600 - 0.690)
+  Source Clock:         clk_int rising at 0.000ns
+  Destination Clock:    clk_int rising at 8.000ns
+  Clock Uncertainty:    0.115ns
+
+  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.218ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_14 to core_inst/tx_udp_ip_dest_ip_reg_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X23Y11.CMUX    Tshcko                0.518   core_inst/rx_udp_buff<15>
+                                                       core_inst/rx_udp_buff_14
+    SLICE_X19Y17.B6      net (fanout=9)        0.990   core_inst/rx_udp_buff<14>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X12Y28.A6      net (fanout=20)       0.742   core_inst/_n1836_inv211_rstpot3
+    SLICE_X12Y28.CLK     Tas                   0.339   core_inst/tx_udp_ip_dest_ip_reg<26>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29
+    -------------------------------------------------  ---------------------------
+    Total                                      8.513ns (2.387ns logic, 6.126ns route)
                                                        (28.0% logic, 72.0% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.137ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_42 (FF)
-  Destination:          core_inst/tx_udp_ip_dest_ip_reg_1 (FF)
+Slack (setup path):     -0.693ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_56 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_29 (FF)
   Requirement:          8.000ns
-  Data Path Delay:      7.682ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.066ns (0.594 - 0.660)
+  Data Path Delay:      8.493ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.085ns (0.600 - 0.685)
   Source Clock:         clk_int rising at 0.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.115ns
@@ -802,45 +1109,45 @@ Slack (setup path):     0.137ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.218ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_42 to core_inst/tx_udp_ip_dest_ip_reg_1
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_56 to core_inst/tx_udp_ip_dest_ip_reg_29
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y41.AMUX     Tshcko                0.576   core_inst/rx_uart_buff<47>
-                                                       core_inst/rx_uart_buff_42
-    SLICE_X1Y40.A2       net (fanout=11)       0.785   core_inst/rx_uart_buff<42>
-    SLICE_X1Y40.A        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/write_mac_reg<11>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5_SW0
-    SLICE_X1Y38.A6       net (fanout=1)        0.383   N36
-    SLICE_X1Y38.A        Tilo                  0.259   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.B5       net (fanout=3)        0.745   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.BMUX     Tilo                  0.337   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o11
-    SLICE_X5Y37.B3       net (fanout=3)        1.051   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X5Y37.B        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<11>
+    SLICE_X19Y11.DQ      Tcko                  0.430   core_inst/rx_udp_buff<56>
+                                                       core_inst/rx_udp_buff_56
+    SLICE_X19Y17.B2      net (fanout=10)       1.058   core_inst/rx_udp_buff<56>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
                                                        core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X9Y40.B6       net (fanout=10)       0.705   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y42.B6      net (fanout=20)       0.839   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y42.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<3>
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1_dpot1
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X12Y28.A6      net (fanout=20)       0.742   core_inst/_n1836_inv211_rstpot3
+    SLICE_X12Y28.CLK     Tas                   0.339   core_inst/tx_udp_ip_dest_ip_reg<26>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29
     -------------------------------------------------  ---------------------------
-    Total                                      7.682ns (2.581ns logic, 5.101ns route)
-                                                       (33.6% logic, 66.4% route)
+    Total                                      8.493ns (2.299ns logic, 6.194ns route)
+                                                       (27.1% logic, 72.9% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     0.160ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_udp_buff_39 (FF)
-  Destination:          core_inst/tx_udp_ip_dest_ip_reg_1 (FF)
+Slack (setup path):     -0.678ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               core_inst/rx_udp_buff_60 (FF)
+  Destination:          core_inst/tx_udp_ip_dest_ip_reg_29 (FF)
   Requirement:          8.000ns
-  Data Path Delay:      7.648ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.077ns (0.594 - 0.671)
+  Data Path Delay:      8.472ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.091ns (0.600 - 0.691)
   Source Clock:         clk_int rising at 0.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.115ns
@@ -850,325 +1157,37 @@ Slack (setup path):     0.160ns (requirement - (data path - clock path skew + un
     Discrete Jitter (DJ):       0.218ns
     Phase Error (PE):           0.000ns
 
-  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_39 to core_inst/tx_udp_ip_dest_ip_reg_1
+  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_60 to core_inst/tx_udp_ip_dest_ip_reg_29
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y34.CMUX     Tshcko                0.576   core_inst/rx_udp_buff<2>
-                                                       core_inst/rx_udp_buff_39
-    SLICE_X0Y35.B2       net (fanout=2)        0.737   core_inst/rx_udp_buff<39>
-    SLICE_X0Y35.B        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9_SW0
-    SLICE_X0Y35.A5       net (fanout=1)        0.247   N14
-    SLICE_X0Y35.A        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C5       net (fanout=12)       0.913   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<3>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A2       net (fanout=1)        0.696   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y42.B6      net (fanout=20)       0.839   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y42.CLK     Tas                   0.373   core_inst/tx_udp_ip_dest_ip_reg<3>
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1_dpot1
-                                                       core_inst/tx_udp_ip_dest_ip_reg_1
-    -------------------------------------------------  ---------------------------
-    Total                                      7.648ns (2.488ns logic, 5.160ns route)
-                                                       (32.5% logic, 67.5% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point core_inst/local_ip_24 (SLICE_X13Y43.C6), 960 paths
---------------------------------------------------------------------------------
-Slack (setup path):     0.120ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_37 (FF)
-  Destination:          core_inst/local_ip_24 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.695ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.070ns (0.597 - 0.667)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_37 to core_inst/local_ip_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y43.BQ       Tcko                  0.525   core_inst/rx_uart_buff<38>
-                                                       core_inst/rx_uart_buff_37
-    SLICE_X2Y39.B1       net (fanout=3)        1.502   core_inst/rx_uart_buff<37>
-    SLICE_X2Y39.B        Tilo                  0.235   core_inst/full_registro<94>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D5       net (fanout=6)        0.916   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A3       net (fanout=6)        0.565   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.C6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_24_dpot1
-                                                       core_inst/local_ip_24
-    -------------------------------------------------  ---------------------------
-    Total                                      7.695ns (2.159ns logic, 5.536ns route)
-                                                       (28.1% logic, 71.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     0.154ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_42 (FF)
-  Destination:          core_inst/local_ip_24 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.668ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.063ns (0.597 - 0.660)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_42 to core_inst/local_ip_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y41.AMUX     Tshcko                0.576   core_inst/rx_uart_buff<47>
-                                                       core_inst/rx_uart_buff_42
-    SLICE_X1Y40.A2       net (fanout=11)       0.785   core_inst/rx_uart_buff<42>
-    SLICE_X1Y40.A        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/write_mac_reg<11>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5_SW0
-    SLICE_X1Y38.A6       net (fanout=1)        0.383   N36
-    SLICE_X1Y38.A        Tilo                  0.259   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.B5       net (fanout=3)        0.745   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.BMUX     Tilo                  0.337   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o11
-    SLICE_X5Y37.B3       net (fanout=3)        1.051   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X5Y37.B        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<11>
+    SLICE_X19Y15.DMUX    Tshcko                0.518   core_inst/rx_udp_buff<58>
+                                                       core_inst/rx_udp_buff_60
+    SLICE_X19Y17.B1      net (fanout=10)       0.949   core_inst/rx_udp_buff<60>
+    SLICE_X19Y17.B       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A1      net (fanout=1)        0.928   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o311
+    SLICE_X19Y17.A       Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/udp_checksum_reg<7>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o313
+    SLICE_X18Y15.A6      net (fanout=4)        0.380   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o31
+    SLICE_X18Y15.A       Tilo                  0.235   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
+                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B1      net (fanout=5)        1.264   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o6
+    SLICE_X15Y21.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/query_ip_reg<19>
                                                        core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X9Y40.B6       net (fanout=10)       0.705   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.C6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_24_dpot1
-                                                       core_inst/local_ip_24
+    SLICE_X13Y24.B6      net (fanout=10)       0.649   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
+    SLICE_X13Y24.B       Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_length_reg_15
+                                                       core_inst/_n1945_inv1_SW0_SW0
+    SLICE_X9Y28.A1       net (fanout=5)        1.173   N585
+    SLICE_X9Y28.A        Tilo                  0.259   core_inst/subnet_mask<2>
+                                                       core_inst/_n1836_inv211_rstpot_3
+    SLICE_X12Y28.A6      net (fanout=20)       0.742   core_inst/_n1836_inv211_rstpot3
+    SLICE_X12Y28.CLK     Tas                   0.339   core_inst/tx_udp_ip_dest_ip_reg<26>
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29_dpot1
+                                                       core_inst/tx_udp_ip_dest_ip_reg_29
     -------------------------------------------------  ---------------------------
-    Total                                      7.668ns (2.581ns logic, 5.087ns route)
-                                                       (33.7% logic, 66.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     0.177ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_udp_buff_39 (FF)
-  Destination:          core_inst/local_ip_24 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.634ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.074ns (0.597 - 0.671)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_39 to core_inst/local_ip_24
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y34.CMUX     Tshcko                0.576   core_inst/rx_udp_buff<2>
-                                                       core_inst/rx_udp_buff_39
-    SLICE_X0Y35.B2       net (fanout=2)        0.737   core_inst/rx_udp_buff<39>
-    SLICE_X0Y35.B        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9_SW0
-    SLICE_X0Y35.A5       net (fanout=1)        0.247   N14
-    SLICE_X0Y35.A        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C5       net (fanout=12)       0.913   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<3>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A2       net (fanout=1)        0.696   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.C6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_24_dpot1
-                                                       core_inst/local_ip_24
-    -------------------------------------------------  ---------------------------
-    Total                                      7.634ns (2.488ns logic, 5.146ns route)
-                                                       (32.6% logic, 67.4% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point core_inst/local_ip_25 (SLICE_X13Y43.D6), 960 paths
---------------------------------------------------------------------------------
-Slack (setup path):     0.120ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_37 (FF)
-  Destination:          core_inst/local_ip_25 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.695ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.070ns (0.597 - 0.667)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_37 to core_inst/local_ip_25
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y43.BQ       Tcko                  0.525   core_inst/rx_uart_buff<38>
-                                                       core_inst/rx_uart_buff_37
-    SLICE_X2Y39.B1       net (fanout=3)        1.502   core_inst/rx_uart_buff<37>
-    SLICE_X2Y39.B        Tilo                  0.235   core_inst/full_registro<94>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D5       net (fanout=6)        0.916   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o1
-    SLICE_X4Y37.D        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A3       net (fanout=6)        0.565   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o7
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.D6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_25_dpot1
-                                                       core_inst/local_ip_25
-    -------------------------------------------------  ---------------------------
-    Total                                      7.695ns (2.159ns logic, 5.536ns route)
-                                                       (28.1% logic, 71.9% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     0.154ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_uart_buff_42 (FF)
-  Destination:          core_inst/local_ip_25 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.668ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.063ns (0.597 - 0.660)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_uart_buff_42 to core_inst/local_ip_25
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y41.AMUX     Tshcko                0.576   core_inst/rx_uart_buff<47>
-                                                       core_inst/rx_uart_buff_42
-    SLICE_X1Y40.A2       net (fanout=11)       0.785   core_inst/rx_uart_buff<42>
-    SLICE_X1Y40.A        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/write_mac_reg<11>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5_SW0
-    SLICE_X1Y38.A6       net (fanout=1)        0.383   N36
-    SLICE_X1Y38.A        Tilo                  0.259   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.B5       net (fanout=3)        0.745   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o5
-    SLICE_X1Y38.BMUX     Tilo                  0.337   core_inst/rx_uart_buff<57>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o11
-    SLICE_X5Y37.B3       net (fanout=3)        1.051   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X5Y37.B        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<11>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o12
-    SLICE_X9Y40.B6       net (fanout=10)       0.705   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.D6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_25_dpot1
-                                                       core_inst/local_ip_25
-    -------------------------------------------------  ---------------------------
-    Total                                      7.668ns (2.581ns logic, 5.087ns route)
-                                                       (33.7% logic, 66.3% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     0.177ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               core_inst/rx_udp_buff_39 (FF)
-  Destination:          core_inst/local_ip_25 (FF)
-  Requirement:          8.000ns
-  Data Path Delay:      7.634ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.074ns (0.597 - 0.671)
-  Source Clock:         clk_int rising at 0.000ns
-  Destination Clock:    clk_int rising at 8.000ns
-  Clock Uncertainty:    0.115ns
-
-  Clock Uncertainty:          0.115ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
-    Total System Jitter (TSJ):  0.070ns
-    Discrete Jitter (DJ):       0.218ns
-    Phase Error (PE):           0.000ns
-
-  Maximum Data Path at Slow Process Corner: core_inst/rx_udp_buff_39 to core_inst/local_ip_25
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y34.CMUX     Tshcko                0.576   core_inst/rx_udp_buff<2>
-                                                       core_inst/rx_udp_buff_39
-    SLICE_X0Y35.B2       net (fanout=2)        0.737   core_inst/rx_udp_buff<39>
-    SLICE_X0Y35.B        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9_SW0
-    SLICE_X0Y35.A5       net (fanout=1)        0.247   N14
-    SLICE_X0Y35.A        Tilo                  0.254   core_inst/udp_complete_inst/udp_inst/udp_ip_tx_inst/m_ip_dest_ip_reg<27>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C5       net (fanout=12)       0.913   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_524_o9
-    SLICE_X5Y35.C        Tilo                  0.259   core_inst/udp_complete_inst/udp_inst/udp_ip_rx_inst/m_ip_source_ip_reg<3>
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A2       net (fanout=1)        0.696   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o1
-    SLICE_X4Y36.A        Tilo                  0.254   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_rx_inst/m_ip_source_ip_reg_23
-                                                       core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o6
-    SLICE_X9Y40.B4       net (fanout=8)        1.135   core_inst/rx_uart_buff[63]_rx_udp_buff[63]_OR_527_o
-    SLICE_X9Y40.B        Tilo                  0.259   core_inst/udp_complete_inst/ip_complete_inst/ip_inst/ip_eth_tx_inst/m_eth_dest_mac_reg<7>
-                                                       core_inst/_n1938_inv1_SW0_SW0
-    SLICE_X11Y42.B6      net (fanout=5)        0.593   N634
-    SLICE_X11Y42.B       Tilo                  0.259   core_inst/local_ip<21>
-                                                       core_inst/_n1829_inv211_rstpot_1
-    SLICE_X13Y43.D6      net (fanout=20)       0.825   core_inst/_n1829_inv211_rstpot1
-    SLICE_X13Y43.CLK     Tas                   0.373   core_inst/local_ip<25>
-                                                       core_inst/local_ip_25_dpot1
-                                                       core_inst/local_ip_25
-    -------------------------------------------------  ---------------------------
-    Total                                      7.634ns (2.488ns logic, 5.146ns route)
-                                                       (32.6% logic, 67.4% route)
+    Total                                      8.472ns (2.387ns logic, 6.085ns route)
+                                                       (28.2% logic, 71.8% route)
 
 --------------------------------------------------------------------------------
 
@@ -1176,84 +1195,84 @@ Hold Paths: TS_pll_inst_clkout0 = PERIOD TIMEGRP "pll_inst_clkout0" TS_sys_clk_p
         HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMA (SLICE_X4Y28.AX), 1 path
+Paths for end point core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.HIGH (SLICE_X0Y15.D3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.313ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_24 (FF)
-  Destination:          core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMA (RAM)
+Slack (hold path):      0.301ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 (FF)
+  Destination:          core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.HIGH (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.318ns (Levels of Logic = 0)
-  Clock Path Skew:      0.005ns (0.114 - 0.109)
+  Data Path Delay:      0.369ns (Levels of Logic = 0)
+  Clock Path Skew:      0.068ns (0.411 - 0.343)
   Source Clock:         clk_int rising at 8.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_24 to core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMA
+  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 to core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.HIGH
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y28.AQ       Tcko                  0.200   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg<27>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_24
-    SLICE_X4Y28.AX       net (fanout=2)        0.238   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg<24>
-    SLICE_X4Y28.CLK      Tdh         (-Th)     0.120   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg<29>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMA
+    SLICE_X0Y16.DQ       Tcko                  0.234   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2
+    SLICE_X0Y15.D3       net (fanout=17)       0.307   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+    SLICE_X0Y15.CLK      Tah         (-Th)     0.172   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/N13
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.HIGH
     -------------------------------------------------  ---------------------------
-    Total                                      0.318ns (0.080ns logic, 0.238ns route)
-                                                       (25.2% logic, 74.8% route)
+    Total                                      0.369ns (0.062ns logic, 0.307ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMB_D1 (SLICE_X4Y30.BI), 1 path
+Paths for end point core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.LOW (SLICE_X0Y15.D3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.322ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_dest_ip_reg_27 (FF)
-  Destination:          core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMB_D1 (RAM)
+Slack (hold path):      0.301ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 (FF)
+  Destination:          core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.LOW (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.323ns (Levels of Logic = 0)
-  Clock Path Skew:      0.001ns (0.046 - 0.045)
+  Data Path Delay:      0.369ns (Levels of Logic = 0)
+  Clock Path Skew:      0.068ns (0.411 - 0.343)
   Source Clock:         clk_int rising at 8.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_dest_ip_reg_27 to core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMB_D1
+  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 to core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.LOW
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X5Y31.DQ       Tcko                  0.198   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_dest_ip_reg<27>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_dest_ip_reg_27
-    SLICE_X4Y30.BI       net (fanout=2)        0.125   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_dest_ip_reg<27>
-    SLICE_X4Y30.CLK      Tdh         (-Th)     0.000   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_dest_ip_reg<29>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMB_D1
+    SLICE_X0Y16.DQ       Tcko                  0.234   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2
+    SLICE_X0Y15.D3       net (fanout=17)       0.307   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+    SLICE_X0Y15.CLK      Tah         (-Th)     0.172   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/N13
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/DP.LOW
     -------------------------------------------------  ---------------------------
-    Total                                      0.323ns (0.198ns logic, 0.125ns route)
-                                                       (61.3% logic, 38.7% route)
+    Total                                      0.369ns (0.062ns logic, 0.307ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMB (SLICE_X4Y28.BX), 1 path
+Paths for end point core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/SP.HIGH (SLICE_X0Y15.D3), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      0.323ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_26 (FF)
-  Destination:          core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMB (RAM)
+Slack (hold path):      0.301ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 (FF)
+  Destination:          core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/SP.HIGH (RAM)
   Requirement:          0.000ns
-  Data Path Delay:      0.328ns (Levels of Logic = 0)
-  Clock Path Skew:      0.005ns (0.114 - 0.109)
+  Data Path Delay:      0.369ns (Levels of Logic = 0)
+  Clock Path Skew:      0.068ns (0.411 - 0.343)
   Source Clock:         clk_int rising at 8.000ns
   Destination Clock:    clk_int rising at 8.000ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_26 to core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMB
+  Minimum Data Path at Fast Process Corner: core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2 to core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/SP.HIGH
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X6Y28.CQ       Tcko                  0.200   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg<27>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg_26
-    SLICE_X4Y28.BX       net (fanout=2)        0.239   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/ip_source_ip_reg<26>
-    SLICE_X4Y28.CLK      Tdh         (-Th)     0.111   core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/m_ip_source_ip_reg<29>
-                                                       core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMB
+    SLICE_X0Y16.DQ       Tcko                  0.234   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg_2
+    SLICE_X0Y15.D3       net (fanout=17)       0.307   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/wr_ptr_reg<2>
+    SLICE_X0Y15.CLK      Tah         (-Th)     0.172   core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/N13
+                                                       core_inst/udp_complete_inst/ip_complete_inst/arp_inst/arp_cache_inst/Mram_valid_mem4/SP.HIGH
     -------------------------------------------------  ---------------------------
-    Total                                      0.328ns (0.089ns logic, 0.239ns route)
-                                                       (27.1% logic, 72.9% route)
+    Total                                      0.369ns (0.062ns logic, 0.307ns route)
+                                                       (16.8% logic, 83.2% route)
 
 --------------------------------------------------------------------------------
 
@@ -1265,7 +1284,7 @@ Slack: 4.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: core_inst/udp_payload_fifo/Mram_mem1/CLKA
   Logical resource: core_inst/udp_payload_fifo/Mram_mem1/CLKA
-  Location pin: RAMB16_X0Y4.CLKA
+  Location pin: RAMB16_X1Y16.CLKA
   Clock network: clk_int
 --------------------------------------------------------------------------------
 Slack: 4.430ns (period - min period limit)
@@ -1273,7 +1292,7 @@ Slack: 4.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKB(Fmax))
   Physical resource: core_inst/udp_payload_fifo/Mram_mem1/CLKB
   Logical resource: core_inst/udp_payload_fifo/Mram_mem1/CLKB
-  Location pin: RAMB16_X0Y4.CLKB
+  Location pin: RAMB16_X1Y16.CLKB
   Clock network: clk_int
 --------------------------------------------------------------------------------
 Slack: 4.430ns (period - min period limit)
@@ -1281,7 +1300,7 @@ Slack: 4.430ns (period - min period limit)
   Min period limit: 3.570ns (280.112MHz) (Trper_CLKA(Fmax))
   Physical resource: core_inst/udp_payload_fifo/Mram_mem2/CLKAWRCLK
   Logical resource: core_inst/udp_payload_fifo/Mram_mem2/CLKAWRCLK
-  Location pin: RAMB8_X0Y3.CLKAWRCLK
+  Location pin: RAMB8_X1Y14.CLKAWRCLK
   Clock network: clk_int
 --------------------------------------------------------------------------------
 
@@ -1293,9 +1312,9 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     21.440ns|            0|            2|            0|       869620|
-| TS_pll_inst_clkout1           |      8.000ns|      8.576ns|          N/A|            2|            0|            2|            0|
-| TS_pll_inst_clkout0           |      8.000ns|      7.897ns|          N/A|            0|            0|       869618|            0|
+|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     22.345ns|            0|           98|            0|       881599|
+| TS_pll_inst_clkout1           |      8.000ns|      7.920ns|          N/A|            0|            0|            2|            0|
+| TS_pll_inst_clkout0           |      8.000ns|      8.938ns|          N/A|           98|            0|       881597|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 1 constraint not met.
@@ -1310,7 +1329,7 @@ Clock to Setup on destination clock ENET0_RX_CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-ENET0_RX_CLK   |    6.756|         |         |         |
+ENET0_RX_CLK   |    7.385|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -1318,25 +1337,25 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    7.897|         |         |         |
+clk            |    8.938|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
 Timing summary:
 ---------------
 
-Timing errors: 2  Score: 231  (Setup/Max: 231, Hold: 0)
+Timing errors: 98  Score: 21505  (Setup/Max: 21505, Hold: 0)
 
-Constraints cover 876932 paths, 0 nets, and 27365 connections
+Constraints cover 888911 paths, 0 nets, and 27364 connections
 
 Design statistics:
-   Minimum period:   8.576ns{1}   (Maximum frequency: 116.604MHz)
+   Minimum period:   8.938ns{1}   (Maximum frequency: 111.882MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Tue May 26 20:07:38 2026 
+Analysis completed Wed Jun 24 09:06:11 2026 
 --------------------------------------------------------------------------------
 
 Trace Settings:

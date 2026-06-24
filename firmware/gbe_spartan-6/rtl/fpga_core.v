@@ -341,7 +341,7 @@ always @(posedge clk) begin
         
             if (tx_fifo_axis_tready) begin
                 cont_reg <= cont_reg + 1;
-                if (cont_reg == (n_bytes - 2) || (cont_reg == (FRAME_BYTES-2) && send_regs) || send_mdio) begin // si se llego a la penultima palabra elegir el ultimo dato y enviarlo en el estado 3
+                if ((~send_regs && (cont_reg == (n_bytes - 2))) || (cont_reg == (FRAME_BYTES-2) && send_regs) || send_mdio) begin // si se llego a la penultima palabra elegir el ultimo dato y enviarlo en el estado 3
                     state <= 3'd3;
                     tx_fifo_axis_tlast <= 1;
 						  
@@ -402,6 +402,7 @@ always @(posedge clk) begin
                 pkt_n_reg <= 0;
                 ocupado <= 0; //fin ocupado para volver a estado 0 y esperar otro triger
                 state <= 3'd0; //volver a estado 0
+					 tx_fifo_axis_tdata_reg <= 8'd0;//reset contador data
                 tx_fifo_axis_tlast <= 0;//bajar last en el siguiente ciclo
                 tx_fifo_axis_tvalid <= 0;//bajar tvalid
             end else begin //si no se llego a ultimo paquete elegir un dato para seguir enviando paquetes desde el estado 1
@@ -468,8 +469,8 @@ always @(posedge clk) begin
     end
 end
 
-assign tx_udp_hdr_valid = rx_loopb ? (rx_udp_hdr_valid && match_cond) : (tx_udp_payload_axis_tvalid && tx_udp_hdr_ready);
-assign rx_udp_hdr_ready = rx_loopb ? ((tx_udp_hdr_ready && match_cond) || no_match) : 1'b1;
+assign tx_udp_hdr_valid = (rx_loopb && ~send_regs) ? (rx_udp_hdr_valid && match_cond) : (tx_udp_payload_axis_tvalid && tx_udp_hdr_ready);
+assign rx_udp_hdr_ready = (rx_loopb && ~send_regs) ? ((tx_udp_hdr_ready && match_cond) || no_match) : 1'b1;
 
 //assign tx_udp_hdr_valid = rx_udp_hdr_valid && match_cond;
 //assign rx_udp_hdr_ready = (tx_eth_hdr_ready && match_cond) || no_match;
@@ -479,23 +480,23 @@ assign tx_udp_ip_ecn = 0;
 assign tx_udp_ip_ttl = 64;
 assign tx_udp_ip_source_ip = local_ip;
 
-assign tx_udp_ip_dest_ip = rx_loopb ? rx_udp_ip_source_ip : tx_udp_ip_dest_ip_reg;
-assign tx_udp_source_port = rx_loopb ? rx_udp_dest_port : tx_udp_source_port_reg;
-assign tx_udp_dest_port = rx_loopb ? rx_udp_source_port : tx_udp_dest_port_reg;
+assign tx_udp_ip_dest_ip = (rx_loopb && ~send_regs) ? rx_udp_ip_source_ip : tx_udp_ip_dest_ip_reg;
+assign tx_udp_source_port = (rx_loopb && ~send_regs) ? rx_udp_dest_port : tx_udp_source_port_reg;
+assign tx_udp_dest_port = (rx_loopb && ~send_regs) ? rx_udp_source_port : tx_udp_dest_port_reg;
 
 //assign tx_udp_ip_dest_ip = rx_udp_ip_source_ip;
 //assign tx_udp_source_port = rx_udp_dest_port;
 //assign tx_udp_dest_port = rx_udp_source_port;
 
-assign tx_udp_length = rx_loopb ? rx_udp_length : (n_bytes + 16'd8);
+assign tx_udp_length = send_regs ? (FRAME_BYTES + 16'd8) : (rx_loopb ? rx_udp_length : (n_bytes + 16'd8));
 assign tx_udp_checksum = 0;
 
-assign tx_udp_payload_axis_tdata = rx_loopb ? reg_fifo_udp_payload_axis_tdata : tx_fifo_axis_tdata;
-assign tx_udp_payload_axis_tvalid = rx_loopb ? reg_fifo_udp_payload_axis_tvalid : tx_fifo_axis_tvalid;
+assign tx_udp_payload_axis_tdata = (rx_loopb && ~send_regs) ? reg_fifo_udp_payload_axis_tdata : tx_fifo_axis_tdata;
+assign tx_udp_payload_axis_tvalid = (rx_loopb && ~send_regs) ? reg_fifo_udp_payload_axis_tvalid : tx_fifo_axis_tvalid;
 assign tx_fifo_axis_tready = tx_udp_payload_axis_tready;
-assign reg_fifo_udp_payload_axis_tready = rx_loopb ? tx_udp_payload_axis_tready : 1'b1;
-assign tx_udp_payload_axis_tlast = rx_loopb ? reg_fifo_udp_payload_axis_tlast : tx_fifo_axis_tlast;
-assign tx_udp_payload_axis_tuser = rx_loopb ? reg_fifo_udp_payload_axis_tuser : tx_fifo_axis_tuser;
+assign reg_fifo_udp_payload_axis_tready = (rx_loopb && ~send_regs) ? tx_udp_payload_axis_tready : 1'b1;
+assign tx_udp_payload_axis_tlast = (rx_loopb && ~send_regs) ? reg_fifo_udp_payload_axis_tlast : tx_fifo_axis_tlast;
+assign tx_udp_payload_axis_tuser = (rx_loopb && ~send_regs) ? reg_fifo_udp_payload_axis_tuser : tx_fifo_axis_tuser;
 
 //assign tx_udp_payload_axis_tdata = tx_fifo_udp_payload_axis_tdata;
 //assign tx_udp_payload_axis_tvalid = tx_fifo_udp_payload_axis_tvalid;
@@ -938,7 +939,7 @@ assign led[0] = ~rst && sw[1]; //reset_n global encendido cuando run
 assign led[1] = phy0_reset_n && sw[1]; //reset_n phy encendido cuando run
 assign led[2] = CLK_125MHZ && sw[2];
 assign led[3] = ~phy0_int_n && sw[3];
-assign led[4] = rx_loopb && sw[4]; //decarctivar indicador con sw
+assign led[4] = (rx_loopb && ~send_regs) && sw[4]; //decarctivar indicador con sw
 assign led[5] = (rx_random || rx_constante) && sw[5];
 assign led[6]= ocupado && sw[6]; //desactivar indicador con sw
 assign led[7]= mdio_busy && sw[7];

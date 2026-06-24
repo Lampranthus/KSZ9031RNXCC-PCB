@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-localhost.localdomain::  Tue May 26 20:04:34 2026
+localhost.localdomain::  Wed Jun 24 09:02:22 2026
 
 par -w -intstyle ise -ol high -mt off fpga_map.ncd fpga.ncd fpga.pcf 
 
@@ -32,11 +32,11 @@ Slice Logic Utilization:
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:               11
-  Number of Slice LUTs:                      4,966 out of   5,720   86%
-    Number used as logic:                    4,641 out of   5,720   81%
-      Number using O6 output only:           2,958
-      Number using O5 output only:             736
-      Number using O5 and O6:                  947
+  Number of Slice LUTs:                      5,001 out of   5,720   87%
+    Number used as logic:                    4,628 out of   5,720   80%
+      Number using O6 output only:           2,974
+      Number using O5 output only:             738
+      Number using O5 and O6:                  916
       Number used as ROM:                        0
     Number used as Memory:                     120 out of   1,440    8%
       Number used as Dual Port RAM:            116
@@ -48,18 +48,18 @@ Slice Logic Utilization:
         Number using O6 output only:             4
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:    205
-      Number with same-slice register load:    175
-      Number with same-slice carry load:        30
+    Number used exclusively as route-thrus:    253
+      Number with same-slice register load:    222
+      Number with same-slice carry load:        31
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,427 out of   1,430   99%
+  Number of occupied Slices:                 1,428 out of   1,430   99%
   Number of MUXCYs used:                     1,292 out of   2,860   45%
-  Number of LUT Flip Flop pairs used:        5,462
-    Number with an unused Flip Flop:           965 out of   5,462   17%
-    Number with an unused LUT:                 496 out of   5,462    9%
-    Number of fully used LUT-FF pairs:       4,001 out of   5,462   73%
+  Number of LUT Flip Flop pairs used:        5,446
+    Number with an unused Flip Flop:           972 out of   5,446   17%
+    Number with an unused LUT:                 445 out of   5,446    8%
+    Number of fully used LUT-FF pairs:       4,029 out of   5,446   73%
     Number of slice register sites lost
       to control set restrictions:               0 out of  11,440    0%
 
@@ -112,75 +112,75 @@ Overall effort level (-ol):   High
 Router effort level (-rl):    High 
 
 Starting initial Timing Analysis.  REAL time: 7 secs 
-Finished initial Timing Analysis.  REAL time: 8 secs 
+Finished initial Timing Analysis.  REAL time: 7 secs 
 
 WARNING:Par:288 - The signal V3_3_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem4_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem3_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1_RAMD_D1_O has no load.  PAR will
+   not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem2_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem3_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem1_RAMD_D1_O has no load.  PAR
+   will not attempt to route this signal.
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem1_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem4_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem2_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_ttl_mem1_RAMD_D1_O has no load.  PAR will
-   not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem5_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem3_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_length_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem2_RAMD_D1_O has no load. 
    PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem4_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem3_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
 WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_source_port_mem1_RAMD_D1_O has no load. 
    PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem2_RAMD_D1_O has no load.  PAR
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_checksum_mem2_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem2_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_source_ip_mem1_RAMD_D1_O has no load.  PAR
-   will not attempt to route this signal.
-WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_udp_dest_port_mem1_RAMD_D1_O has no load.  PAR
+WARNING:Par:288 - The signal core_inst/udp_complete_inst/udp_inst/udp_checksum_gen_inst/Mram_ip_dest_ip_mem5_RAMD_D1_O has no load.  PAR
    will not attempt to route this signal.
 Starting Router
 
 
-Phase  1  : 29840 unrouted;      REAL time: 8 secs 
+Phase  1  : 29806 unrouted;      REAL time: 8 secs 
 
-Phase  2  : 26067 unrouted;      REAL time: 10 secs 
+Phase  2  : 26068 unrouted;      REAL time: 9 secs 
 
-Phase  3  : 10114 unrouted;      REAL time: 28 secs 
+Phase  3  : 10086 unrouted;      REAL time: 26 secs 
 
-Phase  4  : 10304 unrouted; (Setup:8168, Hold:110, Component Switching Limit:0)     REAL time: 32 secs 
-
-Updating file: fpga.ncd with current fully routed design.
-
-Phase  5  : 0 unrouted; (Setup:15662, Hold:59, Component Switching Limit:0)     REAL time: 2 mins 4 secs 
-
-Phase  6  : 0 unrouted; (Setup:13004, Hold:59, Component Switching Limit:0)     REAL time: 2 mins 12 secs 
+Phase  4  : 10801 unrouted; (Setup:72580, Hold:3248, Component Switching Limit:0)     REAL time: 31 secs 
 
 Updating file: fpga.ncd with current fully routed design.
 
-Phase  7  : 0 unrouted; (Setup:13004, Hold:59, Component Switching Limit:0)     REAL time: 2 mins 37 secs 
+Phase  5  : 0 unrouted; (Setup:217507, Hold:2304, Component Switching Limit:0)     REAL time: 2 mins 5 secs 
 
-Phase  8  : 0 unrouted; (Setup:13004, Hold:59, Component Switching Limit:0)     REAL time: 2 mins 37 secs 
+Phase  6  : 0 unrouted; (Setup:163338, Hold:2260, Component Switching Limit:0)     REAL time: 2 mins 58 secs 
 
-Phase  9  : 0 unrouted; (Setup:13004, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 38 secs 
+Updating file: fpga.ncd with current fully routed design.
 
-Phase 10  : 0 unrouted; (Setup:231, Hold:0, Component Switching Limit:0)     REAL time: 2 mins 40 secs 
-Total REAL time to Router completion: 2 mins 40 secs 
-Total CPU time to Router completion: 2 mins 19 secs 
+Phase  7  : 0 unrouted; (Setup:163338, Hold:2260, Component Switching Limit:0)     REAL time: 3 mins 25 secs 
+
+Phase  8  : 0 unrouted; (Setup:163338, Hold:2260, Component Switching Limit:0)     REAL time: 3 mins 25 secs 
+
+Phase  9  : 0 unrouted; (Setup:163338, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 26 secs 
+
+Phase 10  : 0 unrouted; (Setup:21505, Hold:0, Component Switching Limit:0)     REAL time: 3 mins 28 secs 
+Total REAL time to Router completion: 3 mins 28 secs 
+Total CPU time to Router completion: 2 mins 58 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -198,10 +198,10 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|             clk_int |  BUFGMUX_X2Y2| No   | 1344 |  0.761     |  2.152      |
+|             clk_int |  BUFGMUX_X2Y2| No   | 1337 |  0.761     |  2.152      |
 +---------------------+--------------+------+------+------------+-------------+
 |core_inst/eth_mac_in |              |      |      |            |             |
-|           st/rx_clk |  BUFGMUX_X3Y8| No   |   75 |  0.721     |  2.112      |
+|           st/rx_clk |  BUFGMUX_X3Y8| No   |   77 |  0.708     |  2.112      |
 +---------------------+--------------+------+------+------------+-------------+
 |           clk90_int | BUFGMUX_X3Y13| No   |    2 |  0.000     |  2.070      |
 +---------------------+--------------+------+------+------------+-------------+
@@ -214,7 +214,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 231 (Setup: 231, Hold: 0, Component Switching Limit: 0)
+Timing Score: 21505 (Setup: 21505, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
@@ -241,16 +241,16 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* TS_pll_inst_clkout1 = PERIOD TIMEGRP "pll | SETUP       |    -0.180ns|     8.576ns|       2|         231
-  _inst_clkout1" TS_sys_clk_pin / 2.5       | HOLD        |     5.326ns|            |       0|           0
-     PHASE 2.5 ns HIGH 50%                  |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_pll_inst_clkout0 = PERIOD TIMEGRP "pll | SETUP       |     0.103ns|     7.897ns|       0|           0
-  _inst_clkout0" TS_sys_clk_pin / 2.5       | HOLD        |     0.313ns|            |       0|           0
+* TS_pll_inst_clkout0 = PERIOD TIMEGRP "pll | SETUP       |    -0.938ns|     8.938ns|      98|       21505
+  _inst_clkout0" TS_sys_clk_pin / 2.5       | HOLD        |     0.301ns|            |       0|           0
      HIGH 50%                               |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_rx_clk_pin = PERIOD TIMEGRP "rx_clk_pi | SETUP       |     1.244ns|     6.756ns|       0|           0
-  n" 8 ns HIGH 50%                          | HOLD        |     0.325ns|            |       0|           0
+  TS_pll_inst_clkout1 = PERIOD TIMEGRP "pll | SETUP       |     0.025ns|     7.920ns|       0|           0
+  _inst_clkout1" TS_sys_clk_pin / 2.5       | HOLD        |     5.106ns|            |       0|           0
+     PHASE 2.5 ns HIGH 50%                  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_rx_clk_pin = PERIOD TIMEGRP "rx_clk_pi | SETUP       |     0.615ns|     7.385ns|       0|           0
+  n" 8 ns HIGH 50%                          | HOLD        |     0.417ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |    15.000ns|     5.000ns|       0|           0
   pin" 20 ns HIGH 50%                       |             |            |            |        |            
@@ -267,9 +267,9 @@ Derived Constraints for TS_sys_clk_pin
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     21.440ns|            0|            2|            0|       869620|
-| TS_pll_inst_clkout1           |      8.000ns|      8.576ns|          N/A|            2|            0|            2|            0|
-| TS_pll_inst_clkout0           |      8.000ns|      7.897ns|          N/A|            0|            0|       869618|            0|
+|TS_sys_clk_pin                 |     20.000ns|      5.000ns|     22.345ns|            0|           98|            0|       881599|
+| TS_pll_inst_clkout1           |      8.000ns|      7.920ns|          N/A|            0|            0|            2|            0|
+| TS_pll_inst_clkout0           |      8.000ns|      8.938ns|          N/A|           98|            0|       881597|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 1 constraint not met.
@@ -281,14 +281,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 20 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 2 mins 45 secs 
-Total CPU time to PAR completion: 2 mins 23 secs 
+Total REAL time to PAR completion: 3 mins 32 secs 
+Total CPU time to PAR completion: 3 mins 1 secs 
 
-Peak Memory Usage:  783 MB
+Peak Memory Usage:  785 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 2 errors found.
+Timing: Completed - 98 errors found.
 
 Number of error messages: 0
 Number of warning messages: 23
